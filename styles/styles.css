@@ -1,0 +1,73 @@
+/* 
+    Document   : CSS
+    Created on : 06.08.2013, 23:43:00
+    Author     : Alexander Hehn
+    Description: Styles für die Sidepanels, das Hauptmenü und einen Teil der Navigation
+*/
+
+@charset "UTF-8";
+
+/* Bilder für Menüpunkte im Hauptmenü */
+div#Main img{
+	/* 10% Abstand zu den Rändern links und rechts lassen */
+	margin-left: 10%;
+	/* Bilder am unteren Rand ansetzen */
+	vertical-align: bottom;
+	/* Border auf 0 setzen, damit es so aussieht, als wäären die fünf Grafiken eine einzige */
+    border: none;
+}
+
+/* Hintergrundgrafik für die Sidepanels */
+.ui-body-b {
+	/* Das Lineal aus dem Corporate Design als Hintergrund benutzen */
+	background: url(themes/images/bg.png);
+	/* Das Bild nur ein einziges Mal anzeigen, egal wie groß das Panel ist */
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	/* Das Bild immer so darstellen, dass es 100% der Höhe des Bildschirms ausfüllt */
+	background-size: auto 100%;
+	/* Das Lineal an den unteren linken Rand setzen */
+	background-position: left bottom;
+}​
+
+/*.ui-icon-map {
+	background-image: url("../bilder/navigation/icon_map.png";
+}
+
+.ui-icon-qr {
+	background: url("../bilder/navigation/icon_qr.png") no-repeat rgba(0, 0, 0, 0.4);
+}
+
+.ui-icon-building {
+	background: url("../bilder/navigation/icon_building.png") no-repeat;
+	background-size: 18px 18px;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-map {
+	background: url("../bilder/navigation/icon_map.png") no-repeat rgba(0, 0, 0, 0.4) !important;
+	background-size: 18px 18px;
+	}
+
+	.ui-icon-qr {
+	background: url("../bilder/navigation/icon_qr.png") no-repeat rgba(0, 0, 0, 0.4) !important;
+	background-size: 18px 18px;
+	}
+
+	.ui-icon-building {
+	background: url("../bilder/navigation/icon_building.png") no-repeat rgba(0, 0, 0, 0.4) !important;
+	background-size: 18px 18px;
+	}
+}*/
+
+/* ??? */
+div#map-canvas {
+	top: 0px ;
+	right: 0px ;
+	bottom: 0px ;
+	left: 0px ;
+	background-image: url(themes/images/ajax-loader.gif) ;
+	background-repeat: no-repeat ;
+	background-position: center ;
+}

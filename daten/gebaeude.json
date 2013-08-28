@@ -1,0 +1,93 @@
+{
+	"A": {
+		"name": "Gebäude A",
+		"position": {
+			"longitude": 8.391655,
+			"latitude": 49.015799
+		}
+	},
+	"B": {
+		"name": "Gebäude B",
+		"position": {
+			"longitude": 8.391403,
+			"latitude": 49.016837
+		}
+	},
+	"E": {
+		"name": "Gebäude E",
+		"position": {
+			"longitude": 8.390083,
+			"latitude": 49.01505
+		}
+	},
+	"F": {
+		"name": "Gebäude F",
+		"position": {
+			"longitude": 8.390175,
+			"latitude": 49.015595
+		}
+	},
+	"K": {
+		"name": "Gebäude K",
+		"position": {
+			"longitude": 8.392105,
+			"latitude": 49.013224
+		}
+	},
+	"Lb": {
+		"name": "Gebäude Lb",
+		"position": {
+			"longitude": 8.392347,
+			"latitude": 49.016711
+		}
+	},
+	"Li": {
+		"name": "Gebäude Li",
+		"position": {
+			"longitude": 8.389448,
+			"latitude": 49.015717
+		}
+	},
+	"M": {
+		"name": "Gebäude M",
+		"position": {
+			"longitude": 8.390223,
+			"latitude": 49.016183
+		}
+	},
+	"he": {
+		"name": "Hörsaal he",
+		"position": {
+			"longitude": 8.389239,
+			"latitude": 49.014925
+		}
+	},
+	"P": {
+		"name": "Gebäude P",
+		"position": {
+			"longitude": 8.391312,
+			"latitude": 49.014978
+		}
+	},
+	"R": {
+		"name": "Gebäude R",
+		"position": {
+			"longitude": 8.392398,
+			"latitude": 49.014997
+		}
+	},
+	"AM": {
+		"name": "Gebäude AM",
+		"position": {
+			"longitude": 8.388383,
+			"latitude": 49.00986
+		}
+	},
+	"Mensa": {
+		"name": "Mensa",
+		"position": {
+			"longitude": 8.394005,
+			"latitude": 49.014826
+		}
+	}
+}

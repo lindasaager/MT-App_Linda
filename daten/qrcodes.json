@@ -1,0 +1,92 @@
+{
+	"HsKA_F_0001": {
+		"name": "Eingangsbereich",
+		"etage": "EG",
+		"bau":	"F"
+	},
+	"HsKA_F_0002": {
+		"name": "Sekretariat",
+		"etage": "1. OG",
+		"bau":	"F"
+	},
+	"HsKA_F_0003": {
+		"name": "Fachschaftsraum",
+		"etage": "EG",
+		"bau":	"F"
+	},
+	"HsKA_F_0004": {
+		"name": "Übergang zum Gebäude LI",
+		"etage": "KG",
+		"bau":	"F"
+	},
+	"HsKA_F_0005": {
+		"name": "Übergang zum Gebäude LI",
+		"etage": "EG",
+		"bau":	"F"
+	},
+	"HsKA_F_0006": {
+		"name": "Übergang zum Gebäude LI",
+		"etage": "1. OG",
+		"bau":	"F"
+	},
+	"HsKA_F_0007": {
+		"name": "Eingang West / Hörsaal he / Moltkestraße",
+		"etage": "EG",
+		"bau":	"Li"
+	},
+	"HsKA_F_0008": {
+		"name": "Eingang Nord / Knielinger Allee",
+		"etage": "EG",
+		"bau":	"Li"
+	},
+	"HsKA_F_0009": {
+		"name": "Treppenhaus West",
+		"etage": "KG",
+		"bau":	"F"
+	},
+	"HsKA_F_0010": {
+		"name": "Treppenhaus West",
+		"etage": "EG",
+		"bau":	"F"
+	},
+	"HsKA_F_0011": {
+		"name": "Treppenhaus West",
+		"etage": "1. OG",
+		"bau":	"F"
+	},
+	"HsKA_F_0012": {
+		"name": "Treppenhaus West",
+		"etage": "2. OG",
+		"bau":	"F"
+	},
+	"HsKA_F_0013": {
+		"name": "Treppenhaus West",
+		"etage": "3. OG",
+		"bau":	"F"
+	},
+	"HsKA_F_0014": {
+		"name": "Treppenhaus Ost",
+		"etage": "KG",
+		"bau":	"F"
+	},
+	"HsKA_F_0015": {
+		"name": "Treppenhaus Ost",
+		"etage": "EG",
+		"bau":	"F"
+	},
+	"HsKA_F_0016": {
+		"name": "Treppenhaus Ost",
+		"etage": "1. OG",
+		"bau":	"F"
+	},
+		"HsKA_F_0017": {
+		"name": "Treppenhaus Ost",
+		"etage": "2. OG",
+		"bau":	"F"
+	},
+		"HsKA_F_0018": {
+		"name": "Treppenhaus Ost",
+		"etage": "3. OG",
+		"bau":	"F"
+	}
+}

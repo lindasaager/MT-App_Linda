@@ -1,0 +1,489 @@
+<!DOCTYPE HTML>
+<title>Hochschule Karlsruhe - Mechatronik</title>
+<html>
+	<!-- ######################### HEAD ######################### -->
+	<head>
+	
+	
+		<meta name="Content-Type" content="text/html"; charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		
+		<!-- Einbindung der Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="styles/jquery.mobile.structure-1.3.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="styles/themes/20130807_MT_Theme.min.css" />
+		<!-- Eigene CSS für die Navigation -->
+		<link rel="stylesheet" href="styles/styles.css"  type="text/css" />
+
+
+		<!-- Einbindung von jQuery -->
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+		<!-- Einbindung von Phonegap und Barcode-Scanner Plugin -->		
+		<script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="barcodescanner.js"></script>
+
+		
+		
+		<!-- jQuery mobile GOOGLE MAPS Plugin -->		
+
+		
+				
+		<!-- GoogleMaps API -->
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script type="text/javascript" src="js/qrcode_scannner.js"></script>
+		<script type="text/javascript" src="js/campus_map.js"></script>
+		<script type="text/javascript">
+			// Wait for device API libraries to load
+			//
+			document.addEventListener("deviceready", onDeviceReady, false);
+			
+			
+			// device APIs are available
+			//
+			function onDeviceReady() {
+				$("#welcome").popup("open", {positionTo: "window"});
+				$( ".geook" ).click(function() {
+					//$('#map-canvas').html('<a href="#" class="geook" data-role="button" data-icon="refresh" data-theme="a" data-inline="true">Refresh</a>');
+					navigator.geolocation.getCurrentPosition(onSuccess, onError,{maximumAge:600000, timeout:5000, enableHighAccuracy: true});
+					$("#welcome").popup("close");
+				});
+				
+				$( "#geofalse" ).click(function() {
+					onError();
+					$("#welcome").popup("close");
+				});
+			}
+
+			
+			// onSuccess Geolocation
+			//
+			function onSuccess(position) {
+				/*var element = document.getElementById('geolocation');
+				element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+									'Longitude: '          + position.coords.longitude             + '<br />' +
+									'Altitude: '           + position.coords.altitude              + '<br />' +
+									'Accuracy: '           + position.coords.accuracy              + '<br />' +
+									'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+									'Heading: '            + position.coords.heading               + '<br />' +
+									'Speed: '              + position.coords.speed                 + '<br />' +
+									'Timestamp: '          + position.timestamp                    + '<br />';*/
+									
+				$('#geolocation').html('Latitude: '           + position.coords.latitude              + '<br />' +
+									'Longitude: '          + position.coords.longitude             + '<br />' +
+									'Altitude: '           + position.coords.altitude              + '<br />' +
+									'Accuracy: '           + position.coords.accuracy              + '<br />' +
+									'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+									'Heading: '            + position.coords.heading               + '<br />' +
+									'Speed: '              + position.coords.speed                 + '<br />' +
+									'Timestamp: '          + position.timestamp                    + '<br />');
+									
+									
+				meineLongitude = position.coords.longitude;
+				meineLatitude = position.coords.latitude;
+				var Latlng_position = new google.maps.LatLng(meineLatitude, meineLongitude); // Schreibt aktuelle Position in Koordinaten-Variable für die aktuellen Position
+				
+				var mapOptions = {													// Definition der Anzeige-Optionen der Google-Maps karte
+						zoom: 17,													// Zoom-Stufe der Karte
+						center: Latlng_position,									// Definition des Mittelspunktes nach dem die Karte ausgerichtet wird
+						mapTypeId: google.maps.MapTypeId.ROADMAP,					// Definiert den Anzeige-Typ der Goole Maps Karte
+						panControl: false,											// panControl-Button wird deaktiviert
+						zoomControl: true,											// ZoomControl-Button wird aktiviert
+						mapTypeControl: true,										// Auswahlmöglichkeit für Kartentyp wird deaktiviert
+						scaleControl: false,										// scaleControl wird aktiviert
+						streetViewControl: false,									// StreetViewControl-Button wird deaktiviert
+				};
+				
+				create_map(mapOptions);
+				set_position(Latlng_position, map);
+				set_markers(map);
+			}
+
+		
+			// onError Callback creates the Google Map only with the HsKA building markers
+			//
+			function onError(error) {
+				//window.alert('Deine Position konnte nicht ermittelt werden! :-(');
+				$("#nopos").popup("open", {positionTo: "window"});
+				var Latlng_center = new google.maps.LatLng(49.013625,8.390161);	// Erstellt Variable mit der Position nach der die Karte zentriert werden soll
+				var mapOptions = {												// Definition der Anzeige-Optionen der Google-Maps karte
+					zoom: 15,													// Zoom-Stufe der Karte
+					center: Latlng_center,										// Definition des Mittelspunktes nach dem die Karte ausgerichtet wird
+					mapTypeId: google.maps.MapTypeId.ROADMAP,					// Definiert den Anzeige-Typ der Goole Maps Karte
+					panControl: false,											// panControl-Button wird deaktiviert
+					zoomControl: true,											// ZoomControl-Button wird aktiviert
+					mapTypeControl: true,										// Auswahlmöglichkeit für Kartentyp wird deaktiviert
+					scaleControl: false,										// scaleControl wird aktiviert
+					streetViewControl: false,									// StreetViewControl-Button wird deaktiviert
+				};
+				// Google Map erzeugen
+				create_map(mapOptions);
+				set_markers(map); 
+			}
+  
+  		
+			// Create the Google Map with the delivered mapOptions in the div-Objekt "map-canvas"
+			//
+			function create_map(options){
+				map = new google.maps.Map(document.getElementById('map-canvas'), options);
+			}
+
+			
+  			// Set the marker at the position of the user in the Google Map 
+			//
+			function set_position(myPosition, map){
+				// Marker für aktuellen Standort einfügen
+				var marker = new google.maps.Marker({
+					position: myPosition,
+					map: map,
+					title: 'Mein Standort',
+					icon: 'bilder/navigation/position.png'
+				});
+			}
+			
+			
+			
+  			// Set the marker at the position of the user in the Google Map 
+			//
+			function set_markers(map){
+				// Auslesen der JSON-Datei und zeichnen von Google-Maps-Markern
+				$.getJSON('daten/gebaeude.json', function(json) {
+					$.each(json, function(bau,data) {
+						var latLng = new google.maps.LatLng(data.position.latitude, data.position.longitude); 
+						// Creating a marker and putting it on the map
+						var marker = new google.maps.Marker({
+							position: latLng,
+							map: map,
+							title: data.name,
+							icon: 'bilder/navigation/' + bau + '.png'
+						});
+					});
+				});
+			}				
+		</script>
+
+		<!-- Einbindung von jQuery mobile -->
+		<script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+		
+		<!-- Sidepanels ausblenden, falls iOS verwendet wird -->
+		<script type="text/javascript" src="js/sidepanel.js"></script>
+	</head>
+
+	<!-- ######################### BODY ######################### -->
+	<body>
+		<div data-role="page"  id="p1"  data-theme="a">
+		
+			<div data-role="panel" data-theme="b" id="SidePanelp1" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="index.html#Impressum" rel="external">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="index.html" rel="external">Hauptmenü</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete" data-rel="close">Menü Schließen</a>
+			</div>
+				
+			<!-- ######################### HEADER ######################### -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-transition="slide" data-direction="reverse" rel="external" href="index.html#Main">Zurück</a>
+				<h1>Navigator</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" data-direction="reverse" rel="external" href="#SidePanelp1">Menü</a>
+			</div>
+			
+			<!-- ######################### Content ######################### -->
+			<div data-role="content">
+				<div id="map-canvas" style="position:absolute; width: 100%;height: 100%;"><!-- hier wird die Karte angezeigt --></div>
+			</div>
+			
+			<!-- ######################### POPUPS ######################### -->			
+			
+			<div data-role="popup" id="welcome" data-overlay-theme="a" data-theme="b" style="right: 1%; left: 1%; width: 98%;" data-history="false">
+				<div data-role="header" data-theme="a">
+					<h1>Achtung!</h1>
+				</div>
+				<div data-role="content" data-theme="b">
+					<h3 class="ui-title">Verwendung von Standordinformationen!</h3>
+					<p>Um deinen Standort zu bestimmen möchte diese App deine Standortinformationen verwenden. Bist du damit einverstanden?</p>
+					<a href="#" class="geook" data-role="button" data-theme="a">OK</a>
+					<a href="#" id="geofalse" data-role="button" data-theme="a">NEIN, Danke!</a>
+				</div>
+			</div>
+			
+			<div data-role="popup" id="nopos" data-overlay-theme="a" data-theme="b" style="right: 1%; left: 1%; width: 98%;" data-history="false">
+				<div data-role="header" data-theme="a">
+					<h1>Achtung!</h1>
+				</div>
+				<div data-role="content" data-theme="b">
+					<p>Dein Standort konnte nicht ermittelt werden! :-(</p>
+					<a href="#" data-role="button" data-rel="back" data-theme="a">OK</a>
+				</div>
+			</div>
+
+			
+			
+			<!-- ######################### FOOTER ######################### -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#p1" data-transition="none" class="ui-btn-active ui-state-persist"><img src="bilder/navigation/icon_map.png"><br>Karte</a></li>
+						<li><a href="#p2" data-transition="slide"><img src="bilder/navigation/icon_qr.png"><br>QR-Code</a></li>
+						<li><a href="#p3" data-transition="slide"><img src="bilder/navigation/icon_building.png"><br>Gebäudeplan</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+			
+
+	
+			
+		</div>
+		
+		
+		<div data-role="page"   id="p2" data-theme="a">
+		
+			<div data-role="panel" data-theme="b" id="SidePanelp2" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="index.html#Impressum" rel="external">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="index.html" rel="external">Hauptmenü</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete" data-rel="close">Menü Schließen</a>
+			</div>
+		
+			<!-- ######################### HEADER ######################### -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-transition="slide" data-direction="reverse" rel="external" href="index.html#Main">Zurück</a>
+				<h1>Navigator</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" data-direction="reverse" rel="external" href="#SidePanelp2">Menü</a>
+			</div>
+			
+			<!-- ######################### Content ######################### -->
+			<div data-role="content">
+				<p>Du weißt nicht wo du gerade bist? Dann scanne einen QR-Code in deiner Nähe. Er wird die weiterhelfen...</p>
+				
+				<p><button class="scan" data-icon="search" data-iconpos="top">SCAN</button> </p>
+				
+				<div id="geolocation">Finding geolocation...
+					<center><h3>Haupteingang</h3></center>
+					<p>
+						<table>
+							<tr>
+								<td>
+									<b>Etage:</b>
+								</td>
+								<td>
+									EG
+								</td>									
+							</tr>
+							
+							<tr>
+								<td>
+									<b>Gebäude:</b>
+								</td>
+								<td>
+									F
+								</td>									
+							</tr>
+						</table>
+						
+						<table>
+							<tr>
+								<td>
+									<i>Der blaue Pin kennzeichnet deine aktuelle Position</i>
+								</td>						
+							</tr>
+							
+							<tr>
+								<td>
+									<center><img src="bilder/navigation/HsKA_F_0001.png" style="max-width:70%;" alt="Gebäude F"></center>				
+							</tr>
+						</table>
+					</p>
+				</div>
+			</div>
+			
+			
+			<!-- ######################### POPUPS ######################### -->			
+
+			<div data-role="popup" id="noqr" data-overlay-theme="a" data-theme="b" style="right: 1%; left: 1%; width: 98%;">
+				<div data-role="header" data-theme="a" style="width: 100%;">
+					<h1>Achtung!</h1>
+				</div>
+				<div data-role="content" data-theme="a">
+					<p>Sorry, aber das ist kein QR-Code!</p>
+					<a href="#" data-role="button" data-rel="back" data-theme="a">OK</a>
+					<a href="#" class="scan" data-role="button" data-rel="back" data-theme="b">Wiederholen</a>					
+				</div>
+			</div>	
+
+			<div data-role="popup" id="invalidqr1" data-overlay-theme="a" data-theme="b" style="right: 1%; left: 1%; width: 98%;">
+				<div data-role="header" data-theme="a" style="width: 100%;">
+					<h1>Achtung!</h1>
+				</div>
+				<div data-role="content" data-theme="a">
+					<p>Sorry, aber das ist kein gültiger QR-Code zum bestimmen deiner Position!1</p>
+					<a href="#" data-role="button" data-rel="back" data-theme="a">OK</a>
+					<a href="#" class="scan" data-role="button" data-rel="back" data-theme="b">Wiederholen</a>					
+				</div>
+			</div>
+			
+			<div data-role="popup" id="invalidqr2" data-overlay-theme="a" data-theme="b" style="right: 1%; left: 1%; width: 98%;">
+				<div data-role="header" data-theme="a" style="width: 100%;">
+					<h1>Achtung!</h1>
+				</div>
+				<div data-role="content" data-theme="a">
+					<p>Sorry, aber das ist kein gültiger QR-Code zum bestimmen deiner Position!2</p>
+					<a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="a">OK</a>
+					<a href="#" class="scan" data-role="button" data-rel="back" data-theme="b">Wiederholen</a>					
+				</div>
+			</div>
+
+			<div data-role="popup" id="position" data-overlay-theme="a" data-theme="b"  style="right: 1%; left: 1%; width: 98%;">
+				<div data-role="header" data-theme="a">
+					<h1>Deine Position</h1>
+				</div>
+				<div data-role="content" data-theme="a">
+					<div id="positiontext"><!-- Hier wird die aktuelle Position eingetragen-->
+					
+					
+					<center><h3>Haupteingang</h3></center>
+					<p>
+						Etage: EG</br>
+						Gebäude: F
+					</p>
+					<p>
+						Der blaue Pin kennzeichnet deine aktuelle Position:</br>
+						<img src="bilder/navigation/HsKA_F_0001.png" style="max-width:80%;" alt="Gebäude F">
+					</p>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</div>
+					<a href="#" data-role="button" data-rel="back" data-theme="a">OK</a>
+				
+				</div>
+			</div>
+
+			<div data-role="popup" id="error" data-overlay-theme="a" data-theme="b"  style="right: 1%; left: 1%; width: 98%;">
+				<div data-role="header" data-theme="a" style="width: 100%;">
+					<h1>Fehler!</h1>
+				</div>
+				<div data-role="content" data-theme="a">
+					<p>Es konnte kein Barcode gescannt werden!</p>
+					<a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="a">OK</a>
+					<a href="#" class="scan" data-role="button" data-rel="back" data-theme="b">Wiederholen</a>	
+				
+				</div>
+			</div>						
+			
+			<!-- ######################### FOOTER ######################### -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#p1" data-transition="slide" data-direction="reverse"><img src="bilder/navigation/icon_map.png"><br>Karte</a></li>
+						<li><a href="#p2" data-transition="none" class="ui-btn-active ui-state-persist"><img src="bilder/navigation/icon_qr.png"><br>QR-Code</a></li>
+						<li><a href="#p3" data-transition="slide"><img src="bilder/navigation/icon_building.png"><br>Gebäudeplan</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="p3"  data-theme="a">
+		
+			<div data-role="panel" data-theme="b" id="SidePanelp3" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="index.html#Impressum" rel="external">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="index.html" rel="external">Hauptmenü</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete" data-rel="close">Menü Schließen</a>
+			</div>
+		
+			<!-- ######################### HEADER ######################### -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-transition="slide" data-direction="reverse" rel="external" href="index.html#Main">Zurück</a>
+				<h1>Navigator</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" data-direction="reverse" rel="external" href="#SidePanelp3">Menü</a>
+			</div>
+			
+			<!-- ######################### Content ######################### -->
+			<div data-role="content">
+
+				
+				<ul data-role="listview" data-inset="true" data-divider-theme="a">
+					<li data-role="list-divider">Gebäude F</li>
+					<li data-icon="false"><a href="#popup_og3" data-rel="popup" data-position-to="window" data-transition="slideup">3. OG</a></li>
+					<li data-icon="false"><a href="#popup_og2" data-rel="popup" data-position-to="window" data-transition="slideup">2.OG</a></li>
+					<li data-icon="false"><a href="#popup_og1" data-rel="popup" data-position-to="window" data-transition="slideup">1.OG</a></li>
+					<li data-icon="false"><a href="#popup_eg" data-rel="popup" data-position-to="window" data-transition="slideup">EG</a></li>
+					<li data-icon="false"><a href="#popup_kg" data-rel="popup" data-position-to="window" data-transition="slideup">KG</a></li>
+				</ul>
+					
+										
+				<div data-role="popup" id="popup_og3" data-overlay-theme="a" data-theme="a" data-corners="false">
+					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+					<img class="popphoto" src="bilder/navigation/OG3.png" style="max-height:90%;" alt="Gebäude F, 3.OG">
+				</div>
+				
+				<div data-role="popup" id="popup_og2" data-overlay-theme="a" data-theme="a" data-corners="false">
+					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+					<img class="popphoto" src="bilder/navigation/OG2.png" style="max-height:90%;" alt="Gebäude F, 2.OG">
+				</div>
+				
+				<div data-role="popup" id="popup_og1" data-overlay-theme="a" data-theme="a" data-corners="false">
+					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+					<img class="popphoto" src="bilder/navigation/OG1.png" style="max-height:90%;" alt="Gebäude F, 1.OG">
+				</div>
+				
+				<div data-role="popup" id="popup_eg" data-overlay-theme="a" data-theme="a" data-corners="false">
+					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+					<img class="popphoto" src="bilder/navigation/EG.png" style="max-height:90%;" alt="Gebäude F, EG">
+				</div>
+				
+				<div data-role="popup" id="popup_kg" data-overlay-theme="a" data-theme="a" data-corners="false">
+					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+					<img class="popphoto" src="bilder/navigation/KG.png" style="max-height:90%;" alt="Gebäude F, KG">
+				</div>
+				
+			</div>
+			
+			
+			<!-- ######################### FOOTER ######################### -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#p1" data-transition="slide" data-direction="reverse" ><img src="bilder/navigation/icon_map.png"><br>Karte</a></li>
+						<li><a href="#p2" data-transition="slide" data-direction="reverse" ><img src="bilder/navigation/icon_qr.png"><br>QR-Code</a></li>
+						<li><a href="#p3" data-transition="none" class="ui-btn-active ui-state-persist"><img src="bilder/navigation/icon_building.png"><br>Gebäudeplan</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="myPlace" data-corners="false" data-close-btn="right" data-theme="a">
+			<!-- Header -->
+			<div data-role="header">
+				<h1>Dein Standort</h1>
+			</div>
+			<!-- Content -->			
+			<div data-role="content">
+				<h1>Right close button</h1>
+				<p>This is a regular page, styled as a dialog. To create a dialog, just link to a normal page and include a transition and <code>data-rel="dialog"</code> attribute.</p>
+				<a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">Ok, I get it</a>   
+			</div>
+			
+		</div>	
+		
+		
+	
+<!-- <a href="#popupDialog" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" data-icon="delete" data-theme="b">Delete page...</a> -->
+
+
+	
+		
+	</body>
+</html>
+

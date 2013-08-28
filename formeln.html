@@ -1,0 +1,980 @@
+<!DOCTYPE HTML>
+
+<html>
+	<!-- HEADER -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		
+		<title>Hochschule Karlsruhe - Studiengang Mechatronik</title>
+
+		<!-- Einbindung der Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="styles/jquery.mobile.structure-1.3.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="styles/themes/20130807_MT_Theme.min.css" />
+		<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+
+		
+		<!-- Einbindung von jQuery und jQuery mobile -->
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+		
+		<script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="barcodescanner.js"></script>
+	</head>
+
+	<!-- BODY -->
+	<body>
+		<!-- Main menu -->
+		<div data-role="page" data-theme="a" id="Main" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelMain" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">	
+				<h1>Hauptmenü</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" class="ui-btn-right" href="#SidePanelMain">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<a data-transition="slide" href="#Studiengang" ><img src="bilder/menue_01.png" alt="Studiengang" width="90%"></a>
+				<a data-transition="slide" href="#Hochschule"><img src="bilder/menue_02.png" alt="Hochschule" width="90%"></a>
+				<a data-transition="slide" href="#Studentenleben"><img src="bilder/menue_03.png" alt="Studentenleben" width="90%"></a>
+				<a data-transition="slide" href="#Mediathek"><img src="bilder/menue_04.png" alt="Mediathek" width="90%"></a>
+				<a data-transition="slide" href="#Spiele"><img src="bilder/menue_05.png" alt="Spiele" width="90%"></a>
+			</div>
+		</div>
+		
+		
+		<!-- Impressum -->	
+		<div data-role="page" data-theme="a" id="Impressum" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelImpressum" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Impressum</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelImpressum">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<p>
+					Ein wunderschönes Impressum.
+				</p>
+			</div>
+		</div>
+		
+		<!-- Main topics -->
+		<div data-role="page" data-theme="a" id="Studiengang" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelStudiengang" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Studiengang</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelStudiengang">Menü</a>
+			</div>
+ 
+			<div data-role="content">
+				<div data-role="controlgroup">
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" data-icon="arrow-r" href="#Mechatronik">Was ist Mechatronik?</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" data-icon="arrow-r" href="#Vor">Vor dem Studium</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" data-icon="arrow-r" href="#Mittendrin">Mittendrin</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" data-icon="arrow-r" href="#Nach">Nach dem Bachelor</a>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Hochschule" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelHochschule" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Hochschule</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelHochschule">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="controlgroup">
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Ranking">Ranking</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Forschung">Forschung</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Stipendien">Stipendien</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Kontakt">Kontakt</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="main_topics/navigation.html" rel="external">Navigator</a>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Studentenleben" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelStudentenleben" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Studentenleben</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelStudentenleben">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="controlgroup">
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Finanzierung">Finanzierung</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Wohnen">Wohnen</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Freizeitangebote">Freizeitangebote</a>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Mediathek" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelMediathek" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Mediathek</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelMediathek">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="controlgroup">
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Videos">Videos</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Bildergalerie">Bildergalerie</a>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Videos" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelVideos" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Studiengang">Zurück</a>
+				<h1>Videos</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelVideos">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>Was ist Mechatronik?</h1>
+						<video id="video1" controls preload="none" width="100%" poster="bilder/mediathek/thumbs/mechatronik.png">
+							<source src="http://www.mmt-hska.de/videos/mechatronik.mp4">
+							<source src="http://www.mmt-hska.de/videos/mechatronik.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						</video>
+					</div>
+					<div data-role="collapsible">
+						<h1>Imagevideo 1 der Hochschule</h1>
+						<video id="video2" controls preload="none" width="100%" poster="bilder/mediathek/thumbs/imagefilm.png">
+							<source src="http://www.mmt-hska.de/videos/imagefilm_1.mp4">
+							<source src="http://www.mmt-hska.de/videos/imagefilm_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						</video>
+					</div>
+					<div data-role="collapsible">
+						<h1>Imagevideo 2 der Hochschule</h1>
+						<video id="video3" controls preload="none" width="100%" poster="bilder/mediathek/thumbs/imagefilm.png">
+							<source src="http://www.mmt-hska.de/videos/imagefilm_2.mp4">
+							<source src="http://www.mmt-hska.de/videos/imagefilm_2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						</video>
+					</div>
+					<div data-role="collapsible">
+						<h1>Projektvideo mechatronischer Kreisel</h1>
+						<video id="video4" controls preload="none" width="100%" poster="bilder/mediathek/thumbs/mech_kreisel.png">
+							<source src="http://www.mmt-hska.de/videos/mech_kreisel.mp4">
+							<source src="http://www.mmt-hska.de/videos/mech_kreisel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						</video>
+					</div>
+					<div data-role="collapsible">
+						<h1>Projektvideo Kugelbalance</h1>
+						<video id="video5" controls preload="none" width="100%" poster="bilder/mediathek/thumbs/kugelbalance.png">
+							<source src="http://www.mmt-hska.de/videos/kugelbalance.mp4">
+							<source src="http://www.mmt-hska.de/videos/kugelbalance.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						</video>
+					</div>
+					<div data-role="collapsible">
+						<h1>E-Quickie</h1>
+						<video id="video6" controls preload="none" width="100%" poster="bilder/mediathek/thumbs/e_quickie.png">
+							<source src="http://www.mmt-hska.de/videos/e_quickie.mp4">
+							<source src="http://www.mmt-hska.de/videos/e_quickie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Bildergalerie" data-title="Hochschule Karlsruhe - Studiengang Mechatronik" class="gallery-page">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelBildergalerie" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Studiengang">Zurück</a>
+				<h1>Bildergalerie</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelBildergalerie">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<ul class="gallery">
+					<li><a href="bilder/mediathek/Sommerfest1.jpg"	rel="external"><img src="bilder/mediathek/Sommerfest1.jpg"	alt="Teamgeist gefragt: Beachvolleyball-Turnier beim Sommerfest" /></a></li>
+					<li><a href="bilder/mediathek/Sommerfest2.jpg"	rel="external"><img src="bilder/mediathek/Sommerfest2.jpg"	alt="Sommerfest 2013" /></a></li>
+					<li><a href="bilder/mediathek/Sommerfest3.jpg"	rel="external"><img src="bilder/mediathek/Sommerfest3.jpg"	alt="Das Sommerfest der HsKA ist übrigens das größte Hochschulfest der Stadt!" /></a></li>
+					<li><a href="bilder/mediathek/Sommerfest4.jpg"	rel="external"><img src="bilder/mediathek/Sommerfest4.jpg"	alt="Kampf um den Ball beim alljährlichen Sommerfest der Hochschule Karlsruhe" /></a></li>
+					<li><a href="bilder/mediathek/Sommerfest5.jpg"	rel="external"><img src="bilder/mediathek/Sommerfest5.jpg"	alt="Abends sorgen Live-Bands für die richtige Stimmung..." /></a></li>
+					<li><a href="bilder/mediathek/LKW1.jpg"			rel="external"><img src="bilder/mediathek/LKW1.jpg"			alt="Simulation einer Fertigungsstraße mit Lego – hier ist Teamwork gefordert..." /></a></li>
+					<li><a href="bilder/mediathek/LKW2.jpg"			rel="external"><img src="bilder/mediathek/LKW2.jpg"			alt="Bloß nicht verwirren lassen: Ohne Mathematik geht im Mechatronik-Studium gar nichts!" /></a></li>
+					<li><a href="bilder/mediathek/LKW3.jpg"			rel="external"><img src="bilder/mediathek/LKW3.jpg"			alt="Lego-Autos bauen unter Zeitdruck – früher war das irgendwie entspannter..." /></a></li>
+					<li><a href="bilder/mediathek/MT1.jpg"			rel="external"><img src="bilder/mediathek/MT1.jpg"			alt="Von der Natur inspiriert – Bionik-Roboter der HsKA" /></a></li>
+					<li><a href="bilder/mediathek/MT2.jpg"			rel="external"><img src="bilder/mediathek/MT2.jpg"			alt="Die Mikrosystemtechnik ermöglicht die Herstellung winziger elektronischer Schaltungen – das menschliche Auge allein kommt da nicht mehr mit... " /></a></li>
+					<li><a href="bilder/mediathek/MT3.jpg"			rel="external"><img src="bilder/mediathek/MT3.jpg"			alt="Vollgas im Studium: E-Kart der HsKA" /></a></li>
+					<li><a href="bilder/mediathek/EQUICKIE.jpg"		rel="external"><img src="bilder/mediathek/EQUICKIE.jpg"		alt="Vielleicht nicht die bequemste Art der Fortbewegung, wohl aber eine sehr effiziente: Elektrofahrzeug ""E-Quickie"" der HsKA" /></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Spiele" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Spiele</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="controlgroup">
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Formelecke">Formelecke</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Assessment">Assessment</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Werwars">Wer war's?</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Produktememory">Produktememory</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- Subtopics -->		
+		<div data-role="page" data-theme="a" id="Mechatronik" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelMechatronik" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Studiengang">Zurück</a>
+				<h1>Was ist Mechatronik?</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelMechatronik">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<p align="justify">
+					Die Mechatronik ist ein interdisziplinäres Gebiet der Ingenieurwissenschaften, das die klassischen Disziplinen Maschinenbau, Elektrotechnik und Informatik vereint. Es ist dabei unerheblich, ob es um kleine oder große Systeme geht – Mechatronik macht Produkte intelligent und einfach – wie z. B. Küchenmaschinen und Haushaltsgeräte, Smartphones und Computerfestplatten, Werkzeugmaschinen und Industrieroboter.
+				</p>
+				<p align="justify">
+					Das Studium der Mechatronik ist das ideale Feld für technisch interessierte Studierende, die sich zu Beginn noch nicht auf eine Richtung festlegen, sondern am Ende des Grundstudiums noch aus vielen Möglichkeiten das für sich Passende auswählen möchten.
+				</p>
+				<p align="justify">
+					Was Mechatronik genau ist, wird hier nochmal erklärt:					
+				</p>
+				<video id="video7" controls preload="none" width="100%" poster="bilder/mediathek/thumbs/mechatronik.png">
+					<source src="http://www.mmt-hska.de/videos/mechatronik.mp4">
+					<source src="http://www.mmt-hska.de/videos/mechatronik.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+				</video>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Vor" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelVor" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Studiengang">Zurück</a>
+				<h1>Vor dem Studium</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelVor">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>Was man braucht</h1>
+						<ul align="justify">
+							<li><b>Allgemeine oder fachgebundene Hochschulreife</b><br>oder vergleichbare Qualifikation</li>
+							<li><b>Abgeschlossenes 8-wöchiges Vorpraktikum</b><br>
+								Das Vorpraktikum soll dem Studierenden helfen, in einem Unternehmen seiner Wahl grundlegende handwerkliche Fertigkeiten (Sägen, Schweißen, Drehen, etc.) kennenzulernen. In Ausnahmefällen kann das Vorpraktikum bis zum Ende des 3. Semesters nachgeholt werden. Mehr Infos gibt's hier:
+								<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/fakultaeten/fk-mmt/offene-projekte-lehre-und-weitere-einrichtungen/praktikum-mmt.html">Vorpraktikum</a></li>
+							<li><b>Fristgerechte Online-Bewerbung</b><br>
+							Die Bewerbung wird online durchgeführt, alle dafür nötigen Zeugnisse müssen eingescannt werden. Bewerbungsschluss ist der 15. Juli für das Wintersemester bzw. der 15. Januar für das Sommersemester. Mehr dazu findet man hier:
+							<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/studieninteressierte/bewerbung-und-beratung/bewerbungsverfahren.html">Bewerbungsinfos</a></li>
+						</ul>
+					</div>
+					<div data-role="collapsible">
+						<h1>Was man mitbringen sollte</h1>
+						<ul>
+							<li>Begeisterung für Technik</li>
+							<li>Interesse an Mathematik und Physik</li>
+							<li>Spaß an Teamarbeit</li>
+							<li>Motivation und Neugierde</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Mittendrin" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelMittendrin" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Studiengang">Zurück</a>
+				<h1>Mittendrin</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelMittendrin">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>Aufbau</h1>
+						<ul align="justify">
+							<li>Das <b>Grundstudium</b> (1. und 2. Semester) vermittelt die ingenieurwissenschaftlichen Grundlagen. Da das Grundstudium für die Studiengänge Mechatronik, Maschinenbau und Fahrzeugtechnologie sehr ähnlich ist, kann nach dem Grundstudium auch noch zu einem der anderen Studiengänge gewechselt werden.</li>
+							<li>Das <b>Hauptstudium</b> (ab dem 3. Semester) vertieft die erworbenen Grundlagen. Es legt die notwendige Basis für breite Einsatzmöglichkeiten im späteren Beruf. Außerdem kann hier, je nach Interesse, aus verschiedenen Schwerpunkten gewählt werden.</li>
+							<li>Das 5. Semester ist ein <b>Praxissemester</b>, das in der Industrie oder vergleichbaren Einrichtungen abgeleistet wird.</li>
+							<li>Mit der <b>Bachelorarbeit</b> im 7. Semester wird das Studium abgeschlossen.</li>
+						</ul>
+					</div>
+					<div data-role="collapsible">
+						<h1>Studienplan (Fächer)</h1>
+						Eine genauere Übersicht über die einzelnen Fächer gibt es hier:<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/fakultaeten/fk-mmt/bachelorstudiengaenge/mechatronik/studienplan.html">Studienplan</a>
+					</div>
+					<div data-role="collapsible">
+						<h1>Vertiefungsrichtungen</h1>
+						<p align="justify">
+						Im Laufe des Studiums kann einer von vier Schwerpunkten gewählt werden:
+							<ul align="justify">
+								<li><b>Mechatronik im Maschinenbau</b><br>
+									Die Studierenden wählen bei diesem Schwerpunkt innovative Themen aus dem Maschinenbau, wie z.B. Bionik, Werkzeugmaschinen oder Logistik.</li>
+								<li><b>Mikrosystemtechnik</b><br>
+									Die Mikrosystemtechnik ist für die Entwicklung von modernen, intelligenten Produkten, wie z.B. Smartphones oder Robotern, von großer Bedeutung. In diesem Studienschwerpunkt lernen die Studierenden Mikrosysteme zu planen und im eigenen Reinraum zu entwickeln.</li>
+								<li><b>Kälte-, Klima- und Umwelttechnik</b><br>
+									Das Fachgebiet Kälte-, Klima- und Umwelttechnik hat weltweit große Bedeutung. In diesem Studienschwerpunkt werden Ingenieure ausgebildet, die die Effizienz von Kälte- und Klimaanlagen verbessern und damit zur globalen CO2-Reduktion beitragen.</li>
+								<li><b>Aeronautical Engineering</b><br>
+									Im Schwerpunkt „Auronautical Engineering“ werden Ingenieure ausgebildet, die später im Bereich Luft- und Raumfahrttechnik oder auch in der Flugversuchsbranche tätig sein können. In Zusammenarbeit mit mehreren Verkehrsfliegerschulen besteht die Möglichkeit, zusätzlich zum akademischen Grad die Lizenz für Verkehrspiloten zu erwerben (gebührenpflichtig).</li>
+							</ul>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Projekte</h1>
+						<p align="justify">
+							Im Laufe des Studiums arbeiten Studenten der Mechatronik in Gruppen an unterschiedlichsten Projekten, von denen hier einige beispielhaft vorgestellt werden:
+							<ul align="justify">
+								<li><b>Wie balanciert man eine Kugel auf einem Rad?</b><br>
+									Die Position der Kugel wird mit einer außermittig angeordneten Solarzelle gemessen. Der Regler vergleicht den Sollwert, die oberste Lage, mit der momentanen Lage, dem Istwert, der von der Solarzelle geliefert wird, und steuert den Gleichstrommotor so an, dass die Kugel in der instabilen Position oben auf dem Rad balanciert wird. Das Modell dient als Demonstrationsmodell für die experimentelle Reglereinstellung im Labor für Regelungstechnik. Es zeigt sehr anschaulich die Leistungsfähigkeit eines relativ einfach aufgebauten Reglers für Aufgabenstellungen, die manuell nicht beherrschbar sind.</li>
+								<li><b>Endo-Snake</b><br></li>
+								<li><b>Schwebender Würfel</b><br></li>
+								<li><b>Reinraum</b><br></li>
+								<li><b>Mechatronischer Kreisel</b><br>
+									<img src="bilder/mediathek/thumbs/mech_kreisel.png" alt="Mechatronischer Kreisel"></li>
+								<li><b>Nao</b><br></li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Nach" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelNach" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Studiengang">Zurück</a>
+				<h1>Nach dem Studium</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelNach">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>Master</h1>
+						<p align="justify">
+							Studenten mit gutem bis sehr gutem Abschluss in einem Bachelorstudiengang bietet die Hochschule Karlsruhe die Möglichkeit, ihr Fachwissen mit einem Master weiter zu vertiefen. Wer promovieren will, tut dies nach dem zweijährigen Masterstudium, denn dieses ist, bis auf wenige Ausnahmen, die Voraussetzung für die Promotion.
+							<ul align="justify">
+								<li><b>Master an der Fakultät MMT</b><br>
+									An der Fakultät MMT werden momentan folgende Masterstudiengänge angeboten:
+									<ul>
+										<li>Effiziente Mobilität in der Fahrzeugtechnologie</li>
+										<li>Maschinenbau und Mechatronik</li>
+										<li>Maschinenbau</li>
+										<li>Mechatronik</li>
+										<li>Mechatronic and Micro-Mechatronic Systems</li>
+									</ul>
+									Mehr Informationen zu den einzelnen Masterstudiengängen gibt's hier:<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/fakultaeten/fk-mmt/masterstudiengaenge.html">Masterstudiengänge</a>.
+								<li><b>Master an anderen Fakultäten/Hochschulen</b><br>
+									Das Erlangen des Bachelors ermöglicht nicht nur das Masterstudium an der Fakultät MMT, sondern auch an den anderen Fakultäten der Hochschule, sowie anderen Hochschulen i.A.
+									Mehr Informationen zu Masterstudiengängen gibt's hier:<a data-role="button" data-icon="forward" href="http://studieren.de/master.0.html">Masterstudiengänge</a>.</li>
+							</ul>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Promotion</h1>
+						Obwohl in Deutschland nur Universitäten das Promotionsrecht besitzen, kann man doch an der Hochschule Karlsruhe zu promovieren. Möglich wird dies durch die Kooperation mit Universitäten, deren Professoren als Doktorvater bzw. -mutter fungieren.
+					</div>
+					<div data-role="collapsible">
+						<h1>Berufliche Perspektiven</h1>
+							<p align="justify">
+								Mechatronikingenieure lassen sich als „Allrounder“ sowohl im Maschinenbau als auch in elektrotechnisch geprägten Arbeitsfeldern hervorragend einsetzen und sind daher in der Industrie sehr gefragt.
+							</p>
+							<p align="justify">
+								Ingenieure der Mechatronik entwickeln, konstruieren, fertigen, warten und vertreiben mechatronische Systeme und deren Komponenten. Diese Systeme findet man in sämtlichen Industriebranchen, wie z. B. in der Informations- und Kommunikations-, in der Lager-, in der Sensor- sowie in der Produktions- und Automatisierungstechnik. Auch im Konsumerbereich sind solche Systeme vorhanden, um neue Technologien in Küche, Haushalt, Freizeit und Sport einzusetzen und damit den Komfort stetig zu erhöhen.
+							</p>
+							<p align="justify">
+								Die späteren Tätigkeitsbereiche von Mechatronikern sind vielfältig:
+								<ul>
+									<li>Forschung und Entwicklung</li>
+									<li>Technische Beratung</li>
+									<li>Vertrieb, Marketing, Service</li>
+									<li>Produktion, Fertigung</li>
+									<li>...</li>
+								</ul>
+							</p>
+							<p align="justify">
+								Auch bei den Einsatzmöglichkeiten haben Ingenieure der Mechatronik ein außerordentlich breites Spektrum:
+								<ul>
+									<li>Maschinen- und Anlagenbau</li>
+									<li>Elektrotechnik und Elektronik</li>
+									<li>Automobil- und Luftfahrtindustrie</li>
+									<li>Automatisierungstechnik, Robotik</li>
+									<li>Mikrosystem- und Feinwerktechnik</li>
+									<li>Print- und Medientechnik</li>
+									<li>Audio- und Videoindustrie</li>
+									<li>Medizintechnik</li>
+									<li>...</li>
+								</ul>
+							</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Das sagen ehemalige Studenten</h1>
+						<p align="justify">
+							„Am meisten profitieren konnte ich von der praxisnahen Ausbildung. Zwar sind die theoretischen Grundlagen eine notwendige Voraussetzung, doch gerade die praxisorientierten Fächer haben mir wichtige Kenntnisse für meinen jetzigen Beruf vermittelt - beispielsweise zur Kommunikation mit Auftraggebern und Vorgesetzten oder bei der Organisation von Projekten.“
+							Oliver Rothardt, Mechatronik-Absolvent 2003 - Entwicklungsingenieur bei Physik Instrumente GmbH & Co. KG.
+						</p>
+
+						<p align="justify">
+							„Das Schöne an der Mechatronik ist, dass man ein Grundverständnis für viele unterschiedliche Bereiche entwickeln kann. Somit fällt es später erheblich leichter, die Zusammenhänge zwischen den einzelnen Teildisziplinen zu erkennen. Im Berufsleben kann man schließlich selbst wählen, in welche Richtung man sich vertiefen möchte.“
+							Silja-Fabienne Tischler, Mechatronik-Absolventin 2012 – Applikationsentwicklerin bei Hirschmann Automation and Control GmbH
+						</p>
+
+						<p align="justify">
+							„Rückblickend konnte ich vor allem von der starken Projektorientierung im Studium profitieren. Das Wissen, welches wir uns selbstständig in den zahlreichen Projekten als Team erarbeitet haben, war letztendlich das wertvollste Wissen. Sehr hilfreich war auch der direkte Kontakt und Austausch mit den Professoren.“
+							Wolfram Müller, Mechatronik-Absolvent 1996 – selbstständiger Projektmanager, Trainer und Berater
+						</p>
+
+						<p align="justify">
+							„Neben den Grundlagen in Mechanik, Elektrotechnik und Informatik lernt man im Mechatronik-Studium vor allem, woher man Wissen beziehen und wie man es sich aneignen kann.“
+							Jürgen Dürrwang, Mechatronik-Absolvent 2013 – Masterstudent Mechatronik an der HS Karlsruhe
+						</p>
+
+						<p align="justify">
+							„Reizvoll ist vor allem die Mischung von Studenten mit Berufserfahrung, die ihr praktisches Wissen einbringen können und andererseits Studenten mit Abitur, die oft die Theorie leichter verstehen. Außerdem erhält man im Mechatronik-Studium einen Einblick in viele unterschiedliche Bereiche und merkt dabei meist recht schnell, welcher Bereich einem persönlich am meisten Spaß macht.“
+							Christian Anderl, Mechatronik-Absolvent 2011 – Hardwareentwickler bei INIT GmbH
+						</p>
+
+						<p align="justify">
+							„Das Mechatronik-Studium hat mir eine sehr gute Basis gegeben, um mich später im Beruf gezielt weiterzuentwickeln. Vor allem das gemeinsame Lösen technischer Problemstellungen im Team wurde mir sehr gut vermittelt.“
+							Osama Al-Saidi, Mechatronik-Absolvent 2010 – Masterstudent an der TU Kaiserslautern
+						</p>
+
+						<p align="justify">
+							„Im Studium habe ich gelernt, interdisziplinär zu denken, Zusammenhänge zu erkennen und Projekte sauber zu strukturieren. Vor allem von letzterem kann man ein Leben lang profitieren.“
+							Joerg Uschkurat, Mechatronik-Absolvent 1995 – Vertriebsmanager bei Johnson Controls GmbH
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Ein wenig Statistik</h1>
+						Einstiegsgehalt Mechatronik: 42200 &euro; (unteres Viertel) bis 49082 &euro; (oberes Viertel). Quelle: DIE ZEIT 16/2013
+						http://www.ingenieurkarriere.de/_library/content/download/obj2407_Einstiegsgehaelter_fuer_Ingenieure_2012.pdf
+						http://www.ingenieurkarriere.de/_library/content/download/obj2314_Charts_Einstiegsgehaelter2012.pdf
+						http://www.gehalt.de/statistik/Ingenieure-nach-Branche-Einstiegsgehaelter-2011-Gehalt-Ingenieure
+						[Statistiken zum Thema Einstiegsgehälter und Fachkräftemangel]
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Ranking" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelRanking" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Hochschule">Zurück</a>
+				<h1>Ranking</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelRanking">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>Ranking der WirtschaftsWoche</h1>
+						<p align="justify">
+							Für das aktuelle Hochschulranking der „WirtschaftsWoche“ (Ausgabe 15 vom 8. April 2013) wurden in Zusammenarbeit mit der Beratungsgesellschaft Universum Communications auch in diesem Jahr wieder Personalchefs deutscher Unternehmen aller Branchen befragt, aus welchen Hochschulen sie ihren eigenen Führungs- und Fachkräftenachwuchs rekrutieren, welche Hochschulen also nach ihrer Erfahrung die Studierenden am besten auf den Beruf vorbereiten. Der Schwerpunkt des Rankings liegt damit ganz bewusst auf der Praxisrelevanz der Hochschulausbildung. In Elektrotechnik, Informatik, Wirtschaftsinformatik und im Wirtschaftsingenieurwesen ist nach Ansicht der Personalmanager die Hochschule Karlsruhe bundesweit die Fachhochschule, die ihre Absolventen am besten auf den Beruf und damit auf die Karriere vorbereitet – also viermal Rang 1 im aktuellen Hochschulranking. Im Maschinenbau erreicht die Hochschule Karlsruhe den 5. Platz. Mit viermal Platz 1 und einmal Platz 5 in fünf von sechs zentralen ingenieurwissenschaftlichen, Informatik- bzw. Wirtschaftsdisziplinen ist die Hochschule Karlsruhe die erfolgreichste Fachhochschule dieses Rankings – und kann damit die ausgezeichneten Ergebnisse der Vorjahre bestätigen.
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>CHE-Ranking</h1>
+						<p align="justify">
+							Mit mehr als 300 untersuchten Hochschulen, 2.500 Fachbereichen und Bewertungen von 250.000 Studierenden ist das CHE-Hochschulranking das umfassendste und detaillierteste Ranking im deutschsprachigen Raum. Neben Fakten zu Studium, Lehre, Ausstattung und Forschung berücksichtigt es auch Urteile Studierender über die Studienbedingungen an ihrer Hochschule.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Forschung" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelForschung" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Hochschule">Zurück</a>
+				<h1>Forschung</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelForschung">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>Institut für Energieeffiziente Mobilität</h1>
+						<p align="justify">
+							Mit dem Institut für <b>Energieeffiziente Mobilität</b> setzt die Fakultät MMT einen Forschungsschwerpunkt innerhalb des Studienganges "Fahrzeugtechnologie". Hier werden zukünftig Vorhaben in der industrienahen Forschung umgesetzt, die sich mit Themen der Fahrzeughersteller und -zulieferer beschäftigen. Dieses Institut ist ein reines Forschungslabor, d.h. reguläre Studentenveranstaltungen finden hier nicht statt. Im Rahmen von Studien-, Bachelor- und Masterarbeiten werden Forschungs- und Vorentwicklungsvorhaben für mittelständische Unternehmen, aber auch für OEMs (Erstausrüster) der Fahrzeugindustrie bearbeitet.
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Institut für Fertigungstechnik und Produktion</h1>
+						<p align="justify">
+							In der Abteilung <b>Fertigungstechnik und Produktion</b> werden zahlreiche Studentische Projekte mit Industriepartnern durchgeführt. Hierbei werden spanende und abtragende Fertigungsverfahren weiterentwickelt, erprobt und optimiert. Forschungsthemen sind u.a. Werkzeug- und Formenbau, Werkzeugmaschinen, Medizintechnik, Luft- und Raumfahrttechnik.
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Institut für Kälte-, Klima- und Umwelttechnik</h1>
+						<p align="justify">
+							Die Fakultät für Maschinenbau und Mechatronik bietet in den Bachelorstudiengängen Maschinenbau und Mechatronik unter anderem den Studienschwerpunkt <b>Kälte-, Klima- und Umwelttechnik</b> (KKU) an. Auch bei Kälte- und Klimaanlagen muss in Zukunft der Energiebedarf stark reduziert werden. Es gibt jedoch keine bzw. kaum Ingenieure mit den notwenigen mechatronischen und kältetechnischen Kentnissen. Daher haben Studierende mit dem Schwerpunkt KKU sehr gute Berufsaussichten.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Stipendien" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelStipendien" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Hochschule">Zurück</a>
+				<h1>Stipendien</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelStipendien">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<p>
+					Nicht nur für Hochbegabte gibt es zahlreiche Stipendienprogramme, die sowohl finanzielle als auch ideelle Unterstützung beim Studium bieten.
+					Eine Übersicht über die verschiedenen Angebote gibt's hier:
+					<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/studierende/careerservices/careernet/studienstipendien.html">Stipendien zur Studienfinanzierung</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Kontakt" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelKontakt" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Hochschule">Zurück</a>
+				<h1>Kontakt</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelKontakt">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>Studienberatung Mechatronik</h1>
+						<p>
+							Du kannst die studienfachliche Beratung der Professorinnen und Professoren in Anspruch nehmen, wenn du Fragen zu den Inhalten und zum Aufbau eines Studiengangs hast.
+							Die Ansprechperson für den Studiengang Mechatronik ist:
+						</p>
+						<p>
+							Prof. Dr. Christof Krülle<br>
+							Raum: F-209<br>
+							Tel. 0721 925-1753<br>
+							E-Mail: <a href="mailto:christof.kruelle@hs-karlsruhe.de">Christof.Kruelle@hs-karlsruhe.de</a><br>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Sekretariat Mechatronik und Fahrzeugtechnologie</h1>
+						<p>
+							Silke Loykowski<br>
+							Raum: F-114<br>
+							Moltkestr. 30<br>
+							76133 Karlsruhe<br>
+							Tel. 0721 925-1708<br>
+							E-Mail: <a href="mailto:silke.loykowski@hs-karlsruhe.de">Silke.Loykowski@hs-karlsruhe.de</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Campustag</h1>
+						<p align="justify">
+							Die Hochschule Karlsruhe lädt zwei Mal jährlich Schülerinnen und Schüler sowie Studieninteressierte zum Campustag ein, um sich über die Studienangebote der Hochschule zu informieren und einen Blick hinter die Kulissen des Hochschullebens zu werfen. Studierende und Dozenten stellten Forschungsprojekte vor, führten durch die Labore und beantworteten Fragen rund ums Studium. Zahlreiche Infostände verschiedener Service-Einrichtungen der Hochschule und Beratungsangebote ergänzen das Programm. Den Termin für den nächsten Campustag gibt es hier: <a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/studieninteressierte/die-hochschule-kennenlernen/campustag.html">Campustag</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Navigator" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelNavigator" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Hochschule">Zurück</a>
+				<h1>Navigator</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelNavigator">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<!--##################################################################################
+						##																				##
+						##									Navigator 									##
+						##																				##
+						################################################################################## -->
+				</div>
+			</div>
+			
+			<div data-role="footer">
+				
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Finanzierung" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelFinanzierung" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Studentenleben">Zurück</a>
+				<h1>Finanzierung</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelFinanzierung">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>BAföG</h1>
+						<p align="justify">
+							Die staatliche Förderung mit BAföG („Bundesausbildungsförderungsgesetz“) ist quasi der Klassiker unter den Studienfinanzierungen.
+							Deutschlandweit werden bereits mehr als 125.000 Studierende gefördert. Eine grobe Abschätzung, ob du förderberechtigt bist, liefert der BAföG-Rechner: <a data-role="button" href="http://www.bafoeg-rechner.de/Rechner/">BAföG-Rechner</a>
+						</p>
+						<p align="justify">
+							Weitere Informationen und Unterstützung bietet auch das Studentenwerk: <a data-role="button" data-icon="forward" href="http://www.studentenwerk-karlsruhe.de/de/finanzen/bafoeg">Studentenwerk</a>.
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Mitarbeit an der Hochschule</h1>
+						<p align="justify">
+							Die Mitarbeit als studentische Hilfskraft/Tutor lohnt sich nicht nur finanziell:
+							Neben einer Vergütung  von aktuell 8,67 &euro;/Stunde (inkl. Vorbereitungszeit, Stand: August 2013) schult man hierbei auch seine kommunikativen und fachlichen Fähigkeiten.
+							Weitere Infos gibt’s auch hier:
+							<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/hochschule/lehre/tutorenprogramm.html">Tutorenprogramm</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Stipendien</h1>
+						<p align="justify">
+							Nicht nur für Hochbegabte gibt es zahlreiche Stipendienprogramme, die sowohl finanzielle als auch ideelle Unterstützung beim Studium bieten.
+							Eine Übersicht über die verschiedenen Angebote gibt's hier:
+							<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/studierende/careerservices/careernet/studienstipendien.html">Stipendien zur Studienfinanzierung</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Verbundstudium</h1>
+						<p align="justify">
+							Die Hochschule Karlsruhe bietet die Möglichkeit, das Studium in Kooperation mit einem Unternehmen zu absolvieren.
+							Dabei werden alle praktischen Abschnitte des Studiums (z.B. Vorpraktikum, Praxissemester, Abschlussarbeit) in diesem Unternehmen abgeleistet –
+							im Gegenzug winkt eine finanzielle Unterstützung von 500 - 700 &euro; monatlich. Weitere Infos gibt es hier:
+							<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/fakultaeten/fk-mmt/fk-mmtangebote/verbundstudium.html">Karlsruher Verbundstudium</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Studium Plus</h1>
+						<p align="justify">
+							Das Studium Plus bietet ebenfalls die Möglichkeit, das Studium in Kooperation mit einem Unternehmen und bei einer monatlichen Vergütung zu absolvieren.
+							Das Besondere hierbei ist jedoch, dass neben dem Mechatronikstudium auch eine Ausbildung zum Mechatroniker abgeschlossen wird. Weitere Infos gibt es hier:
+							<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/fakultaeten/fk-mmt/fk-mmtangebote/fk-mmtstudium-plus.html">Studium Plus</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Wohnen" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelWohnen" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Studentenleben">Zurück</a>
+				<h1>Wohnen</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelWohnen">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<p align="justify">
+					Wer einen Studienplatz an der Hochschule Karlsruhe bekommen hat, für den geht es meist zunächst an die Wohnungssuche.
+					Hilfe dabei bietet das Studentenwerk, gute Tipps gibt’s außerdem noch auf der Website der Hochschule:<a data-role="button" data-icon="forward" href="http://www.studentenwerk-karlsruhe.de/de/wohnen">Studentwerk</a><a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/studieninteressierte/in-karlsruhe-studieren/wohnen.html">Website der Hochschule</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Freizeitangebote" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelFreizeitangebote" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Studentenleben">Zurück</a>
+				<h1>Freizeitangebote</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelFreizeitangebote">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<p align="justify">
+					Da das Studentenleben natürlich nicht nur aus Lernen besteht, sind hier ein paar Freizeitaktivitäten aufgeführt, die die Hochschule oder die Stadt Karlsruhe anbieten.
+					Wer sich für die Organisation von Festen interessiert, kann sich gern im Allgemeinen Studierendenausschuss (AStA) oder in der Fachschaft MMT einbringen.
+				</p>
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>Hochschulsport</h1>
+						<p align="justify">
+							Der Hochschulsport wird vom Karlsruher Institut für Technologie (KIT) organisiert und steht den Studenten aller Hochschulen in Karlsruhe offen: <a data-role="button" data-icon="forward" href="http://www.sport.kit.edu/hochschulsport">Hochschulsport</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Schwimmbäder</h1>
+						<p align="justify">
+							In Karlsruhe gibt es insgesamt neun Schwimmbäder, mehr dazu gibt’s hier:<a data-role="button" data-icon="forward" href="http://www.ka-baeder.de/unserebaeder/">Schwimmbäder</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Kulturangebot</h1>
+						<p align="justify">
+							Eine Auswahl an Museen, Theatern und weiteren Kulturangeboten findet sich auch auf der Homepage der Hochschule Karlsruhe:<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/studieninteressierte/in-karlsruhe-studieren/kulturangebote.html">Kulturangebot</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Freizeitangebote der Stadt Karlsruhe</h1>
+						<p align="justify">
+							Im Stadtwiki der Stadt Karlsruhe sind Freizeitangebote aller Art zu finden:<a data-role="button" data-icon="forward" href="http://ka.stadtwiki.net/Freizeit">Stadtwiki der Stadt Karlsruhe</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>AStA</h1>
+						<p align="justify">
+							Der Jahreskalender der Hochschule besteht nicht nur aus Semester- und Prüfungszeiten.
+							Neben einer Reihe offizieller Veranstaltungen, zu denen die Hochschulleitung einlädt, können sich Studierende auf verschiedenen Festen vergnügen.
+							Die großen Feste organisiert der Allgemeine Studierendenausschuss (AStA), kleinere die Fachschaften:<a data-role="button" data-icon="forward" href="http://www.hs-karlsruhe.de/studierende/campusleben/kulturelles.html">AStA</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Hochschulchor</h1>
+						<p align="justify">
+							Wer gerne singt oder schon immer einmal im Chor mitwirken wollte, ist bei vocal resources – dem Hochschulchor – gut aufgehoben.
+							Der hat überregional auf verschiedenen Festivals und Wettbewerben bereits auf sich aufmerksam gemacht.
+							<a data-role="button" data-icon="forward" href="http://www.vocal-resources.de/main.html">vocal resources</a>
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h1>Freundeskreis Mechatronik und Fahrzeugtechnologie</h1>
+						<p align="justify">
+							Der Freundeskreis ist ein Verein aus derzeitigen und ehemaligen Studierenden der Mechatronik und Fahrzeugtechnologie.
+							Er organisiert u.a. Exkursionen, Podiumsdiskussionen und Messen für Praxissemester und Abschlussarbeiten.
+							Mehr über den Freundeskreis und aktuell anstehende Termine gibt es auf seiner Homepage:<a data-role="button" data-icon="forward" href="http://www.freundeskreis-mechatronik-fahrzeugtechnologie.de">Freundeskreis</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Produktememory" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelProduktememory" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zurück</a>
+				<h1>Produktememory</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelProduktememory">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>Was man braucht</h1>
+						
+					</div>
+					<div data-role="collapsible">
+						<h1>Was man braucht</h1>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Quiz" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelQuiz" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-iconpos="notext" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zurück</a>
+				<h1>Quiz</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelQuiz">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>Was man braucht</h1>
+						
+					</div>
+					<div data-role="collapsible">
+						<h1>Was man braucht</h1>
+						
+					</div>
+				</div>
+			</div>
+		</div> 
+	</body>
+</html>

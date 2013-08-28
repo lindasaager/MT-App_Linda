@@ -1,0 +1,50 @@
+{
+    "1": {
+        "Frage": "Der zurückgelegt Weg eines Objekts ist das Produkt aus der quadrierten Zeit und s = __ t²",
+        "Antwort1": "½ mal der Geschwindigkeit v",
+        "Antwort2": "½ mal der Beschleunigung a",
+        "Antwort3": "seiner Masse m"
+    },
+    "2": {
+        "Frage": "Die Fläche innerhalb eines Kreises ist das Produkt aus dem quadrierten Radius r und A = __ r²",
+        "Antwort1": "der Kreiszahl Pi",
+        "Antwort2": "der Eulersche Zahl e",
+        "Antwort3": "dem Umfang u des Kreises"
+    },
+    "3": {
+        "Frage": "Die Lageenergie (potientelle Energie) eines Objekts ist die Produkt aus seiner Masse, der Höhe, in der er sich befindet und E = m * __ * h",
+        "Antwort1": "der Erdbeschleunigung g",
+        "Antwort2": "seiner Masse m",
+        "Antwort3": "seiner Dichte rho"
+    },
+    "4": {
+        "Frage": "Die Spannung an einem Widerstand R ist das Produkt aus R und U = R * __",
+        "Antwort1": "dem Widerstand R selbst",
+        "Antwort2": "dem Strom I",
+        "Antwort3": "dem Leitwert G"
+    },
+    "5": {
+        "Frage": "Was ergibt das Produkt aus Kondesatorkapazität und Spannung? __ = C * U",
+        "Antwort1": "Ladung Q",
+        "Antwort2": "Strom I",
+        "Antwort3": "Dielektrizitätskonstante eps"
+    },
+    "6": {
+        "Frage": "Was muss mit einem Leiterstück der Länge l passieren, damit auf es die Lorentzkraft F_L wirkt? F_L = __ * l * B",
+        "Antwort1": "Es muss von einem Strom I durchflossen werden",
+        "Antwort2": "Es muss sich mit der Geschwindigkeit v bewegen",
+        "Antwort3": "Es muss den Widerstand R bieten"
+    },
+    "7": {
+        "Frage": "Was muss größer werden, damit das elektrische Feld an einem Kondensator mit der Spannung U kleiner wird? E = U / __",
+        "Antwort1": "Kapazität C",
+        "Antwort2": "Plattenabstand d",
+        "Antwort3": "Dielektrizitätskonstante eps"
+    },
+    "8": {
+        "Frage": "Die Leistung P ist die Arbeit, die P = W / __",
+        "Antwort1": "beim Zurücklegen einer bestimmten Strecke s umgesetzt wird",
+        "Antwort2": "für eine bestimmte Energie E umgesetzt wird",
+        "Antwort3": "in einer bestimmten Zeit t umgesetzt wird"
+    }
+}

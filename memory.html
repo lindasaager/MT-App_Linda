@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Memory</title>
+
+        <link rel="stylesheet"  href="styles/jquery.mobile.structure-1.3.2.min.css" />
+        <link rel="stylesheet"  href="styles/themes/20130807_MT_Theme.min.css" />
+        <link rel="stylesheet"  href="styles/memory.css" />
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/memory.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+		
+		<script type="text/javascript" src="phonegap.js"></script>
+		
+		<!-- Sidepanels ausblenden, falls iOS verwendet wird -->
+		<script type="text/javascript" src="js/sidepanel.js"></script>
+    </head>
+	
+    <body>
+        <!-- Hauptseite -->
+        <div data-role="page" id="home" data-theme="a">
+            
+            <!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelMemory" data-position="right" data-position-fixed="true" data-display="overlay">
+				<a data-role="button" data-theme="b" data-icon="star"    data-transition="flip" id="menu_joker">Joker</a>
+				<a data-role="button" data-theme="b" data-icon="refresh" data-transition="flip" id="menu_restart">Neu starten</a>
+				<a data-role="button" data-theme="b" data-icon="info"    data-transition="flip" href="index.html#Impressum"        rel="external">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search"  data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"    data-transition="flip" href="main.html" rel="external">Hauptmenü</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"    data-rel="close">Menü Schließen</a>
+			</div>
+            
+			
+            <!-- Regeln-Popup -->
+            <div data-role="popup" id="popup_rules" data-theme="a" data-transition='slidedown' class='ui-content' data-dismissible="false">
+                <div data-role="header" ><h1>So geht's</h1></div>
+                <div data-role="content">
+                    <p class="rules">
+                        <i><strong>Finde die passenden Firmenlogos zu den gezeigten Produkten!</strong><br>
+						Vor Spielbeginn werden die Logos von 20 Unternehmen eingeblendet - anschließend werden alle Karten umgedreht und das Spiel beginnt...<strong>bereit?</strong></i>
+                    </p>
+                    <div data-role='button' id='button_ready'>
+                        Na klar!
+                    </div>
+					<div data-role='button' id='button_exit' data-icon="delete" data-iconpos="left">
+                        Spiel verlassen
+                    </div>
+                </div>       
+            </div>
+			
+			
+			<!-- Start-Popup -->
+            <div data-role="popup" id="popup_start" data-theme="a" data-transition='slidedown' class='ui-content' data-dismissible="false">
+                <div data-role="header" ><h1>Los geht's</h1></div>
+                <div data-role="content">
+                    <p class="rules">
+                        <i><strong>Die Logos werden nun eingeblendet - also gut merken!</strong><br>Bei Klick auf den Bildschirm startet das Spiel - sei schnell!</i>
+                    </p>  
+                    <div data-role='button' id='button_ok'>
+                        Ok!
+                    </div>
+                </div>       
+            </div>
+            
+            
+            <!-- Punkte-Popup -->
+            <div data-role="popup" id="popup_points" data-theme="a" data-transition='slidedown' data-dismissible="false">
+                <div data-role="header" ><h1>Punkte</h1></div>
+                <div data-role="content" id="popup-content">
+                <p class="points_text">0</p>
+                </div>                    
+            </div>
+            
+			
+			<!-- Produktbild-Popup -->
+            <div data-role="popup" id="popup_product" data-theme="a" data-transition='slidedown'>
+                <div data-role="header" >
+                    <h1> </h1>
+                    <div  data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></div></div>
+                <div data-role="content">
+                <img class ="product" src="bilder/memory/products/bosch.jpg">
+                </div>                    
+            </div>
+
+			
+            <!-- Spielende-Popup -->            
+            <div data-role="popup" id="popup_end" data-theme="a" data-transition='slidedown' class='ui-content' data-dismissible="false">
+                <div data-role="header" ><h1>Spiel beendet</h1></div>
+                <div data-role="content">
+                    <p style="text-align: center; margin-top: 10px">
+                        <strong>Deine Punktzahl:</strong>
+                    </p>
+                    <p class="points_final" id="points_final"></p>
+                    <div data-role='button' id='button_restart' data-icon="refresh" data-iconpos="left">
+                        Nochmal
+                    </div>					
+                </div>       
+            </div>
+			
+            
+            <!-- Overlay (abdunkeln der Seite) -->
+            <div class="overlay" id="overlay" style="display:none;"></div>
+            
+            <!-- Overlay (durchsichtig, nur aus Programmablauf-Gründen) -->
+            <div class="overlay_transparent" id="overlay_transp" style="display:none;"></div>
+        
+		
+            <div data-role="header" >
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="index.html#Spiele" rel="external">Zurück</a>
+				<h1>Produktememory</h1>
+                <a data-role="button" data-icon="grid" data-transition="slide" class="ui-btn-right" id="button_menu">Menü</a>
+			</div>
+			
+			
+            <div data-role="content">
+                <!--                        Container für die einzelnen Karten-->
+                <div class="cardboard">
+
+                    <div id="card1" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card2" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card3" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card4" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card5" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card6" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card7" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card8" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card9" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card10" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card11" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card12" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card13" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card14" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card15" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card16" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card17" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card18" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card19" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card20" class="container">
+                        <div class="card">
+                            <div class="face front">
+                                <img class="cardimage" src="bilder/memory/hska.jpg"/>
+                            </div>
+                            <div class="face back">
+                                <img class="cardimage" src="bilder/memory/apple.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>    
+        </div>
+
+
+
+
+    </body>
+</html>

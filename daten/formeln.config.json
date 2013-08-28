@@ -1,0 +1,41 @@
+(function($){
+	$.formeln = function(element, options) {
+		var plugin	 = this,
+		    $element = $(element),
+			_element = '#' + $element.attr('id'),
+			
+			defaults = { //Vorgaben
+				checkAntwort: 'Meine Antwort überprüfen',
+				nextFrage:	  'Nächste Frage',
+				backButton:   '',
+				tryAgain:     '',
+				numberDerFragen: null,
+				randomSort:   false,
+				randomSortFragen: false,
+				randomSortAntworten: false,
+			},
+			
+			//Klassennamen
+			countFragenClass			= 'countFragen',
+			FragenClass					= 'Fragen',
+			AntwortClass				= 'Antwort',
+			RueckantwortClass			= 'Rueckantwort',
+			korrektClass				= 'korrektRueckantwort',
+			korrentRueckantwortClass	= 'korrekt',
+			falschRueckantwortClass		= 'falsch',
+			checkAntwortClass			= 'checkAntwort',
+			nextFrageClass				= 'nextFrage',
+			backZuFrageClass			= 'backZuFrage',
+			tryAgainClass				= 'tryAgain',
+			
+
+//Variable setzen
+var quizWerte = (plugin.config.json ? plugin.config.json : typeof quizjson != 'undefiniert' ? quizjson : null);
+
+//Fragen zufällig gestellt bekommen
+var Fragen = plugin.config.randomSort || plugin.config.randomSortFragen ?
+			 quizWerte.Fragen.sort(function() { return (Math.round(Math.random())-0.5); }) :
+			 quizWerte.Fragen;
+
+//zählt die Anzahl der Fragen
+var Fragezaehler = Fragen.length 

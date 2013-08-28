@@ -1,0 +1,93 @@
+{
+    "1": {
+        "FrageA": "Otto von Guericke",
+        "Antwort1A": "Erfinder des Zeichenbretts",
+        "Antwort2A": "Erfinder des Kugelschreibers",
+        "Antwort3A": "Erfinder der Luftpumpe",
+        "Antwort4A": "Erfinder des Flugzeugs"
+    },
+    "2": {
+        "FrageA": "James Watt",
+        "Antwort1A": "Erfinder der Dampfmaschine",
+        "Antwort2A": "Erfinder des Revolvers",
+        "Antwort3A": "Entdecker des Pulvers",
+        "Antwort4A": "Erfinder der Glühbirne"
+    },
+    "3": {
+        "FrageA": "Wilhelm Conrad Röntgen",
+        "Antwort1A": "Physiker",
+        "Antwort2A": "Erfinder des Fotoapparats",
+        "Antwort3A": "Entdecker des Tuberkelvirus",
+        "Antwort4A": "Chemiker"
+    },
+    "4": {
+        "FrageA": "Von der Sonne bis zur Erde braucht Licht …",
+        "Antwort1A": "8 Minuten 13 Sek.",
+        "Antwort2A": "30 Minuten 15 Sek.",
+        "Antwort3A": "1 Stunde 03 Sek.",
+        "Antwort4A": "2 Stunden 14 Sek."
+    },
+    "5": {
+        "FrageA": "Das … ist ein Messinstrument für den Luftdruck.",
+        "Antwort1A": "Barometer",
+        "Antwort2A": "Hygrometer",
+        "Antwort3A": "Thermometer",
+        "Antwort4A": "Spektroskop"
+    },
+    "6": {
+        "FrageA": "Der/das … ist ein Messinstrument für Erdbeben",
+        "Antwort1A": "Seismograph",
+        "Antwort2A": "Manometer",
+        "Antwort3A": "Quadrometer",
+        "Antwort4A": "Tremblograph"
+    },
+    "7": {
+        "FrageA": "Was zeigt der Geigerzähler an?",
+        "Antwort1A": "radioaktive Strahlen",
+        "Antwort2A": "Röntgenstrahlen",
+        "Antwort3A": "Sonnenstrahlen",
+        "Antwort4A": "Wärmestrahlen"
+    },
+    "8": {
+        "FrageA": "Nach welchem Prinzip wird Rohrpost befördert?",
+        "Antwort1A": "mit Druck- oder Saugluft",
+        "Antwort2A": "nach dem Prinzip der schiefen Ebene",
+        "Antwort3A": "mit Flüssigkeit",
+        "Antwort4A": "nach dem Prinzip der Anziehungskraft"
+    },
+    "9": {
+        "FrageA": "Wo findet die Braunsche Röhre ihre Verwendung?",
+        "Antwort1A": "als Fernsehbildröhre",
+        "Antwort2A": "in der Stereoanlage",
+        "Antwort3A": "als Lichtverstärker im Laserapparat",
+        "Antwort4A": "im Röntgenapparat"
+    },
+    "10": {
+        "FrageA": "Was ist ein Ion?",
+        "Antwort1A": "ein elektrisch geladenes Atom oder Molekül",
+        "Antwort2A": "ein Molekül oder ein Atom, das fähig ist, elektrischen Strom zu leiten",
+        "Antwort3A": "die antike Bezeichnung für einen vermuteten „Stromkörper“",
+        "Antwort4A": "die physikalische Maßeinheit für Stromverlust durch Widerstand"
+    },
+    "11": {
+        "FrageA": "Welcher der folgenden Stoffe leitet Wärme am besten?",
+        "Antwort1A": "Metall",
+        "Antwort2A": "Luft",
+        "Antwort3A": "Holz",
+        "Antwort4A": "Glas"
+    },
+    "12": {
+        "FrageA": "Wie lautet die Einheit zur Angabe der elektrischen Stromstärke?",
+        "Antwort1A": "Ampere (A)",
+        "Antwort2A": "Volt (V)",
+        "Antwort3A": "Coulomb (C)",
+        "Antwort4A": "Watt (W)"
+    },
+    "13": {
+        "FrageA": "Welche Funktion hat ein Transformator?",
+        "Antwort1A": "die Umwandelung von niedrigen elektrischen Wechselspannungen in höhere oder umgekehrt",
+        "Antwort2A": "die Überführung von mechanischer Energie (Bewegung) in elektrischen Strom",
+        "Antwort3A": "die Vermeidung von Kurzschlüssen in einem elektrischen System",
+        "Antwort4A": "die Speicherung von elektrischer Energie in Trafospeichern"
+    },
+}
