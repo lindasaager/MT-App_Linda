@@ -1,0 +1,2350 @@
+<!DOCTYPE HTML>
+
+<html>
+	<!-- HEADER -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		
+		<title>Hochschule Karlsruhe - Studiengang Mechatronik</title>
+
+		<!-- Einbindung der Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="styles/jquery.mobile.structure-1.3.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="styles/themes/20130807_MT_Theme.min.css" />
+
+		
+		<!-- Einbindung von jQuery und jQuery mobile -->
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+		
+		<script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="barcodescanner.js"></script>
+		
+		<!-- Einbinden von Javascript --> 
+		<script language="javascript" type="text/javascript" src="script_formeln.js"></script>
+		<script language="javascript" type="text/javascript" src="script_assessment.js"></script>
+		<script language="javascript" type="text/javascript" src="script_auswerten.js"></script>
+		<script language="javascript" type="text/javascript" src="script_auswerten1.js"></script>
+		
+		<!-- Einbinden von JSON -->
+		
+	</head>
+
+	<!-- BODY -->
+		<div data-role="page" data-theme="a" id="Spiele" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Spiele</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+
+			<div data-role="content">
+				<div data-role="controlgroup">
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Formelecke">Formelecke</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Assessment">Assessment</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Werwars">Wer war's?</a>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Produktememory">Produktememory</a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Subtopics -->
+		
+		<div data-role="page" data-theme="a" id="Formelecke" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Formelecke</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<a href="#Frage1" data-role="button" data-inline="true">START</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage1" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 1</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend>Frage 1: <span id="jFrage1"></span><br></legend>
+						<input name="falsch" id="falsch-1a" value="on" type="radio">
+						<label for="falsch-1a"><span id="j1Antwort1"></span><br></label>
+						<input name="richtig1" id="richtig-1b" value="off" type="radio">
+						<label for="richtig-1b"><span id="j1Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-1c" value="other" type="radio">
+						<label for="falsch-1c"><span id="j1Antwort3"></span><br></label>
+					</fieldset>					
+				</form>
+
+				<script>
+					var JSON1={
+						"Frage":"Der zurückgelegt Weg eines Objekts ist das Produkt aus der quadrierten Zeit und s = __ t²",
+						"Antwort1":"½ mal der Beschleunigung a", 
+						"Antwort2":"½ mal der Geschwindigkeit v",
+						"Antwort3":"seiner Masse m"
+					};
+					document.getElementById("jFrage1").innerHTML=JSON1.Frage  
+					document.getElementById("j1Antwort1").innerHTML=JSON1.Antwort1  
+					document.getElementById("j1Antwort2").innerHTML=JSON1.Antwort2  
+					document.getElementById("j1Antwort3").innerHTML=JSON1.Antwort3  
+				</script>
+				<!-- <script type="text/javascript"  src="script_auswerten.js">
+				</script> -->
+				<p>
+					<a href="#Frage2" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage2" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 2</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jFrage2"></span><br></legend>
+						<input name="falsch" id="falsch-2a" value="on" type="radio">
+						<label for="falsch-2a"><span id="j2Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-2b" value="off" type="radio">
+						<label for="falsch-2b"><span id="j2Antwort2"></span><br></label>
+						<input name="richtig1" id="richtig-2c" value="other" type="radio">
+						<label for="richtig-2c"><span id="j2Antwort3"></span><br></label>
+					</fieldset>					
+				</form>
+			<!--	<script>
+					$.getJSON("formeln.json", function(json) {
+					var div_data = json.2[1].Frage;
+					$('#Frage2').append(div_data);
+					});
+					
+					<!-- $.getJSON("formeln1.js", function(json){
+					<!--alert("JSON Data: " + json.1[0].Frage);
+					<!--});
+					
+					$.getJSON("formeln.json", function(json) {
+					var div_data = json.2[1].Antwort1;
+					$('#Antwort1').append(div_data);
+					
+					$.getJSON("formeln.json", function(json) {
+					var div_data = json.2[1].Antwort2;
+					$('#Antwort2').append(div_data);
+					
+					$.getJSON("formeln.json", function(json) {
+					var div_data = json.2[1].Antwort3;
+					$('#Antwort3').append(div_data);
+				</script> -->
+				
+				<script>
+					var JSON2={
+						"Frage":"Die Fläche innerhalb eines Kreises ist das Produkt aus dem quadrierten Radius r und A = __ r²",
+						"Antwort1":"der Eulersche Zahl e", 
+						"Antwort2":"dem Umfang u des Kreises",
+						"Antwort3":"der Kreiszahl Pi"
+					};
+					document.getElementById("jFrage2").innerHTML=JSON2.Frage  
+					document.getElementById("j2Antwort1").innerHTML=JSON2.Antwort1  
+					document.getElementById("j2Antwort2").innerHTML=JSON2.Antwort2  
+					document.getElementById("j2Antwort3").innerHTML=JSON2.Antwort3  
+				</script>
+				<!-- 2. Frage + Antworten -->
+				<p>
+					<a href="#Frage3" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage3" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 3</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jFrage3"></span><br></legend>
+						<input name="falsch" id="falsch-3a" value="on" type="radio">
+						<label for="falsch-3a"><span id="j3Antwort1"></span><br></label>
+						<input name="richtig1" id="richtig-3b" value="off" type="radio">
+						<label for="richtig-3b"><span id="j3Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-3c" value="other" type="radio">
+						<label for="falsch-3c"><span id="j3Antwort3"></span><br></label>
+					</fieldset>					
+				</form>
+				<!-- um Arrays an den Server zu senden
+				<script type="text/javascript">
+					$.getJSON('formeln.json',null,function(json){			
+						$.each(json,function(i,fa){
+							alert(json[2].Frage, json[2].Antwort1, json[2].Antwort2, json[2].Antwort.3)
+						});
+					});
+				document.getElementById("jFrage1").innerHTML=JSON1.Frage  
+				document.getElementById("jAntwort1").innerHTML=JSON1.Antwort1  
+				document.getElementById("jAntwort2").innerHTML=JSON1.Antwort2  
+				document.getElementById("jAntwort3").innerHTML=JSON1.Antwort3
+				</script> -->
+				<script>
+					var JSON3={
+						"Frage":"Die Lageenergie (potientelle Energie) eines Objekts ist die Produkt aus seiner Masse, der Höhe, in der er sich befindet und	E = m * __ * h",
+						"Antwort1":"seiner Dichte rho", 
+						"Antwort2":"der Erdbeschleunigung g",
+						"Antwort3":"seiner Masse m"
+					};
+					document.getElementById("jFrage3").innerHTML=JSON3.Frage  
+					document.getElementById("j3Antwort1").innerHTML=JSON3.Antwort1  
+					document.getElementById("j3Antwort2").innerHTML=JSON3.Antwort2  
+					document.getElementById("j3Antwort3").innerHTML=JSON3.Antwort3  
+				</script>
+				<!--<script type="text/javascript"  src="script_auswerten1.js">
+				</script>
+				<!-- 3. Frage + Antworten -->
+				<p>
+					<a href="#Frage4" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage4" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 4</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jFrage4"></span><br></legend>
+						<input name="richtig1" id="richtig-4a" value="on" type="radio">
+						<label for="richtig-4a"><span id="j4Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-4b" value="off" type="radio">
+						<label for="falsch-4b"><span id="j4Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-4c" value="other" type="radio">
+						<label for="falsch-4c"><span id="j4Antwort3"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON4={
+						"Frage":"Die Spannung an einem Widerstand R ist das Produkt aus R und	U = R * __",
+						"Antwort1":"dem Widerstand R selbst", 
+						"Antwort2":"dem Strom I",
+						"Antwort3":"dem Leitwert G"
+					};
+					document.getElementById("jFrage4").innerHTML=JSON4.Frage  
+					document.getElementById("j4Antwort1").innerHTML=JSON4.Antwort1  
+					document.getElementById("j4Antwort2").innerHTML=JSON4.Antwort2  
+					document.getElementById("j4Antwort3").innerHTML=JSON4.Antwort3  
+				</script>
+				<!-- 4. Frage + Antworten -->
+				<p>
+					<a href="#Frage5" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage5" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 5</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jFrage5"></span><br></legend>
+						<input name="richtig1" id="richtig-5a" value="on" type="radio">
+						<label for="richtig-5a"><span id="j5Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-5b" value="off" type="radio">
+						<label for="falsch-5b"><span id="j5Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-5c" value="other" type="radio">
+						<label for="falsch-5c"><span id="j5Antwort3"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON5={
+						"Frage":"Was ergibt das Produkt aus Kondesatorkapazität und Spannung?	__ = C * U",
+						"Antwort1":"Ladung Q", 
+						"Antwort2":"Strom I",
+						"Antwort3":"Dielektrizitätskonstante eps"
+					};
+					document.getElementById("jFrage5").innerHTML=JSON5.Frage  
+					document.getElementById("j5Antwort1").innerHTML=JSON5.Antwort1  
+					document.getElementById("j5Antwort2").innerHTML=JSON5.Antwort2  
+					document.getElementById("j5Antwort3").innerHTML=JSON5.Antwort3  
+				</script>
+				<!-- 5. Frage + Antworten -->
+				<p>
+					<a href="#Frage6" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage6" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 6</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jFrage6"></span><br></legend>
+						<input name="falsch" id="falsch-6a" value="on" type="radio">
+						<label for="falsch-6a"><span id="j6Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-6b" value="off" type="radio">
+						<label for="falsch-6b"><span id="j6Antwort2"></span><br></label>
+						<input name="richtig1" id="richtig-6c" value="other" type="radio">
+						<label for="richtig-6c"><span id="j6Antwort3"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON6={
+						"Frage":"Was muss mit einem Leiterstück der Länge l passieren, damit auf es die Lorentzkraft F_L wirkt?	F_L = __ * l * B",
+						"Antwort1":"Es muss sich mit der Geschwindigkeit v bewegen", 
+						"Antwort2":"Es muss den Widerstand R bieten",
+						"Antwort3":"Es muss von einem Strom I durchflossen werden"
+					};
+					document.getElementById("jFrage6").innerHTML=JSON6.Frage  
+					document.getElementById("j6Antwort1").innerHTML=JSON6.Antwort1  
+					document.getElementById("j6Antwort2").innerHTML=JSON6.Antwort2  
+					document.getElementById("j6Antwort3").innerHTML=JSON6.Antwort3  
+				</script>
+				<!-- 6. Frage + Antworten -->
+				<p>
+					<a href="#Frage7" data-role="button" data-inline="true" id="f7">WEITER</a>
+					<a href="#Frage1" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage7" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 7</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jFrage7"></span><br></legend>
+						<input name="falsch" id="falsch-7a" value="on" type="radio">
+						<label for="falsch-7a"><span id="j7Antwort1"></span><br></label>
+						<input name="richtig1" id="richtig-7b" value="off" type="radio">
+						<label for="richtig-7b"><span id="j7Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-7c" value="other" type="radio">
+						<label for="falsch-7c"><span id="j7Antwort3"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON7={
+						"Frage":"Was muss größer werden, damit das elektrische Feld an einem Kondensator mit der Spannung U kleiner wird?	E = U / __",
+						"Antwort1":"Plattenabstand d", 
+						"Antwort2":"Kapazität C",
+						"Antwort3":"Dielektrizitätskonstante eps"
+					};
+					document.getElementById("jFrage7").innerHTML=JSON7.Frage  
+					document.getElementById("j7Antwort1").innerHTML=JSON7.Antwort1  
+					document.getElementById("j7Antwort2").innerHTML=JSON7.Antwort2  
+					document.getElementById("j7Antwort3").innerHTML=JSON7.Antwort3  
+				</script>
+				<!-- 7. Frage + Antworten -->
+				<p>
+					<a href="#Frage8" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage8" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 8</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jFrage8"></span><br></legend>
+						<input name="falsch" id="falsch-8a" value="on" type="radio">
+						<label for="falsch-8a"><span id="j8Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-8b" value="off" type="radio">
+						<label for="falsch-8b"><span id="j8Antwort2"></span><br></label>
+						<input name="richtig1" id="richtig-8c" value="other" type="radio">
+						<label for="richtig-8c"><span id="j8Antwort3"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON8={
+						"Frage":"Die Leistung P ist die Arbeit, die	P = W / __",
+						"Antwort1":"für eine bestimmte Energie E umgesetzt wird", 
+						"Antwort2":"in einer bestimmten Zeit t umgesetzt wird",
+						"Antwort3":"beim Zurücklegen einer bestimmten Strecke s umgesetzt wird"
+					};
+					document.getElementById("jFrage8").innerHTML=JSON8.Frage  
+					document.getElementById("j8Antwort1").innerHTML=JSON8.Antwort1  
+					document.getElementById("j8Antwort2").innerHTML=JSON8.Antwort2  
+					document.getElementById("j8Antwort3").innerHTML=JSON8.Antwort3  
+				</script>
+				<!-- 8. Frage + Antworten -->
+				<p>
+					<a href="#Frage1" data-role="button" data-inline="true">Start</a>
+					<!--<a href="#" data-role="button" data-inline="true" data-icon="home" value="Auswerten!" onclick="auswerten()">AUSWERTEN</a>
+					<div id="ausgabe">&nbsp;</div>-->
+					<a href="#ausgabe" data-rel="popup" data-role="button" data-inline="true" data-transition="pop" data-icon="home" value="Auswerten!" onclick="auswerten()">AUSWERTEN</a>
+					<div data-role="popup" id="ausgabe"><p>&nbsp;</p>
+					</div>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Assessment" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Assessment</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<a href="#Frage1A" data-role="button" data-inline="true">START</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage1A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 1</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage1"></span><br></legend>
+						<input name="falsch" id="falsch-1a" value="on" type="radio">
+						<label for="falsch-1a"><span id="jA1Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-1b" value="off" type="radio">
+						<label for="falsch-1b"><span id="jA1Antwort2"></span><br></label>
+						<input name="richtig" id="richtig-1c" value="other" type="radio">
+						<label for="richtig-1c"><span id="jA1Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-14" value="other" type="radio">
+						<label for="falsch-1d"><span id="jA1Antwort4"></span><br></label>
+					</fieldset>					
+				</form>	
+				<script>
+					var JSON1A={
+						"Frage":"Otto von Guericke",
+						"Antwort1":"Erfinder der Luftpumpe", 
+						"Antwort2":"Erfinder des Kugelschreibers",
+						"Antwort3":"Erfinder des Zeichenbretts",
+						"Antwort4":"Erfinder des Flugzeugs"
+					};
+					document.getElementById("jAFrage1").innerHTML=JSON1A.Frage  
+					document.getElementById("jA1Antwort1").innerHTML=JSON1A.Antwort1  
+					document.getElementById("jA1Antwort2").innerHTML=JSON1A.Antwort2  
+					document.getElementById("jA1Antwort3").innerHTML=JSON1A.Antwort3
+					document.getElementById("jA1Antwort4").innerHTML=JSON1A.Antwort4
+				</script>
+					<!-- 1.Frage aus Assessment -->
+					<!-- getJSON -->
+				<p>	
+					<a href="#Frage2A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage2A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 2</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage2"></span><br></legend>
+						<input name="richtig" id="richtig-2a" value="on" type="radio">
+						<label for="richtig-2a"><span id="jA2Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-2b" value="off" type="radio">
+						<label for="falsch-2b"><span id="jA2Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-2c" value="other" type="radio">
+						<label for="falsch-2c"><span id="jA2Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-2d" value="other" type="radio">
+						<label for="falsch-2d"><span id="jA2Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON2A={
+						"Frage":"James Watt",
+						"Antwort1":"Erfinder der Dampfmaschine", 
+						"Antwort2":"Erfinder des Revolvers",
+						"Antwort3":"Entdecker des Pulvers",
+						"Antwort4":"Erfinder der Glühbirne"
+					};
+					document.getElementById("jAFrage2").innerHTML=JSON2A.Frage  
+					document.getElementById("jA2Antwort1").innerHTML=JSON2A.Antwort1  
+					document.getElementById("jA2Antwort2").innerHTML=JSON2A.Antwort2  
+					document.getElementById("jA2Antwort3").innerHTML=JSON2A.Antwort3
+					document.getElementById("jA2Antwort4").innerHTML=JSON2A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage3A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage3A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 3</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage3"></span><br></legend>
+						<input name="falsch" id="falsch-3a" value="on" type="radio">
+						<label for="falsch-3a"><span id="jA3Antwort1"></span><br></label>
+						<input name="richtig" id="richtig-3b" value="off" type="radio">
+						<label for="richtig-3b"><span id="jA3Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-3c" value="other" type="radio">
+						<label for="falsch-3c"><span id="jA3Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-3d" value="other" type="radio">
+						<label for="falsch-3d"><span id="jA3Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON3A={
+						"Frage":"Wilhelm Conrad Röntgen",
+						"Antwort1":"Erfinder des Fotoapparats", 
+						"Antwort2":"Physiker",
+						"Antwort3":"Entdecker des Tuberkelvirus",
+						"Antwort4":"Chemiker"
+					};
+					document.getElementById("jAFrage3").innerHTML=JSON3A.Frage  
+					document.getElementById("jA3Antwort1").innerHTML=JSON3A.Antwort1  
+					document.getElementById("jA3Antwort2").innerHTML=JSON3A.Antwort2  
+					document.getElementById("jA3Antwort3").innerHTML=JSON3A.Antwort3
+					document.getElementById("jA3Antwort4").innerHTML=JSON3A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage4A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage4A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 4</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage4"></span><br></legend>
+						<input name="falsch" id="falsch-4a" value="on" type="radio">
+						<label for="falsch-4a"><span id="jA4Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-4b" value="off" type="radio">
+						<label for="falsch-4b"><span id="jA4Antwort2"></span><br></label>
+						<input name="richtig" id="richtig-4c" value="other" type="radio">
+						<label for="richtig-4c"><span id="jA4Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-4d" value="other" type="radio">
+						<label for="falsch-4d"><span id="jA4Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON4A={
+						"Frage":"Von der Sonne bis zur Erde braucht Licht …",
+						"Antwort1":"1 Stunde 03 Sek.", 
+						"Antwort2":"30 Minuten 15 Sek.",
+						"Antwort3":"8 Minuten 13 Sek.",
+						"Antwort4":"2 Stunden 14 Sek."
+					};
+					document.getElementById("jAFrage4").innerHTML=JSON4A.Frage  
+					document.getElementById("jA4Antwort1").innerHTML=JSON4A.Antwort1  
+					document.getElementById("jA4Antwort2").innerHTML=JSON4A.Antwort2  
+					document.getElementById("jA4Antwort3").innerHTML=JSON4A.Antwort3
+					document.getElementById("jA4Antwort4").innerHTML=JSON4A.Antwort4
+				</script>
+				<p>
+					<!-- 4.Frage aus Assessment -->
+					<!-- getJSON -->
+					<a href="#Frage5A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage5A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 5</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage5"></span><br></legend>
+						<input name="falsch" id="falsch-5a" value="on" type="radio">
+						<label for="falsch-5a"><span id="jA5Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-5b" value="off" type="radio">
+						<label for="falsch-5b"><span id="jA5Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-5c" value="other" type="radio">
+						<label for="falsch-5c"><span id="jA5Antwort3"></span><br></label>
+						<input name="richtig" id="richtig-5d" value="other" type="radio">
+						<label for="richtig-5d"><span id="jA5Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON5A={
+						"Frage":"Das … ist ein Messinstrument für den Luftdruck.",
+						"Antwort1":"Spektroskop", 
+						"Antwort2":"Hygrometer",
+						"Antwort3":"Thermometer",
+						"Antwort4":"Barometer"
+					};
+					document.getElementById("jAFrage5").innerHTML=JSON5A.Frage  
+					document.getElementById("jA5Antwort1").innerHTML=JSON5A.Antwort1  
+					document.getElementById("jA5Antwort2").innerHTML=JSON5A.Antwort2  
+					document.getElementById("jA5Antwort3").innerHTML=JSON5A.Antwort3
+					document.getElementById("jA5Antwort4").innerHTML=JSON5A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage6A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage6A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 6</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage6"></span><br></legend>
+						<input name="richtig" id="richtig-6a" value="on" type="radio">
+						<label for="richtig-6a"><span id="jA6Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-6b" value="off" type="radio">
+						<label for="falsch-6b"><span id="jA6Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-6c" value="other" type="radio">
+						<label for="falsch-6c"><span id="jA6Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-6d" value="other" type="radio">
+						<label for="falsch-6d"><span id="jA6Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON6A={
+						"Frage":"Der/das … ist ein Messinstrument für Erdbeben",
+						"Antwort1":"Seismograph", 
+						"Antwort2":"Manometer",
+						"Antwort3":"Quadrometer",
+						"Antwort4":"Tremblograph"
+					};
+					document.getElementById("jAFrage6").innerHTML=JSON6A.Frage  
+					document.getElementById("jA6Antwort1").innerHTML=JSON6A.Antwort1  
+					document.getElementById("jA6Antwort2").innerHTML=JSON6A.Antwort2  
+					document.getElementById("jA6Antwort3").innerHTML=JSON6A.Antwort3
+					document.getElementById("jA6Antwort4").innerHTML=JSON6A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage7A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage7A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 7</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage7"></span><br></legend>
+						<input name="falsch" id="falsch-7a" value="on" type="radio">
+						<label for="falsch-7a"><span id="jA7Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-7b" value="off" type="radio">
+						<label for="falsch-7b"><span id="jA7Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-7c" value="other" type="radio">
+						<label for="falsch-7c"><span id="jA7Antwort3"></span><br></label>
+						<input name="richtig" id="richtig-7d" value="other" type="radio">
+						<label for="richtig-7d"><span id="jA7Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON7A={
+						"Frage":"Was zeigt der Geigerzähler an?",
+						"Antwort1":"Wärmestrahlen", 
+						"Antwort2":"Röntgenstrahlen",
+						"Antwort3":"Sonnenstrahlen",
+						"Antwort4":"radioaktive Strahlen"
+					};
+					document.getElementById("jAFrage7").innerHTML=JSON7A.Frage  
+					document.getElementById("jA7Antwort1").innerHTML=JSON7A.Antwort1  
+					document.getElementById("jA7Antwort2").innerHTML=JSON7A.Antwort2  
+					document.getElementById("jA7Antwort3").innerHTML=JSON7A.Antwort3
+					document.getElementById("jA7Antwort4").innerHTML=JSON7A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage8A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage8A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 8</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage8"></span><br></legend>
+						<input name="falsch" id="falsch-8a" value="on" type="radio">
+						<label for="falsch-8a"><span id="jA8Antwort1"></span><br></label>
+						<input name="richtig" id="richtig-8b" value="off" type="radio">
+						<label for="richtig-8b"><span id="jA8Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-8c" value="other" type="radio">
+						<label for="falsch-8c"><span id="jA8Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-8d" value="other" type="radio">
+						<label for="falsch-8d"><span id="jA8Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON8A={
+						"Frage":"Nach welchem Prinzip wird Rohrpost befördert?",
+						"Antwort1":"nach dem Prinzip der schiefen Ebene", 
+						"Antwort2":"mit Druck- oder Saugluft",
+						"Antwort3":"mit Flüssigkeit",
+						"Antwort4":"nach dem Prinzip der Anziehungskraft"
+					};
+					document.getElementById("jAFrage8").innerHTML=JSON8A.Frage  
+					document.getElementById("jA8Antwort1").innerHTML=JSON8A.Antwort1  
+					document.getElementById("jA8Antwort2").innerHTML=JSON8A.Antwort2  
+					document.getElementById("jA8Antwort3").innerHTML=JSON8A.Antwort3
+					document.getElementById("jA8Antwort4").innerHTML=JSON8A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage9A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage9A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 9</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage9"></span><br></legend>
+						<input name="richtig" id="richtig-9a" value="on" type="radio">
+						<label for="richtig-9a"><span id="jA9Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-9b" value="off" type="radio">
+						<label for="falsch-9b"><span id="jA9Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-9c" value="other" type="radio">
+						<label for="falsch-9c"><span id="jA9Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-9d" value="other" type="radio">
+						<label for="falsch-9d"><span id="jA9Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON9A={
+						"Frage":"Wo findet die Braunsche Röhre ihre Verwendung?",
+						"Antwort1":"als Fernsehbildröhre", 
+						"Antwort2":"in der Stereoanlage",
+						"Antwort3":"als Lichtverstärker im Laserapparat",
+						"Antwort4":"im Röntgenapparat"
+					};
+					document.getElementById("jAFrage9").innerHTML=JSON9A.Frage  
+					document.getElementById("jA9Antwort1").innerHTML=JSON9A.Antwort1  
+					document.getElementById("jA9Antwort2").innerHTML=JSON9A.Antwort2  
+					document.getElementById("jA9Antwort3").innerHTML=JSON9A.Antwort3
+					document.getElementById("jA9Antwort4").innerHTML=JSON9A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage10A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage10A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 10</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage10"></span><br></legend>
+						<input name="falsch" id="falsch-10a" value="on" type="radio">
+						<label for="falsch-10a"><span id="jA10Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-10b" value="off" type="radio">
+						<label for="falsch-10b"><span id="jA10Antwort2"></span><br></label>
+						<input name="richtig" id="richtig-10c" value="other" type="radio">
+						<label for="richtig-10c"><span id="jA10Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-10d" value="other" type="radio">
+						<label for="falsch-10d"><span id="jA10Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON10A={
+						"Frage":"Was ist ein Ion?",
+						"Antwort1":"die antike Bezeichnung für einen vermuteten „Stromkörper“", 
+						"Antwort2":"ein Molekül oder ein Atom, das fähig ist, elektrischen Strom zu leiten",
+						"Antwort3":"ein elektrisch geladenes Atom oder Molekül",
+						"Antwort4":"die physikalische Maßeinheit für Stromverlust durch Widerstand"
+					};
+					document.getElementById("jAFrage10").innerHTML=JSON10A.Frage  
+					document.getElementById("jA10Antwort1").innerHTML=JSON10A.Antwort1  
+					document.getElementById("jA10Antwort2").innerHTML=JSON10A.Antwort2  
+					document.getElementById("jA10Antwort3").innerHTML=JSON10A.Antwort3
+					document.getElementById("jA10Antwort4").innerHTML=JSON10A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage11A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage11A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 11</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage11"></span><br></legend>
+						<input name="falsch" id="falsch-11a" value="on" type="radio">
+						<label for="falsch-11a"><span id="jA11Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-11b" value="off" type="radio">
+						<label for="falsch-11b"><span id="jA11Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-11c" value="other" type="radio">
+						<label for="falsch-11c"><span id="jA11Antwort3"></span><br></label>
+						<input name="richtig" id="richtig-11d" value="other" type="radio">
+						<label for="richtig-11d"><span id="jA11Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON11A={
+						"Frage":"Welcher der folgenden Stoffe leitet Wärme am besten?",
+						"Antwort1":"Glas", 
+						"Antwort2":"Luft",
+						"Antwort3":"Holz",
+						"Antwort4":"Metall"
+					};
+					document.getElementById("jAFrage11").innerHTML=JSON11A.Frage  
+					document.getElementById("jA11Antwort1").innerHTML=JSON11A.Antwort1  
+					document.getElementById("jA11Antwort2").innerHTML=JSON11A.Antwort2  
+					document.getElementById("jA11Antwort3").innerHTML=JSON11A.Antwort3
+					document.getElementById("jA11Antwort4").innerHTML=JSON11A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage12A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage12A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 12</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage12"></span><br></legend>
+						<input name="falsch" id="falsch-12a" value="on" type="radio">
+						<label for="falsch-12a"><span id="jA12Antwort1"></span><br></label>
+						<input name="richtig" id="richtig-12b" value="off" type="radio">
+						<label for="richtig1-12b"><span id="jA12Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-12c" value="other" type="radio">
+						<label for="falsch-12c"><span id="jA12Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-12d" value="other" type="radio">
+						<label for="falsch-12d"><span id="jA12Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON12A={
+						"Frage":"Wie lautet die Einheit zur Angabe der elektrischen Stromstärke?",
+						"Antwort1":"Volt (V)", 
+						"Antwort2":"Ampere (A)",
+						"Antwort3":"Coulomb (C)",
+						"Antwort4":"Watt (W)"
+					};
+					document.getElementById("jAFrage12").innerHTML=JSON12A.Frage  
+					document.getElementById("jA12Antwort1").innerHTML=JSON12A.Antwort1  
+					document.getElementById("jA12Antwort2").innerHTML=JSON12A.Antwort2  
+					document.getElementById("jA12Antwort3").innerHTML=JSON12A.Antwort3
+					document.getElementById("jA12Antwort4").innerHTML=JSON12A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage13A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage13A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 13</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage13"></span><br></legend>
+						<input name="richtig" id="richtig-13a" value="on" type="radio">
+						<label for="richtig-13a"><span id="jA13Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-1b" value="off" type="radio">
+						<label for="falsch-13b"><span id="jA13Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-1c" value="other" type="radio">
+						<label for="falsch-13c"><span id="jA13Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-1d" value="other" type="radio">
+						<label for="falsch-13d"><span id="jA13Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON13A={
+						"Frage":"Welche Funktion hat ein Transformator?",
+						"Antwort1":"die Umwandelung von niedrigen elektrischen Wechselspannungen in höhere oder umgekehrt", 
+						"Antwort2":"die Überführung von mechanischer Energie (Bewegung) in elektrischen Strom",
+						"Antwort3":"die Vermeidung von Kurzschlüssen in einem elektrischen System",
+						"Antwort4":"die Speicherung von elektrischer Energie in Trafospeichern"
+					};
+					document.getElementById("jAFrage13").innerHTML=JSON13A.Frage  
+					document.getElementById("jA13Antwort1").innerHTML=JSON13A.Antwort1  
+					document.getElementById("jA13Antwort2").innerHTML=JSON13A.Antwort2  
+					document.getElementById("jA13Antwort3").innerHTML=JSON13A.Antwort3
+					document.getElementById("jA13Antwort4").innerHTML=JSON13A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+					<!--<a href="#" data-role="button" data-inline="true" data-icon="home" value="Auswerten!" onclick="auswerten()">AUSWERTEN</a>
+					<div id="ausgabe1">&nbsp;</div> -->
+				
+					<a href="#ausgabe1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop" data-icon="home" value="Auswerten!" onclick="auswerten()">AUSWERTEN</a>
+					<div data-role="popup" id="ausgabe1"><p>&nbsp;</p>
+					</div>
+				</p>
+			</div>
+		</div>
+			
+		<div data-role="page" data-theme="a" id="Werwars" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Wer war's</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Wer war's</a>
+					<a href="#Bilderraten" data-role="button" data-inline="true">Bilderraten</a>
+				</p>
+			</div>
+		</div>	
+		
+		<div data-role="page" data-theme="a" id="Werwars(Quiz)" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Wer war's - Quiz</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<a href="#Frage1Q" data-role="button" data-inline="true">START</a>
+				</p>
+			</div>
+		</div>	
+		
+		<div data-role="page" data-theme="a" id="Bilderraten" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Bilderraten</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<a href="#Frage1B" data-role="button" data-inline="true">START</a>
+				</p>
+			</div>
+		</div>	
+		
+		<div data-role="page" data-theme="a" id="Frage1Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 1</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wer gilt als der Erfinder des Telefons?</legend>
+					<a href="#jW1Antwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alexander Graham Bell</a>
+					<div data-role="popup" id="jW1Antwort1">
+						<p></p>
+					</div>
+					<a href="#jW1Antwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
+					<div data-role="popup" id="jW1Antwort2">
+						<p></p>
+					</div><a href="#jW1Antwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nicola Tesla</a>
+					<div data-role="popup" id="jW1Antwort3">
+						<p></p>
+					</div><a href="#jW1Antwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">James Clerk Maxwell</a>
+					<div data-role="popup" id="jW1Antwort4">
+						<p></p>
+					</div>
+					<script>
+					var JSON1W={
+						"Antwort1":"Obwohl sein Telefon weder das erste, noch funktionstüchtig war,  reichte Bell als erster ein Patent für das Telefon ein, und wird somit meist als Erfinder des Telefons bezeichnet.", 
+						"Antwort2":"Leider falsch – probier‘s nochmal!",
+						"Antwort3":"Leider falsch – probier‘s nochmal!",
+						"Antwort4":"Leider falsch – probier‘s nochmal!"
+					};  
+					document.getElementById("jW1Antwort1").innerHTML=JSON1W.Antwort1  
+					document.getElementById("jW1Antwort2").innerHTML=JSON1W.Antwort2  
+					document.getElementById("jW1Antwort3").innerHTML=JSON1W.Antwort3
+					document.getElementById("jW1Antwort4").innerHTML=JSON1W.Antwort4
+				</script>
+					<!-- 1.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage2Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage2Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 2</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wer gründete zusammen mit Bill Gates den mittlerweile weltgrößten Softwarekonzern?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Paul Allen</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Zusammen mit Bill Gates, den er auf einer Privatschule kennengelernt hatte, gründete Paul Allen im Jahre 1975 Microsoft, den weltweit größten Softwarekonzern.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Dietmar Hopp</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Jobs</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Larry Page</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+		
+					<a href="#Frage3Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage3Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 3</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wie heißt der Stuttgarter Ingenieur, der 1887 die größte deutsche GmbH gründete?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Robert Bosch</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Das Unternehmen Robert Bosch GmbH mit Firmensitz in Gerlingen bei Stuttgart ist die größte GmbH Deutschlands, das heißt, dass keine Anteile der Firma an Börsen gehandelt werden.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Werner von Siemens</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">August Thyssen</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gottlieb Daimler</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 3.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage4Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage4Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 4</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wer gilt als der Erfinder der Glühbirne?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Thomas Alva Edison</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Thomas Edison war es, der 1879 die Kohlefadenglühlampe erfand und es damit ermöglichte, auf einfache Weise elektrische Energie nutzbar zu machen. Insgesamt machte Edison über 2.000 Erfindungen, darunter der elektrische Stuhl, der Kleinbildfilm und der Phonograph.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alfred Wendel</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Joseph von Wolfram</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 4.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage5Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage5Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 5</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wer erhielt 1905 für die Erklärung des photoelektrischen Effektes den Nobelpreis für Physik?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Albert Einstein</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Albert Einstein erhielt den Nobelpreis tatsächlich nicht für die Formulierung der Relativitätstheorie, sondern für die Erklärung des photoelektrischen Effekts, der unter anderem die Grundlage für die Funktion von Solarzellen bildet.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Sir Isaac Newton</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Wilhelm Conrad Röntgen</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Erwin Schrödinger</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 5.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage6Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage6Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 6</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wer ließ sich eine freischwebende, gläserne Treppe patentieren?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Jobs</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Steve Jobs, bekannt geworden durch die erfolgreiche Leitung des Unternehmens Apple, ließ sich unter anderem das Design des futuristischen Glaswürfels patentieren, der den Apple Store an der Fifth Avenue in New York beherbergt.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alfred Krupp</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gustave Eiffel</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Enzo Ferrari</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 6.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage7Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage7Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 7</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Nach welchem Deutschen Erfinder ist ein noch heute häufig im Automobil eingesetzter Motorentyp benannt?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nicolaus August Otto</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Der Ottomotor ist ein zu Ehren von Nicolaus Otto benannter Verbrennungsmotor, der im Gegensatz zum Dieselmotor mittels Zündkerzen gezündet werden muss.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Benz</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Hugo von Brenner</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Robert Stirling</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 7.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage8Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage8Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 8</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wie hieß die Ehefrau eines berühmten Erfinders, die 1888 mit einem Automobil eine Strecke von 106 Kilometern zurücklegte?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Bertha Benz</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Bertha Benz fuhr im Jahre 1888 von Mannheim nach Pforzheim, um zu beweisen, dass das von Ihrem Mann konstruierte Automobil voll funktionstüchtig war.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Anna Bosch</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Louise Porsche</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Clara Jane Ford</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 8.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage9Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage9Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 9</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Was erhielt Michael Rotert als erster 1984 in Karlsruhe?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">eine E-Mail</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Michael Rotert, Honorarprofessor an der Fakultät für Informatik und Wirtschaftsinformatik der Hochschule Karlsruhe, war der erste Mensch, der je eine E-Mail erhielt. </p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">eine computertomographische Untersuchung (CT)</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">den Nobelpreis für Mechatronik</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">einen Anruf von US-Präsident Ronald Reagan</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 9.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage10Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage10Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 10</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wie heißt der Erfinder des ersten funktionsfähigen Digitalrechners der Welt?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Konrad Zuse</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Den ersten Digitalrechner, den Zuse Z3, konstruierte der Deutsche Konrad Zuse im Jahre 1941 in Berlin. Ein funktionierender Nachbau steht seit 1962 im Deutschen Museum München.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Bill Gates</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Tashado Atari</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">William Texas-Instruments</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 10.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage11Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage11Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 1</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wer bewies in Karlsruhe die Existenz der elektromagnetischen Welle?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Heinrich Hertz</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Im Jahre 1886 bewies Heinrich Hertz, der als Professor an der Technischen Hochschule Karlsruhe arbeitete, die Existenz der elektromagnetischen Welle, was kurz darauf die Erfindung der drahtlosen Telegrafie und des Radios ermöglichte.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Albert Einstein</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Wilhelm Conrad Röntgen</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Johann Gottfried Tulla</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 11.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage12Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage12Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 12</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wie heißt der Karlsruher Erfinder, der den Vorläufer des heutigen Fahrrads entwickelte?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Karl Drais</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Mit seinem als Draisine bekannten Laufrad bildete Karl Freiherr von Drais 1817 den Grundstein für ein heute millionenfach genutztes Fortbewegungsmittel.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich Gauß</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Benz</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 12.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage13Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage13Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 13</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Welche zwei Brüder entwickelten das erste motorgetriebene Flugzeug?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Wilbur und Orville Wright</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Die US-amerikanischen Brüder Wright waren 1903 die ersten, die mit ihrem selbstgebauten motorisierten Flugzeug eine Strecke von 260 Metern flogen.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Jacob und Wilhelm Grimm</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Joseph Michel und Jacques Etienne Montgolfière</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Martin und Simon Fourcade</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 13.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage14Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage14Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 14</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wer erhielt für ihre Forschungen im Bereich der Radioaktivität als erste Frau den Nobelpreis für Physik?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Marie Curie</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Zusammen mit Antoine Henri Becquerel und ihrem Mann Pierre erhielt Marie Curie 1903 für die Erforschung der Radioaktivität den Physik-Nobelpreis und 1911 für die Entdeckung der Elemente Polonium und Radium den Chemie-Nobelpreis.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Maria Montessori</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Lise Meitner</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Margaret Thatcher</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 14.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage15Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage15Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 15</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Welches Universalgenie ist neben seinen Flugmaschinen und vielen anderen Erfindungen vor allem für das Bild einer Frau bekannt?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Leonardo da Vinci</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Leonardo da Vinci war nicht nur Maler und Philosoph, sondern auch Architekt und Ingenieur. Er entwickelte bereits vor 500 Jahren Fluggeräte und Automobile, die ihrer Zeit weit voraus waren.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Galileo Galilei</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Vincent van Gogh</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michelangelo Buonarroti</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 15.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage16Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage16Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 16</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Wer ermöglichte mit der Entwicklung eines nach ihm benannten Verfahrens die Erfindung des Kühlschranks?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl von Linde</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Das Linde-Verfahren ist eine 1895 von Carl von Linde erfundene Methode, die das verflüssigen von Gasen ermöglicht, und das Grundprinzip eines jeden Kühlschranks bildet.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich von Siemens</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Miele</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich Gauß</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 16.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage17Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage17Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 17</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Welcher bekannte Ingenieur perfektionierte die Fließbandfertigung von Automobilen?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Henry Ford</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Mit der Umsetzung der Fließbandarbeit in der Automobilindustrie konnte Henry Ford bereits 1908 seinen Ford T mit sehr hohen Stückzahlen produzieren.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Sakichi Toyota</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Antonio Fiat</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Ferdinand Porsche</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 17.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage18Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage18Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 18</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Welcher italienische Erfinder entwickelte die Batterie?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alessandro Volta</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Alessandro Volta baute die erste Batterie, genannt Volta‘sche Säule, die mit Hilfe von aufeinandergeschichteten Kupfer- und Zinkplatten elektrischen Strom liefern konnte.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">André-Marie Ampère</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nikola Tesla</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Francesco Alkaline</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 18.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage19Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage19Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 19</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Nach welchem Multitalent sind unter anderem ein neues Satellitennavigationssystem und ein Fernrohr benannt?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Galileo Galilei</a>
+					<div data-role="popup" id="popupBasic">
+						<p align="justify">Das Satellitennavigationssystem der EU, Galileo, soll ab 2014 voll funktionsfähig sein. Benannt wurde es nach dem Astronomen Galileo Galilei, der unter anderem das Teleskop weiterentwickelte und zur Beobachtung von Himmelkörpern einsetzte.</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Tom Tomson
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Johannes Kepler</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gustav P. Sloterdijk</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 19.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Frage20Q" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage20Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 20</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<legend align="justify">Was erfand Karl Ferdinand Braun 1897 in Karlsruhe?</legend>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">die Braun'sche Röhre</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Richtig!</p>
+					</div>
+					<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">den ersten elektrisch betriebenen Rasierapparat</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">die Braunüle</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div><a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">die erste funktionstüchtige Langstreckenrakete</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Leider falsch – probier‘s nochmal!</p>
+					</div>
+					<!-- 20.Frage aus Wer war'S -->
+					<!-- getJSON -->
+					<a href="#Werwars(Quiz)" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Bilderraten" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Wer war's Bilderraten</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<a href="#Frage1B" data-role="button" data-inline="true">START</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage1B" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Bild 1</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<img src="Bilder/Carl_Friedrich_Gauß.png" />
+				</p>
+				<legend>Wer bin ich? </legend>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Sir Isaac Newton</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich Gauß</a>
+				<div data-role="popup" id="popupBasic">
+					<p align="justify">Carl Friedrich Gauß, dessen Konterfei auf den<br>Zehn-Mark-Scheinen zu sehen ist, war einer der</br>bedeutendsten Mathematiker der Geschichte und <br>beschäftigte sich außerdem mit Astronomie und</br>Physik.</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alexander von Humboldt</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gottfried Wilhelm Leibniz</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<p>
+					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
+					<a href="#Frage2B" data-role="button" data-inline="true">WEITER</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage2B" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Bild 2</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<img src="Bilder/Albert_Einstein.png" />
+				</p>
+				<legend>Wer bin ich? </legend>
+				
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Stephen Hawking</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Max Planck</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Otto Hahn</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Albert Einstein</a>
+				<div data-role="popup" id="popupBasic">
+					<p align="justify">Obwohl er Fotografen nicht ausstehen konnte (er bezeichnete sie als „Lichtaffen“), gibt es doch zahlreiche Aufnahmen von Albert Einstein, einem der bedeutendsten Wissenschaftler der Neuzeit.</p>
+				</div>
+				<p>
+					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
+					<a href="#Frage3B" data-role="button" data-inline="true">WEITER</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage3B" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Bild 3</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<img src="Bilder/SteveJobs.png" />
+				</p>
+				<legend>Wer bin ich? </legend>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Jobs</a>
+				<div data-role="popup" id="popupBasic">
+					<p align="justify">Der Gründer der Firma Apple war eine der wichtigsten Persönlichkeiten der Computerindustrie und maßgeblich für den Erfolg des Heimcomputers verantwortlich.</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">William Hewlett</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Larry Page</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Wozniak</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<p>
+					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
+					<a href="#Frage4B" data-role="button" data-inline="true">WEITER</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage4B" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Bild 4</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<img src="Bilder/Leonardo_da_Vinci.png" />
+				</p>
+				<legend>Wer bin ich? </legend>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Galileo Galilei</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nikolaus Kopernikus</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Johannes Kepler</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Leonardo Da Vinci</a>
+				<div data-role="popup" id="popupBasic">
+					<p align="justify">Dieses Selbstporträt zeigt Leonardo da Vinci, der nicht nur Erfinder und Ingenieur, sondern auch ein begabter Zeichner war.</p>
+				</div>
+				<p>
+					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
+					<a href="#Frage5B" data-role="button" data-inline="true">WEITER</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage5B" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed"> 
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Bild 5</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<p>
+					<img src="Bilder/Benjamin_Franklin.png" />
+				</p>
+				<legend>Wer bin ich? </legend>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Thomas Alva Edison</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Benjamin Franklin</a>
+				<div data-role="popup" id="popupBasic">
+					<p align="justify">Benjamin Franklin war nicht nur als Politiker maßgeblich an der Ausarbeitung der amerikanischen Verfassung beteiligt, sondern auch Naturwissenschaftler und Erfinder. Er beschäftigte sich unter anderem mit Elektrizität und erfand den Blitzableiter.</p>
+				</div>
+				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Lord William Kelvin</a>
+				<div data-role="popup" id="popupBasic">
+					<p>Leider falsch – probier‘s nochmal!</p>
+				</div>
+				<p>
+					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
+				</p>
+			</div>
+		</div>
+		
+	</body>
+	</html>
