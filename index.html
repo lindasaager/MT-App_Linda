@@ -1401,7 +1401,7 @@
 				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
 				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
 			</div>
-
+			
 			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
 				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
@@ -1411,16 +1411,60 @@
 
 			<!-- Inhalt der Seite -->
 			<div data-role="content">
-				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
-					<div data-role="collapsible">
-						<h1>123t</h1>
+				<p>
+					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Frage1">Start</a>
+					<a href="#Frage1" data-role="button" data-inline="true">START</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage1" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Frage 1</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend>Frage 1: <span id="jFrage1"></span><br></legend>
+						<input name="falsch" id="falsch-1a" value="on" type="radio">
+						<label for="falsch-1a"><span id="j1Antwort1"></span><br></label>
+						<input name="richtig1" id="richtig-1b" value="off" type="radio">
+						<label for="richtig-1b"><span id="j1Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-1c" value="other" type="radio">
+						<label for="falsch-1c"><span id="j1Antwort3"></span><br></label>
+					</fieldset>					
+				</form>
 
-					</div>
-					<div data-role="collapsible">
-						<h1>345</h1>
-
-					</div>
-				</div>
+				<script>
+					var JSON1={
+						"Frage":"Der zurückgelegt Weg eines Objekts ist das Produkt aus der quadrierten Zeit und s = __ t²",
+						"Antwort1":"½ mal der Beschleunigung a", 
+						"Antwort2":"½ mal der Geschwindigkeit v",
+						"Antwort3":"seiner Masse m"
+					};
+					document.getElementById("jFrage1").innerHTML=JSON1.Frage  
+					document.getElementById("j1Antwort1").innerHTML=JSON1.Antwort1  
+					document.getElementById("j1Antwort2").innerHTML=JSON1.Antwort2  
+					document.getElementById("j1Antwort3").innerHTML=JSON1.Antwort3  
+				</script>
+				<!-- <script type="text/javascript"  src="script_auswerten.js">
+				</script> -->
+				<p>
+					<a href="#Frage2" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1" data-role="button" data-inline="true">Start</a>
+				</p>
 			</div>
 		</div>
 	</body>
