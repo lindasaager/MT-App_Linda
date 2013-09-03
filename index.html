@@ -31,14 +31,25 @@
 		
 		<!-- Einbinden von Skripten für Quiz -->
 		<script>
-        function auswerten() {
-        	var punkte = 0;
-        	for (i=0; obj = document.getElementsByName('richtig1')[i]; i++)
-        		if (obj.checked) punkte++;
-        	document.getElementById('ausgabe').firstChild.data =
-        		'Du hast '+ punkte +' von '+ (pmax = document.getElementsByName('richtig1').length) +
-        		' möglichen Punkten erreicht. Das sind '+ Math.round(punkte*100/pmax) +' Prozent.';
-        }
+			function auswerten() {
+				var punkte = 0;
+				for (i=0; obj = document.getElementsByName('richtig1')[i]; i++)
+					if (obj.checked) punkte++;
+				document.getElementById('ausgabe').firstChild.data =
+					'Du hast '+ punkte +' von '+ (pmax = document.getElementsByName('richtig1').length) +
+					' möglichen Punkten erreicht. Das sind '+ Math.round(punkte*100/pmax) +' Prozent.';
+			}
+		</script>
+		<script>
+			
+			function auswerten() {
+				var punkte = 0;
+				for (i=0; obj = document.getElementsByName('richtig1')[i]; i++)
+					if (obj.checked) punkte++;
+				document.getElementById('ausgabe1').firstChild.data =
+					'Du hast '+ punkte +' von '+ (pmax = document.getElementsByName('richtig1').length) +
+					' möglichen Punkten erreicht. Das sind '+ Math.round(punkte*100/pmax) +' Prozent.';
+			}
 		</script>
 		<!--<script language="javascript" type="text/javascript" src="script_formeln.js"></script>
 		<script language="javascript" type="text/javascript" src="script_assessment.js"></script>
@@ -1382,7 +1393,7 @@
 				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
 				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
 			</div>
-
+			
 			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
 				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
@@ -1392,19 +1403,723 @@
 
 			<!-- Inhalt der Seite -->
 			<div data-role="content">
-				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
-					<div data-role="collapsible">
-						<h1>123t</h1>
-
-					</div>
-					<div data-role="collapsible">
-						<h1>345</h1>
-
-					</div>
-				</div>
+				<p align="justify">
+				Bei diesem Quiz handelt es sich um Fragen aus einem Assessmentcenter.<br>Insgesamt sind es 13 Fragen und zu jeder der Fragen gibt es vier Antwortmöglichkeiten,
+				aber nur eine davon ist richtig. <br>Wenn du die Frage beantwortet hast, einfach auf den Button 'WEITER' klicken und die kommst zur nächsten Frage. Am Ende 
+				des Quiz kannst du dir das Ergebnis auswerten lassen, indem du einfach auf den'Auswerten'-Butoon klickst.<br><p> Viel Erfolg.</p>
+					<p>
+						<a href="#Frage1A" data-role="button" data-inline="true">START</a>
+					</p>
+				</p>
 			</div>
 		</div>
-
+		
+		<div data-role="page" data-theme="a" id="Frage1A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 1</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage1"></span><br></b></legend>
+						<input name="falsch" id="falsch-1a" value="on" type="radio">
+						<label for="falsch-1a"><span id="jA1Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-1b" value="on" type="radio">
+						<label for="falsch-1b"><span id="jA1Antwort2"></span><br></label>
+						<input name="richtig" id="richtig-1c" value="on" type="radio">
+						<label for="richtig-1c"><span id="jA1Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-1d" value="on" type="radio">
+						<label for="falsch-1d"><span id="jA1Antwort4"></span><br></label>
+					</fieldset>					
+				</form>	
+				<script>
+					var JSON1A={
+						"Frage":"Otto von Guericke",
+						"Antwort1":"Erfinder der Luftpumpe", 
+						"Antwort2":"Erfinder des Kugelschreibers",
+						"Antwort3":"Erfinder des Zeichenbretts",
+						"Antwort4":"Erfinder des Flugzeugs"
+					};
+					document.getElementById("jAFrage1").innerHTML=JSON1A.Frage  
+					document.getElementById("jA1Antwort1").innerHTML=JSON1A.Antwort1  
+					document.getElementById("jA1Antwort2").innerHTML=JSON1A.Antwort2  
+					document.getElementById("jA1Antwort3").innerHTML=JSON1A.Antwort3
+					document.getElementById("jA1Antwort4").innerHTML=JSON1A.Antwort4
+				</script>
+					<!-- 1.Frage aus Assessment -->
+					<!-- getJSON -->
+				<p>	
+					<a href="#Frage2A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage2A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 2</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage2"></span><br></b></legend>
+						<input name="richtig" id="richtig-2a" value="on" type="radio">
+						<label for="richtig-1a"><span id="jA2Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-2b" value="on" type="radio">
+						<label for="falsch-2b"><span id="jA2Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-2c" value="on" type="radio">
+						<label for="falsch-2c"><span id="jA2Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-2d" value="on" type="radio">
+						<label for="falsch-2d"><span id="jA2Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON2A={
+						"Frage":"James Watt",
+						"Antwort1":"Erfinder der Dampfmaschine", 
+						"Antwort2":"Erfinder des Revolvers",
+						"Antwort3":"Entdecker des Pulvers",
+						"Antwort4":"Erfinder der Glühbirne"
+					};
+					document.getElementById("jAFrage2").innerHTML=JSON2A.Frage  
+					document.getElementById("jA2Antwort1").innerHTML=JSON2A.Antwort1  
+					document.getElementById("jA2Antwort2").innerHTML=JSON2A.Antwort2  
+					document.getElementById("jA2Antwort3").innerHTML=JSON2A.Antwort3
+					document.getElementById("jA2Antwort4").innerHTML=JSON2A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage3A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage3A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 3</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage3"></span><br></b></legend>
+						<input name="falsch" id="falsch-3a" value="on" type="radio">
+						<label for="falsch-3a"><span id="jA3Antwort1"></span><br></label>
+						<input name="richtig" id="richtig-3b" value="on" type="radio">
+						<label for="richtig-3b"><span id="jA3Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-3c" value="on" type="radio">
+						<label for="falsch-3c"><span id="jA3Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-3d" value="on" type="radio">
+						<label for="falsch-3d"><span id="jA3Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON3A={
+						"Frage":"Wilhelm Conrad Röntgen",
+						"Antwort1":"Erfinder des Fotoapparats", 
+						"Antwort2":"Physiker",
+						"Antwort3":"Entdecker des Tuberkelvirus",
+						"Antwort4":"Chemiker"
+					};
+					document.getElementById("jAFrage3").innerHTML=JSON3A.Frage  
+					document.getElementById("jA3Antwort1").innerHTML=JSON3A.Antwort1  
+					document.getElementById("jA3Antwort2").innerHTML=JSON3A.Antwort2  
+					document.getElementById("jA3Antwort3").innerHTML=JSON3A.Antwort3
+					document.getElementById("jA3Antwort4").innerHTML=JSON3A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage4A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage2A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage4A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 4</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage4"></span><br></b></legend>
+						<input name="falsch" id="falsch-4a" value="on" type="radio">
+						<label for="falsch-4a"><span id="jA4Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-4b" value="on" type="radio">
+						<label for="falsch-4b"><span id="jA4Antwort2"></span><br></label>
+						<input name="richtig" id="richtig-4c" value="on" type="radio">
+						<label for="richtig-4c"><span id="jA4Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-4d" value="on" type="radio">
+						<label for="falsch-4d"><span id="jA4Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON4A={
+						"Frage":"Von der Sonne bis zur Erde braucht Licht …",
+						"Antwort1":"1 Stunde 03 Sek.", 
+						"Antwort2":"30 Minuten 15 Sek.",
+						"Antwort3":"8 Minuten 13 Sek.",
+						"Antwort4":"2 Stunden 14 Sek."
+					};
+					document.getElementById("jAFrage4").innerHTML=JSON4A.Frage  
+					document.getElementById("jA4Antwort1").innerHTML=JSON4A.Antwort1  
+					document.getElementById("jA4Antwort2").innerHTML=JSON4A.Antwort2  
+					document.getElementById("jA4Antwort3").innerHTML=JSON4A.Antwort3
+					document.getElementById("jA4Antwort4").innerHTML=JSON4A.Antwort4
+				</script>
+				<p>
+					<!-- 4.Frage aus Assessment -->
+					<!-- getJSON -->
+					<a href="#Frage5A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage3A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage5A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 5</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage5"></span><br></b></legend>
+						<input name="falsch" id="falsch-5a" value="on" type="radio">
+						<label for="falsch-5a"><span id="jA5Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-5b" value="on" type="radio">
+						<label for="falsch-5b"><span id="jA5Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-5c" value="on" type="radio">
+						<label for="falsch-5c"><span id="jA5Antwort3"></span><br></label>
+						<input name="richtig" id="richtig-5d" value="on" type="radio">
+						<label for="richtig-5d"><span id="jA5Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON5A={
+						"Frage":"Das … ist ein Messinstrument für den Luftdruck.",
+						"Antwort1":"Spektroskop", 
+						"Antwort2":"Hygrometer",
+						"Antwort3":"Thermometer",
+						"Antwort4":"Barometer"
+					};
+					document.getElementById("jAFrage5").innerHTML=JSON5A.Frage  
+					document.getElementById("jA5Antwort1").innerHTML=JSON5A.Antwort1  
+					document.getElementById("jA5Antwort2").innerHTML=JSON5A.Antwort2  
+					document.getElementById("jA5Antwort3").innerHTML=JSON5A.Antwort3
+					document.getElementById("jA5Antwort4").innerHTML=JSON5A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage6A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage4A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage6A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 6</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage6"></span><br></b></legend>
+						<input name="richtig" id="richtig-6a" value="on" type="radio">
+						<label for="richtig-6a"><span id="jA6Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-6b" value="on" type="radio">
+						<label for="falsch-6b"><span id="jA6Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-6c" value="on" type="radio">
+						<label for="falsch-6c"><span id="jA6Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-6d" value="on" type="radio">
+						<label for="falsch-6d"><span id="jA6Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON6A={
+						"Frage":"Der/das … ist ein Messinstrument für Erdbeben",
+						"Antwort1":"Seismograph", 
+						"Antwort2":"Manometer",
+						"Antwort3":"Quadrometer",
+						"Antwort4":"Tremblograph"
+					};
+					document.getElementById("jAFrage6").innerHTML=JSON6A.Frage  
+					document.getElementById("jA6Antwort1").innerHTML=JSON6A.Antwort1  
+					document.getElementById("jA6Antwort2").innerHTML=JSON6A.Antwort2  
+					document.getElementById("jA6Antwort3").innerHTML=JSON6A.Antwort3
+					document.getElementById("jA6Antwort4").innerHTML=JSON6A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage7A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage5A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage7A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 7</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage7"></span><br></b></legend>
+						<input name="falsch" id="falsch-7a" value="on" type="radio">
+						<label for="falsch-7a"><span id="jA7Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-7b" value="on" type="radio">
+						<label for="falsch-7b"><span id="jA7Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-7c" value="on" type="radio">
+						<label for="falsch-7c"><span id="jA7Antwort3"></span><br></label>
+						<input name="richtig" id="richtig-7d" value="on" type="radio">
+						<label for="richtig-7d"><span id="jA7Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON7A={
+						"Frage":"Was zeigt der Geigerzähler an?",
+						"Antwort1":"Wärmestrahlen", 
+						"Antwort2":"Röntgenstrahlen",
+						"Antwort3":"Sonnenstrahlen",
+						"Antwort4":"radioaktive Strahlen"
+					};
+					document.getElementById("jAFrage7").innerHTML=JSON7A.Frage  
+					document.getElementById("jA7Antwort1").innerHTML=JSON7A.Antwort1  
+					document.getElementById("jA7Antwort2").innerHTML=JSON7A.Antwort2  
+					document.getElementById("jA7Antwort3").innerHTML=JSON7A.Antwort3
+					document.getElementById("jA7Antwort4").innerHTML=JSON7A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage8A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage6A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage8A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 8</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage8"></span><br></b></legend>
+						<input name="falsch" id="falsch-8a" value="on" type="radio">
+						<label for="falsch-8a"><span id="jA8Antwort1"></span><br></label>
+						<input name="richtig" id="richtig-8b" value="on" type="radio">
+						<label for="richtig-8b"><span id="jA8Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-8c" value="on" type="radio">
+						<label for="falsch-8c"><span id="jA8Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-8d" value="on" type="radio">
+						<label for="falsch-8d"><span id="jA8Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON8A={
+						"Frage":"Nach welchem Prinzip wird Rohrpost befördert?",
+						"Antwort1":"nach dem Prinzip der schiefen Ebene", 
+						"Antwort2":"mit Druck- oder Saugluft",
+						"Antwort3":"mit Flüssigkeit",
+						"Antwort4":"nach dem Prinzip der Anziehungskraft"
+					};
+					document.getElementById("jAFrage8").innerHTML=JSON8A.Frage  
+					document.getElementById("jA8Antwort1").innerHTML=JSON8A.Antwort1  
+					document.getElementById("jA8Antwort2").innerHTML=JSON8A.Antwort2  
+					document.getElementById("jA8Antwort3").innerHTML=JSON8A.Antwort3
+					document.getElementById("jA8Antwort4").innerHTML=JSON8A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage9A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage7A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage9A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 9</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage9"></span><br></b></legend>
+						<input name="richtig" id="richtig-9a" value="on" type="radio">
+						<label for="richtig-9a"><span id="jA9Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-9b" value="on" type="radio">
+						<label for="falsch-9b"><span id="jA9Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-9c" value="on" type="radio">
+						<label for="falsch-9c"><span id="jA9Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-9d" value="on" type="radio">
+						<label for="falsch-9d"><span id="jA9Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON9A={
+						"Frage":"Wo findet die Braunsche Röhre ihre Verwendung?",
+						"Antwort1":"als Fernsehbildröhre", 
+						"Antwort2":"in der Stereoanlage",
+						"Antwort3":"als Lichtverstärker im Laserapparat",
+						"Antwort4":"im Röntgenapparat"
+					};
+					document.getElementById("jAFrage9").innerHTML=JSON9A.Frage  
+					document.getElementById("jA9Antwort1").innerHTML=JSON9A.Antwort1  
+					document.getElementById("jA9Antwort2").innerHTML=JSON9A.Antwort2  
+					document.getElementById("jA9Antwort3").innerHTML=JSON9A.Antwort3
+					document.getElementById("jA9Antwort4").innerHTML=JSON9A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage10A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage8A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage10A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 10</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage10"></span><br></b></legend>
+						<input name="falsch" id="falsch-10a" value="on" type="radio">
+						<label for="falsch-10a"><span id="jA10Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-10b" value="on" type="radio">
+						<label for="falsch-10b"><span id="jA10Antwort2"></span><br></label>
+						<input name="richtig" id="richtig-10c" value="on" type="radio">
+						<label for="richtig-10c"><span id="jA10Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-10d" value="on" type="radio">
+						<label for="falsch-10d"><span id="jA10Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON10A={
+						"Frage":"Was ist ein Ion?",
+						"Antwort1":"die antike Bezeichnung für einen vermuteten „Stromkörper“", 
+						"Antwort2":"ein Molekül oder ein Atom, das fähig ist, elektrischen Strom zu leiten",
+						"Antwort3":"ein elektrisch geladenes Atom oder Molekül",
+						"Antwort4":"die physikalische Maßeinheit für Stromverlust durch Widerstand"
+					};
+					document.getElementById("jAFrage10").innerHTML=JSON10A.Frage  
+					document.getElementById("jA10Antwort1").innerHTML=JSON10A.Antwort1  
+					document.getElementById("jA10Antwort2").innerHTML=JSON10A.Antwort2  
+					document.getElementById("jA10Antwort3").innerHTML=JSON10A.Antwort3
+					document.getElementById("jA10Antwort4").innerHTML=JSON10A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage11A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage9A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage11A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 11</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage11"></span><br></b></legend>
+						<input name="falsch" id="falsch-11a" value="on" type="radio">
+						<label for="falsch-11a"><span id="jA11Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-11b" value="on" type="radio">
+						<label for="falsch-11b"><span id="jA11Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-11c" value="on" type="radio">
+						<label for="falsch-11c"><span id="jA11Antwort3"></span><br></label>
+						<input name="richtig" id="richtig-11d" value="on" type="radio">
+						<label for="richtig-11d"><span id="jA11Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON11A={
+						"Frage":"Welcher der folgenden Stoffe leitet Wärme am besten?",
+						"Antwort1":"Glas", 
+						"Antwort2":"Luft",
+						"Antwort3":"Holz",
+						"Antwort4":"Metall"
+					};
+					document.getElementById("jAFrage11").innerHTML=JSON11A.Frage  
+					document.getElementById("jA11Antwort1").innerHTML=JSON11A.Antwort1  
+					document.getElementById("jA11Antwort2").innerHTML=JSON11A.Antwort2  
+					document.getElementById("jA11Antwort3").innerHTML=JSON11A.Antwort3
+					document.getElementById("jA11Antwort4").innerHTML=JSON11A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage12A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage10A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage12A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 12</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><span id="jAFrage12"></span><br></legend>
+						<input name="falsch" id="falsch-12a" value="on" type="radio">
+						<label for="falsch-12a"><span id="jA12Antwort1"></span><br></label>
+						<input name="richtig" id="richtig-12b" value="on" type="radio">
+						<label for="richtig1-12b"><span id="jA12Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-12c" value="on" type="radio">
+						<label for="falsch-12c"><span id="jA12Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-12d" value="on" type="radio">
+						<label for="falsch-12d"><span id="jA12Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON12A={
+						"Frage":"Wie lautet die Einheit zur Angabe der elektrischen Stromstärke?",
+						"Antwort1":"Volt (V)", 
+						"Antwort2":"Ampere (A)",
+						"Antwort3":"Coulomb (C)",
+						"Antwort4":"Watt (W)"
+					};
+					document.getElementById("jAFrage12").innerHTML=JSON12A.Frage  
+					document.getElementById("jA12Antwort1").innerHTML=JSON12A.Antwort1  
+					document.getElementById("jA12Antwort2").innerHTML=JSON12A.Antwort2  
+					document.getElementById("jA12Antwort3").innerHTML=JSON12A.Antwort3
+					document.getElementById("jA12Antwort4").innerHTML=JSON12A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage13A" data-role="button" data-inline="true">WEITER</a>
+					<a href="#Frage11A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Frage1A" data-role="button" data-inline="true">Start</a>
+				</p>
+			</div>
+		</div>
+		
+		<div data-role="page" data-theme="a" id="Frage13A" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
+				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+			</div>
+			
+			<!-- Headerleiste -->
+			<div data-role="header" data-position="fixed">
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
+				<h1>Frage 13</h1>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend><b><span id="jAFrage13"></span><br></b></legend>
+						<input name="richtig" id="richtig-13a" value="on" type="radio">
+						<label for="richtig-13a"><span id="jA13Antwort1"></span><br></label>
+						<input name="falsch" id="falsch-1b" value="on" type="radio">
+						<label for="falsch-13b"><span id="jA13Antwort2"></span><br></label>
+						<input name="falsch" id="falsch-1c" value="on" type="radio">
+						<label for="falsch-13c"><span id="jA13Antwort3"></span><br></label>
+						<input name="falsch" id="falsch-1d" value="on" type="radio">
+						<label for="falsch-13d"><span id="jA13Antwort4"></span><br></label>
+					</fieldset>					
+				</form>
+				<script>
+					var JSON13A={
+						"Frage":"Welche Funktion hat ein Transformator?",
+						"Antwort1":"die Umwandelung von niedrigen elektrischen Wechselspannungen in höhere oder umgekehrt", 
+						"Antwort2":"die Überführung von mechanischer Energie (Bewegung) in elektrischen Strom",
+						"Antwort3":"die Vermeidung von Kurzschlüssen in einem elektrischen System",
+						"Antwort4":"die Speicherung von elektrischer Energie in Trafospeichern"
+					};
+					document.getElementById("jAFrage13").innerHTML=JSON13A.Frage  
+					document.getElementById("jA13Antwort1").innerHTML=JSON13A.Antwort1  
+					document.getElementById("jA13Antwort2").innerHTML=JSON13A.Antwort2  
+					document.getElementById("jA13Antwort3").innerHTML=JSON13A.Antwort3
+					document.getElementById("jA13Antwort4").innerHTML=JSON13A.Antwort4
+				</script>
+				<p>
+					<a href="#Frage12A" data-role="button" data-inline="true">ZURÜCK</a>
+					<a href="#Assessment" data-role="button" data-inline="true">Start</a>
+					<a href="#" data-role="button" data-inline="true" data-icon="home" value="Auswerten!" onclick="auswerten()">AUSWERTEN</a>
+					<div id="ausgabe1">&nbsp;</div>
+				
+					<!--<a href="#ausgabe1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop" data-icon="home" value="Auswerten!" onclick="auswerten()">AUSWERTEN</a>
+					<div data-role="popup" id="ausgabe1"><p>&nbsp;</p>
+					</div>-->
+				</p>
+			</div>
+		</div>
 
 		<!-- Spiele -> Formelecke -->
 		<div data-role="page" data-theme="a" id="Formelecke" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
@@ -1428,36 +2143,38 @@
 			<!-- Inhalt der Seite -->
 			<div data-role="content">
 				<p align="justify">
-				Bei diesem Quiz kannst du dein Wissen in Bezug auf physikalische und Mathematische Formeln testen. <br> Es gibt zu jeder Formel drei Antwortmöglichkeiten, 
+				Bei diesem Quiz kannst du dein Wissen im Bezug auf physikalische und Mathematische Formeln testen. <br> Es gibt zu jeder Formel drei Antwortmöglichkeiten, 
 				aber nur eine davon ist richtig. <br>Wenn du die Frage beantwortet hast, einfach auf den Button 'WEITER' klicken und die kommst zur nächsten Frage. Am Ende 
-				des Quiz kannst du dir das Ergebnis auswerten lassen, indem du einfach auf den'Auswerten'-Butoon klickst.<br> Viel Erfolg.
+				des Quiz kannst du dir das Ergebnis auswerten lassen, indem du einfach auf den'Auswerten'-Butoon klickst.<br><p> Viel Erfolg.</p>
 				<p>
-				<a href="#Frage1" data-role="button" data-inline="true">START</a>
+					<a href="#Frage1" data-role="button" data-inline="true">START</a>
 				</p>
 				</p>
 			</div>
 		</div>
 		
 		<div data-role="page" data-theme="a" id="Frage1" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
 				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
 			</div>
 			
+			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
 				<h1>Frage 1</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
 			</div>
 			
 			<div data-role="content">
 				<form>
 					<fieldset data-role="controlgroup">
-						<legend>Frage 1: <span id="jFrage1"></span><br></legend>
+						<legend><span id="jFrage1"></span><br></legend>
 						<input name="falsch" id="falsch-1a" value="on" type="radio">
 						<label for="falsch-1a"><span id="j1Antwort1"></span><br></label>
 						<input name="richtig1" id="richtig-1b" value="off" type="radio">
@@ -1469,7 +2186,7 @@
 
 				<script>
 					var JSON1={
-						"Frage":"Der zurückgelegt Weg eines Objekts ist das Produkt aus der quadrierten Zeit und s = __ t²",
+						"Frage":"Der zurückgelegt Weg eines Objekts ist das Produkt aus der quadrierten Zeit und <br>s = __ t²",
 						"Antwort1":"½ mal der Beschleunigung a", 
 						"Antwort2":"½ mal der Geschwindigkeit v",
 						"Antwort3":"seiner Masse m"
@@ -1490,19 +2207,21 @@
 		</div>
 		
 		<div data-role="page" data-theme="a" id="Frage2" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
 				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
 			</div>
 			
+			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
 				<h1>Frage 2</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
 			</div>
 			
 			<div data-role="content">
@@ -1519,7 +2238,7 @@
 				</form>
 				<script>
 					var JSON2={
-						"Frage":"Die Fläche innerhalb eines Kreises ist das Produkt aus dem quadrierten Radius r und A = __ r²",
+						"Frage":"Die Fläche innerhalb eines Kreises ist das Produkt aus dem quadrierten Radius r und <br>A = __ r²",
 						"Antwort1":"der Eulersche Zahl e", 
 						"Antwort2":"dem Umfang u des Kreises",
 						"Antwort3":"der Kreiszahl Pi"
@@ -1539,19 +2258,21 @@
 		</div>
 		
 		<div data-role="page" data-theme="a" id="Frage3" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
 				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
 			</div>
 			
+			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
 				<h1>Frage 3</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
 			</div>
 			
 			<div data-role="content">
@@ -1580,7 +2301,7 @@
 				</script> -->
 				<script>
 					var JSON3={
-						"Frage":"Die Lageenergie (potientelle Energie) eines Objekts ist die Produkt aus seiner Masse, der Höhe, in der er sich befindet und	E = m * __ * h",
+						"Frage":"Die Lageenergie (potientelle Energie) eines Objekts ist die Produkt aus seiner Masse, der Höhe, in der er sich befindet und <br>E = m * __ * h",
 						"Antwort1":"seiner Dichte rho", 
 						"Antwort2":"der Erdbeschleunigung g",
 						"Antwort3":"seiner Masse m"
@@ -1602,19 +2323,21 @@
 		</div>
 		
 		<div data-role="page" data-theme="a" id="Frage4" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
 				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
 			</div>
 			
+			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
 				<h1>Frage 4</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
 			</div>
 			
 			<div data-role="content">
@@ -1631,7 +2354,7 @@
 				</form>
 				<script>
 					var JSON4={
-						"Frage":"Die Spannung an einem Widerstand R ist das Produkt aus R und	U = R * __",
+						"Frage":"Die Spannung an einem Widerstand R ist das Produkt aus R und <br>U = R * __",
 						"Antwort1":"dem Widerstand R selbst", 
 						"Antwort2":"dem Strom I",
 						"Antwort3":"dem Leitwert G"
@@ -1651,19 +2374,21 @@
 		</div>
 		
 		<div data-role="page" data-theme="a" id="Frage5" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
 				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
 			</div>
 			
+			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
 				<h1>Frage 5</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
 			</div>
 			
 			<div data-role="content">
@@ -1680,7 +2405,7 @@
 				</form>
 				<script>
 					var JSON5={
-						"Frage":"Was ergibt das Produkt aus Kondesatorkapazität und Spannung?	__ = C * U",
+						"Frage":"Was ergibt das Produkt aus Kondesatorkapazität und Spannung? <br>__ = C * U",
 						"Antwort1":"Ladung Q", 
 						"Antwort2":"Strom I",
 						"Antwort3":"Dielektrizitätskonstante eps"
@@ -1700,19 +2425,21 @@
 		</div>
 		
 		<div data-role="page" data-theme="a" id="Frage6" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
 				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
 			</div>
 			
+			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
 				<h1>Frage 6</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
 			</div>
 			
 			<div data-role="content">
@@ -1729,7 +2456,7 @@
 				</form>
 				<script>
 					var JSON6={
-						"Frage":"Was muss mit einem Leiterstück der Länge l passieren, damit auf es die Lorentzkraft F_L wirkt?	F_L = __ * l * B",
+						"Frage":"Was muss mit einem Leiterstück der Länge l passieren, damit auf es die Lorentzkraft F_L wirkt?	<br>F_L = __ * l * B",
 						"Antwort1":"Es muss sich mit der Geschwindigkeit v bewegen", 
 						"Antwort2":"Es muss den Widerstand R bieten",
 						"Antwort3":"Es muss von einem Strom I durchflossen werden"
@@ -1749,19 +2476,21 @@
 		</div>
 		
 		<div data-role="page" data-theme="a" id="Frage7" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
 				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
 			</div>
 			
+			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
 				<h1>Frage 7</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
 			</div>
 			
 			<div data-role="content">
@@ -1778,7 +2507,7 @@
 				</form>
 				<script>
 					var JSON7={
-						"Frage":"Was muss größer werden, damit das elektrische Feld an einem Kondensator mit der Spannung U kleiner wird?	E = U / __",
+						"Frage":"Was muss größer werden, damit das elektrische Feld an einem Kondensator mit der Spannung U kleiner wird?<br>E = U / __",
 						"Antwort1":"Plattenabstand d", 
 						"Antwort2":"Kapazität C",
 						"Antwort3":"Dielektrizitätskonstante eps"
@@ -1798,19 +2527,21 @@
 		</div>
 		
 		<div data-role="page" data-theme="a" id="Frage8" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
+			<!-- Sidepanel -->
+			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Men&uuml;</h3>
 				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
+				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
+				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
+				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
 			</div>
 			
+			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
 				<h1>Frage 8</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
+				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
 			</div>
 			
 			<div data-role="content">
@@ -1827,7 +2558,7 @@
 				</form>
 				<script>
 					var JSON8={
-						"Frage":"Die Leistung P ist die Arbeit, die	P = W / __",
+						"Frage":"Die Leistung P ist die Arbeit, die	<br>P = W / __",
 						"Antwort1":"für eine bestimmte Energie E umgesetzt wird", 
 						"Antwort2":"in einer bestimmten Zeit t umgesetzt wird",
 						"Antwort3":"beim Zurücklegen einer bestimmten Strecke s umgesetzt wird"
