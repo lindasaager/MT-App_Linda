@@ -32,19 +32,19 @@
 		<!-- Einbinden von Skripten für Quiz -->
 		
 		<script type="text/javascript">
-			function auswerten_1(fra_nr) {
+			function auswerten_1(frage_nr) {
 				var punkte = 0;
-				var name = 'fra_';
+				var name = 'frage_';
 				var pmax = 8;
 
-				for (var i = 1; i <= pmax ; i++)if (check_1(name + i)) punkte++;
+				for (var i = 1; i <= pmax ; i++)if (check(name + i)) punkte++;
 
 				document.getElementById('ausgabe_1').firstChild.data =
 				'Du hast '+ punkte +' von '+ pmax +
 				' möglichen Punkten erreicht. Das sind '+ Math.round(punkte*100/pmax) +' Prozent.';
 			}
-			function check_1(fra) {
-				for (var i = 0; obj = document.getElementsByName(fra)[i]; i++){
+			function check(frage) {
+				for (var i = 0; obj = document.getElementsByName(frage)[i]; i++){
 					if (obj.checked && obj.value === 'richtig_1') return true;
 				}
 				return false;
@@ -52,7 +52,7 @@
 		</script>
 		
 		<script type="text/javascript">
-			function auswerten(afrage_nr) {
+			function auswerten(frage_nr) {
 				var punkte = 0;
 				var name = 'afrage_';
 				var pmax = 13;
@@ -64,13 +64,12 @@
 				' möglichen Punkten erreicht. Das sind '+ Math.round(punkte*100/pmax) +' Prozent.';
 			}
 			function check(frage) {
-				for (var i = 0; obj = document.getElementsByName(frage)[i]; i++){
+				for (var i = 0; obj = document.getElementsByName(afrage)[i]; i++){
 					if (obj.checked && obj.value === 'richtig') return true;
 				}
 				return false;
 			}
 		</script>
-		
 		
 		<script type="text/javascript">
 			<!--function clearRadios(radioName)
@@ -1407,1456 +1406,19 @@
 
 			<!-- Inhalt der Seite -->
 			<div data-role="content">
-				<div data-role="controlgroup">
-					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Werwars(Quiz)">Wer war's?</a>
-					<a data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right" href="#Bilderraten">Bilderraten</a>
+				<div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+					<div data-role="collapsible">
+						<h1>123t</h1>
+
+					</div>
+					<div data-role="collapsible">
+						<h1>345</h1>
+
+					</div>
 				</div>
 			</div>
 		</div>
-		
-		<div data-role="page" data-theme="a" id="Werwars(Quiz)" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
-			</div>
-			
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
-				<h1>Wer war's - Quiz</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
-			</div>
-			
-			<div data-role="content">
-				<p align="justify">
-				Beim "Wer war's - Quiz" geht es darum, zu erkennen bzw zu erraten, welcher der vier aufgezählten Persönlichkeiten, die in der Frage gestellte Erfindung oder 
-				Entdeckung gemacht hat.<br>Insgesamt gibt es 20 Fragen und jeweils nur eine richtige Antwort.<br>
-				Wenn du die Frage beantwortet hast, einfach auf den Button 'WEITER' klicken und die kommst zur nächsten Frage. Am Ende 
-				des Quiz kannst du dir das Ergebnis auswerten lassen, indem du einfach auf den'Auswerten'-Butoon klickst.<br><p> Viel Erfolg.</p>
-					<p>
-						<a href="#Frage1Q" data-role="button" data-inline="true">START</a>
-					</p>
-				</p>
-			</div>
-		</div>	
-		
-		<div data-role="page" data-theme="a" id="Bilderraten" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
-			</div>
-			
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
-				<h1>Bilderraten</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true">START</a>
-				</p>
-			</div>
-		</div>	
-		
-		<div data-role="page" data-theme="a" id="Frage1Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 1 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wer gilt als der Erfinder des Telefons?</b></legend>
-					<p>
-						<a href="#jW1Antwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">James Clerk Maxwell</a>
-						<div data-role="popup" id="jW1Antwort3"></div>
-					</p>
-					<p>
-						<a href="#jW1Antwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
-						<div data-role="popup" id="jW1Antwort2"><br></div>
-					</p>
-					<p>
-						<a href="#jW1Antwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alexander Graham Bell</a>
-						<div data-role="popup" id="jW1Antwort1"><br></div>
-					</p>
-					<p>
-						<a href="#jW1Antwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nicola Tesla</a>
-						<div data-role="popup" id="jW1Antwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON1W={
-							"Antwort1":"Obwohl sein Telefon weder das erste, noch funktionstüchtig war,  reichte Bell als erster ein Patent für das Telefon ein, und wird somit meist als Erfinder des Telefons bezeichnet.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("jW1Antwort1").innerHTML=JSON1W.Antwort1  
-						document.getElementById("jW1Antwort2").innerHTML=JSON1W.Antwort2  
-						document.getElementById("jW1Antwort3").innerHTML=JSON1W.Antwort3
-						document.getElementById("jW1Antwort4").innerHTML=JSON1W.Antwort4
-					</script>
-					<!-- 1.Frage aus Wer war'S -->
-					<!-- getJSON -->
-					<P>
-						<a href="#Frage2Q" data-role="button" data-inline="true">WEITER</a>
-					</p>	
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage2Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 2 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wer gründete zusammen mit Bill Gates den mittlerweile weltgrößten Softwarekonzern?</b></legend>
-					<p>
-						<a href="#j2WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Paul Allen</a>
-						<div data-role="popup" id="j2WAntwort1"></div>
-					</p>
-					<p>
-						<a href="#j2WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Dietmar Hopp</a>
-						<div data-role="popup" id="j2WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j2WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Jobs</a>
-						<div data-role="popup" id="j2WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j2WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Larry Page</a>
-						<div data-role="popup" id="j2WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON2W={
-							"Antwort1":"Zusammen mit Bill Gates, den er auf einer Privatschule kennengelernt hatte, gründete Paul Allen im Jahre 1975 Microsoft, den weltweit größten Softwarekonzern.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j2WAntwort1").innerHTML=JSON2W.Antwort1  
-						document.getElementById("j2WAntwort2").innerHTML=JSON2W.Antwort2  
-						document.getElementById("j2WAntwort3").innerHTML=JSON2W.Antwort3
-						document.getElementById("j2WAntwort4").innerHTML=JSON2W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage3Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage3Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 3 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wie heißt der Stuttgarter Ingenieur, der 1887 die größte deutsche GmbH gründete?</b></legend>
-					<p>
-						<a href="#j3WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">August Thyssen</a>
-						<div data-role="popup" id="j3WAntwort4"></div>
-					</p>
-					<p>
-						<a href="#j3WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gottlieb Daimler</a>
-						<div data-role="popup" id="j3WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j3WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Werner von Siemens</a>
-						<div data-role="popup" id="j3WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j3WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Robert Bosch</a>
-						<div data-role="popup" id="j3WAntwort1"><br></div>
-					</p>
-					
-					<script>
-						var JSON3W={
-							"Antwort1":"Das Unternehmen Robert Bosch GmbH mit Firmensitz in Gerlingen bei Stuttgart ist die größte GmbH Deutschlands, das heißt, dass keine Anteile der Firma an Börsen gehandelt werden.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j3WAntwort1").innerHTML=JSON3W.Antwort1  
-						document.getElementById("jW3Antwort2").innerHTML=JSON3W.Antwort2  
-						document.getElementById("jW3Antwort3").innerHTML=JSON3W.Antwort3
-						document.getElementById("jW3Antwort4").innerHTML=JSON3W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage4Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage4Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 4 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wer gilt als der Erfinder der Glühbirne?</b></legend>
-					<p>
-						<a href="#j4WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alfred Wendel</a>
-						<div data-role="popup" id="j4WAntwort3"></div>
-					</p>
-					<p>
-						<a href="#j4WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
-						<div data-role="popup" id="j4WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j4WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Thomas Alva Edison</a>
-						<div data-role="popup" id="j4WAntwort1"><br></div>
-					</p>
-					<p>
-						<a href="#j4WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Joseph von Wolfram</a>
-						<div data-role="popup" id="j4WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON4W={
-							"Antwort1":"Thomas Edison war es, der 1879 die Kohlefadenglühlampe erfand und es damit ermöglichte, auf einfache Weise elektrische Energie nutzbar zu machen. Insgesamt machte Edison über 2.000 Erfindungen, darunter der elektrische Stuhl, der Kleinbildfilm und der Phonograph.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j4WAntwort1").innerHTML=JSON4W.Antwort1  
-						document.getElementById("j4WAntwort2").innerHTML=JSON4W.Antwort2  
-						document.getElementById("j4WAntwort3").innerHTML=JSON4W.Antwort3
-						document.getElementById("j4WAntwort4").innerHTML=JSON4W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage5Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage5Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 5 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wer erhielt 1905 für die Erklärung des photoelektrischen Effektes den Nobelpreis für Physik?</b></legend>
-					<p>
-						<a href="#j5WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Sir Isaac Newton</a>
-						<div data-role="popup" id="j5WAntwort2"></div>
-					</p>
-					<p>
-						<a href="#j5WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Albert Einstein</a>
-						<div data-role="popup" id="j5WAntwort1"><br></div>
-					</p>
-					<p>
-						<a href="#j5WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Wilhelm Conrad Röntgen</a>
-						<div data-role="popup" id="j5WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j5WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Erwin Schrödinger</a>
-						<div data-role="popup" id="j5WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON5W={
-							"Antwort1":"Albert Einstein erhielt den Nobelpreis tatsächlich nicht für die Formulierung der Relativitätstheorie, sondern für die Erklärung des photoelektrischen Effekts, der unter anderem die Grundlage für die Funktion von Solarzellen bildet.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j5WAntwort1").innerHTML=JSON5W.Antwort1  
-						document.getElementById("j5WAntwort2").innerHTML=JSON5W.Antwort2  
-						document.getElementById("j5WAntwort3").innerHTML=JSON5W.Antwort3
-						document.getElementById("j5WAntwort4").innerHTML=JSON5W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage6Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage6Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 6 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wer ließ sich eine freischwebende, gläserne Treppe patentieren?</b></legend>
-					<p>
-						<a href="#j6WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Jobs</a>
-						<div data-role="popup" id="j6WAntwort1"></div>
-					</p>
-					<p>
-						<a href="#j6WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alfred Krupp</a>
-						<div data-role="popup" id="j6WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j6WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gustave Eiffel</a>
-						<div data-role="popup" id="j6WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j6WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Enzo Ferrari</a>
-						<div data-role="popup" id="j6WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON6W={
-							"Antwort1":"Steve Jobs, bekannt geworden durch die erfolgreiche Leitung des Unternehmens Apple, ließ sich unter anderem das Design des futuristischen Glaswürfels patentieren, der den Apple Store an der Fifth Avenue in New York beherbergt.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j6WAntwort1").innerHTML=JSON6W.Antwort1  
-						document.getElementById("j6WAntwort2").innerHTML=JSON6W.Antwort2  
-						document.getElementById("j6WAntwort3").innerHTML=JSON6W.Antwort3
-						document.getElementById("j6WAntwort4").innerHTML=JSON6W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage7Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage7Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 7 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Nach welchem Deutschen Erfinder ist ein noch heute häufig im Automobil eingesetzter Motorentyp benannt?</b></legend>
-					<p>
-						<a href="#j7WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Hugo von Brenner</a>
-						<div data-role="popup" id="j7WAntwort3"></div>
-					</p>
-					<p>
-						<a href="#j7WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Benz</a>
-						<div data-role="popup" id="j7WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j7WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nicolaus August Otto</a>
-						<div data-role="popup" id="j7WAntwort1"><br></div>
-					</p>
-					<p>
-						<a href="#j7WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Robert Stirling</a>
-						<div data-role="popup" id="j7WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON7W={
-							"Antwort1":"Der Ottomotor ist ein zu Ehren von Nicolaus Otto benannter Verbrennungsmotor, der im Gegensatz zum Dieselmotor mittels Zündkerzen gezündet werden muss.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j7WAntwort1").innerHTML=JSON7W.Antwort1  
-						document.getElementById("j7WAntwort2").innerHTML=JSON7W.Antwort2  
-						document.getElementById("j7WAntwort3").innerHTML=JSON7W.Antwort3
-						document.getElementById("j7WAntwort4").innerHTML=JSON7W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage8Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage8Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 8 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wie hieß die Ehefrau eines berühmten Erfinders, die 1888 mit einem Automobil eine Strecke von 106 Kilometern zurücklegte?</b></legend>
-					<p>
-						<a href="#j8WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Clara Jane Ford</a>
-						<div data-role="popup" id="j8WAntwort4"></div>
-					</p>
-					<p>
-						<a href="#j8WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Louise Porsche</a>
-						<div data-role="popup" id="j8WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j8WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Anna Bosch</a>
-						<div data-role="popup" id="j8WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j8WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Bertha Benz</a>
-						<div data-role="popup" id="j8WAntwort1"><br></div>
-					</p>
-					
-					<script>
-						var JSON8W={
-							"Antwort1":"Bertha Benz fuhr im Jahre 1888 von Mannheim nach Pforzheim, um zu beweisen, dass das von Ihrem Mann konstruierte Automobil voll funktionstüchtig war.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j8WAntwort1").innerHTML=JSON8W.Antwort1  
-						document.getElementById("j8WAntwort2").innerHTML=JSON8W.Antwort2  
-						document.getElementById("j8WAntwort3").innerHTML=JSON8W.Antwort3
-						document.getElementById("j8WAntwort4").innerHTML=JSON8W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage9Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage9Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 9 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Was erhielt Michael Rotert als erster 1984 in Karlsruhe?</b></legend>
-					<p>
-						<a href="#j9WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">eine computertomographische Untersuchung (CT)</a>
-						<div data-role="popup" id="j9WAntwort2"></div>
-					</p>
-					<p>
-						<a href="#j9WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">eine E-Mail</a>
-						<div data-role="popup" id="j9WAntwort1"><br></div>
-					</p>
-					<p>
-						<a href="#j9WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">den Nobelpreis für Mechatronik</a>
-						<div data-role="popup" id="j9WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j9WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">einen Anruf von US-Präsident Ronald Reagan</a>
-						<div data-role="popup" id="j9WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON9W={
-							"Antwort1":"Michael Rotert, Honorarprofessor an der Fakultät für Informatik und Wirtschaftsinformatik der Hochschule Karlsruhe, war der erste Mensch, der je eine E-Mail erhielt. ", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j9WAntwort1").innerHTML=JSON9W.Antwort1  
-						document.getElementById("j9WAntwort2").innerHTML=JSON9W.Antwort2  
-						document.getElementById("j9WAntwort3").innerHTML=JSON9W.Antwort3
-						document.getElementById("j9WAntwort4").innerHTML=JSON9W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage10Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage10Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 10 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wie heißt der Erfinder des ersten funktionsfähigen Digitalrechners der Welt?</b></legend>
-					<p>
-						<a href="#j10WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Bill Gates</a>
-						<div data-role="popup" id="j10WAntwort2"></div>
-					</p>
-					<p>
-						<a href="#j10WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Konrad Zuse</a>
-						<div data-role="popup" id="j10WAntwort1"><br></div>
-					</p>
-					<p>
-						<a href="#j10WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Tashado Atari</a>
-						<div data-role="popup" id="j10WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j10WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">William Texas-Instruments</a>
-						<div data-role="popup" id="j10WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON10W={
-							"Antwort1":"Den ersten Digitalrechner, den Zuse Z3, konstruierte der Deutsche Konrad Zuse im Jahre 1941 in Berlin. Ein funktionierender Nachbau steht seit 1962 im Deutschen Museum München.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j10WAntwort1").innerHTML=JSON10W.Antwort1  
-						document.getElementById("j10WAntwort2").innerHTML=JSON10W.Antwort2  
-						document.getElementById("j10WAntwort3").innerHTML=JSON10W.Antwort3
-						document.getElementById("j10WAntwort4").innerHTML=JSON10W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage11Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage11Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 11 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wer bewies in Karlsruhe die Existenz der elektromagnetischen Welle?</b></legend>
-					<p>
-						<a href="#j11WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Heinrich Hertz</a>
-						<div data-role="popup" id="j11WAntwort1"></div>
-					</p>
-					<p>
-						<a href="#j11WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Albert Einstein</a>
-						<div data-role="popup" id="j11WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j11WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Wilhelm Conrad Röntgen</a>
-						<div data-role="popup" id="j11WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j11WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Johann Gottfried Tulla</a>
-						<div data-role="popup" id="j11WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON11W={
-							"Antwort1":"Im Jahre 1886 bewies Heinrich Hertz, der als Professor an der Technischen Hochschule Karlsruhe arbeitete, die Existenz der elektromagnetischen Welle, was kurz darauf die Erfindung der drahtlosen Telegrafie und des Radios ermöglichte.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j11WAntwort1").innerHTML=JSON11W.Antwort1  
-						document.getElementById("j11WAntwort2").innerHTML=JSON11W.Antwort2  
-						document.getElementById("j11WAntwort3").innerHTML=JSON11W.Antwort3
-						document.getElementById("j11WAntwort4").innerHTML=JSON11W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage12Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage12Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 12 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wie heißt der Karlsruher Erfinder, der den Vorläufer des heutigen Fahrrads entwickelte?</b></legend>
-					<p>
-						<a href="#j12WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Benz</a>
-						<div data-role="popup" id="j12WAntwort4"></div>
-					</p>
-					<p>
-						<a href="#j12WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
-						<div data-role="popup" id="j12WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j12WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich Gauß</a>
-						<div data-role="popup" id="j12WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j12WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Karl Drais</a>
-						<div data-role="popup" id="j12WAntwort1"><br></div>
-					</p>
-					
-					<script>
-						var JSON12W={
-							"Antwort1":"Mit seinem als Draisine bekannten Laufrad bildete Karl Freiherr von Drais 1817 den Grundstein für ein heute millionenfach genutztes Fortbewegungsmittel.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j12WAntwort1").innerHTML=JSON12W.Antwort1  
-						document.getElementById("j12WAntwort2").innerHTML=JSON12W.Antwort2  
-						document.getElementById("j12WAntwort3").innerHTML=JSON12W.Antwort3
-						document.getElementById("j12WAntwort4").innerHTML=JSON12W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage13Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage13Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 13 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Welche zwei Brüder entwickelten das erste motorgetriebene Flugzeug?</b></legend>
-					<p>
-						<a href="#j13WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Joseph Michel und Jacques Etienne Montgolfière</a>
-						<div data-role="popup" id="j13WAntwort3"></div>
-					</p>
-					<p>
-						<a href="#j13WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Jacob und Wilhelm Grimm</a>
-						<div data-role="popup" id="j13WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j13WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Wilbur und Orville Wright</a>
-						<div data-role="popup" id="j13WAntwort1"><br></div>
-					</p>
-					<p>
-						<a href="#j13WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Martin und Simon Fourcade</a>
-						<div data-role="popup" id="j13WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON13W={
-							"Antwort1":"Die US-amerikanischen Brüder Wright waren 1903 die ersten, die mit ihrem selbstgebauten motorisierten Flugzeug eine Strecke von 260 Metern flogen.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j13WAntwort1").innerHTML=JSON13W.Antwort1  
-						document.getElementById("j13WAntwort2").innerHTML=JSON13W.Antwort2  
-						document.getElementById("j13WAntwort3").innerHTML=JSON13W.Antwort3
-						document.getElementById("j13WAntwort4").innerHTML=JSON13W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage14Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage14Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 14 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wer erhielt für ihre Forschungen im Bereich der Radioaktivität als erste Frau den Nobelpreis für Physik?</b></legend>
-					<p>
-						<a href="#j14WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Lise Meitner</a>
-						<div data-role="popup" id="j14WAntwort1"></div>
-					</p>
-					<p>
-						<a href="#j14WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Maria Montessori</a>
-						<div data-role="popup" id="j14WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j14WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Marie Curie</a>
-						<div data-role="popup" id="j14WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j14WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Margaret Thatcher</a>
-						<div data-role="popup" id="j14WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON14W={
-							"Antwort1":"Zusammen mit Antoine Henri Becquerel und ihrem Mann Pierre erhielt Marie Curie 1903 für die Erforschung der Radioaktivität den Physik-Nobelpreis und 1911 für die Entdeckung der Elemente Polonium und Radium den Chemie-Nobelpreis.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j14WAntwort1").innerHTML=JSON14W.Antwort1  
-						document.getElementById("j14WAntwort2").innerHTML=JSON14W.Antwort2  
-						document.getElementById("j14WAntwort3").innerHTML=JSON14W.Antwort3
-						document.getElementById("j14WAntwort4").innerHTML=JSON14W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage15Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage15Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 15 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Welches Universalgenie ist neben seinen Flugmaschinen und vielen anderen Erfindungen vor allem für das Bild einer Frau bekannt?</b></legend>
-					<p>
-						<a href="#j15WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Galileo Galilei</a>
-						<div data-role="popup" id="j15WAntwort2"></div>
-					</p>
-					<p>
-						<a href="#j15WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Leonardo da Vinci</a>
-						<div data-role="popup" id="j15WAntwort1"><br></div>
-					</p>
-					<p>
-						<a href="#j15WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Vincent van Gogh</a>
-						<div data-role="popup" id="j15WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j15WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michelangelo Buonarroti</a>
-						<div data-role="popup" id="j15WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON15W={
-							"Antwort1":"Leonardo da Vinci war nicht nur Maler und Philosoph, sondern auch Architekt und Ingenieur. Er entwickelte bereits vor 500 Jahren Fluggeräte und Automobile, die ihrer Zeit weit voraus waren.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j15WAntwort1").innerHTML=JSON15W.Antwort1  
-						document.getElementById("j15WAntwort2").innerHTML=JSON15W.Antwort2  
-						document.getElementById("j15WAntwort3").innerHTML=JSON15W.Antwort3
-						document.getElementById("j15WAntwort4").innerHTML=JSON15W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage16Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage16Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 16 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Wer ermöglichte mit der Entwicklung eines nach ihm benannten Verfahrens die Erfindung des Kühlschranks?</b></legend>
-					<p>
-						<a href="#j16WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich Gauß</a>
-						<div data-role="popup" id="j16WAntwort3"></div>
-					</p>
-					<p>
-						<a href="#j16WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Miele</a>
-						<div data-role="popup" id="j16WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j16WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl von Linde</a>
-						<div data-role="popup" id="j16WAntwort1"><br></div>
-					</p>
-					<p>
-						<a href="#j16WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich von Siemens</a>
-						<div data-role="popup" id="j16WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON16W={
-							"Antwort1":"Das Linde-Verfahren ist eine 1895 von Carl von Linde erfundene Methode, die das verflüssigen von Gasen ermöglicht, und das Grundprinzip eines jeden Kühlschranks bildet.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j16WAntwort1").innerHTML=JSON16W.Antwort1  
-						document.getElementById("j16WAntwort2").innerHTML=JSON16W.Antwort2  
-						document.getElementById("j16WAntwort3").innerHTML=JSON16W.Antwort3
-						document.getElementById("j16WAntwort4").innerHTML=JSON16W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage17Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage17Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 17 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Welcher bekannte Ingenieur perfektionierte die Fließbandfertigung von Automobilen?</b></legend>
-					<p>
-						<a href="#j17WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Henry Ford</a>
-						<div data-role="popup" id="j17WAntwort1"></div>
-					</p>
-					<p>
-						<a href="#j17WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Sakichi Toyota</a>
-						<div data-role="popup" id="j17WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j17WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Antonio Fiat</a>
-						<div data-role="popup" id="j17WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j17WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Ferdinand Porsche</a>
-						<div data-role="popup" id="j17WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON17W={
-							"Antwort1":"Mit der Umsetzung der Fließbandarbeit in der Automobilindustrie konnte Henry Ford bereits 1908 seinen Ford T mit sehr hohen Stückzahlen produzieren.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j17WAntwort1").innerHTML=JSON17W.Antwort1  
-						document.getElementById("j17WAntwort2").innerHTML=JSON17W.Antwort2  
-						document.getElementById("j17WAntwort3").innerHTML=JSON17W.Antwort3
-						document.getElementById("j17WAntwort4").innerHTML=JSON17W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage18Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage18Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 18 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Welcher italienische Erfinder entwickelte die Batterie?</b></legend>
-					<p>
-						<a href="#j18WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Francesco Alkaline</a>
-						<div data-role="popup" id="j18WAntwort4"></div>
-					</p>
-					<p>
-						<a href="#j18WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">André-Marie Ampère</a>
-						<div data-role="popup" id="j18WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j18WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nikola Tesla</a>
-						<div data-role="popup" id="j18WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j18WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alessandro Volta</a>
-						<div data-role="popup" id="j18WAntwort1"><br></div>
-					</p>
-					
-					<script>
-						var JSON18W={
-							"Antwort1":"Alessandro Volta baute die erste Batterie, genannt Volta‘sche Säule, die mit Hilfe von aufeinandergeschichteten Kupfer- und Zinkplatten elektrischen Strom liefern konnte.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j18WAntwort1").innerHTML=JSON18W.Antwort1  
-						document.getElementById("j18WAntwort2").innerHTML=JSON18W.Antwort2  
-						document.getElementById("j18WAntwort3").innerHTML=JSON18W.Antwort3
-						document.getElementById("j18WAntwort4").innerHTML=JSON18W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage19Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage19Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 19 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Nach welchem Multitalent sind unter anderem ein neues Satellitennavigationssystem und ein Fernrohr benannt?</b></legend>
-					<p>
-						<a href="#j19WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Johannes Kepler</a>
-						<div data-role="popup" id="j19WAntwort3"></div>
-					</p>
-					<p>
-						<a href="#j19WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Tom Tomson</a>
-						<div data-role="popup" id="j19WAntwort2"><br></div>
-					</p>
-					<p>
-						<a href="#j19WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Galileo Galilei</a>
-						<div data-role="popup" id="j19WAntwort1"><br></div>
-					</p>
-					<p>
-						<a href="#j19WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gustav P. Sloterdijk</a>
-						<div data-role="popup" id="j19WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON19W={
-							"Antwort1":"Das Satellitennavigationssystem der EU, Galileo, soll ab 2014 voll funktionsfähig sein. Benannt wurde es nach dem Astronomen Galileo Galilei, der unter anderem das Teleskop weiterentwickelte und zur Beobachtung von Himmelkörpern einsetzte.", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j19WAntwort1").innerHTML=JSON19W.Antwort1  
-						document.getElementById("j19WAntwort2").innerHTML=JSON19W.Antwort2  
-						document.getElementById("j19WAntwort3").innerHTML=JSON19W.Antwort3
-						document.getElementById("j19WAntwort4").innerHTML=JSON19W.Antwort4
-					</script>
-					<p>
-						<a href="#Frage20Q" data-role="button" data-inline="true">WEITER</a>
-					</p>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage20Q" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Frage 20 von 20</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<legend align="justify"><b>Was erfand Karl Ferdinand Braun 1897 in Karlsruhe?</b></legend>
-					<p>
-						<a href="#j20WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">den ersten elektrisch betriebenen Rasierapparat</a>
-						<div data-role="popup" id="j20WAntwort2"></div>
-					</p>
-					<p>
-						<a href="#j20WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">die Braun'sche Röhre</a>
-						<div data-role="popup" id="j20WAntwort1"><br></div>
-					</p>
-					<p>
-						<a href="#j20WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">die Braunüle</a>
-						<div data-role="popup" id="j20WAntwort3"><br></div>
-					</p>
-					<p>
-						<a href="#j20WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">die erste funktionstüchtige Langstreckenrakete</a>
-						<div data-role="popup" id="j20WAntwort4"><br></div>
-					</p>
-					
-					<script>
-						var JSON20W={
-							"Antwort1":"Richtig!", 
-							"Antwort2":"Leider falsch – probier‘s nochmal!",
-							"Antwort3":"Leider falsch – probier‘s nochmal!",
-							"Antwort4":"Leider falsch – probier‘s nochmal!"
-						};  
-						document.getElementById("j20WAntwort1").innerHTML=JSON20W.Antwort1  
-						document.getElementById("j20WAntwort2").innerHTML=JSON20W.Antwort2  
-						document.getElementById("j20WAntwort3").innerHTML=JSON20W.Antwort3
-						document.getElementById("j20WAntwort4").innerHTML=JSON20W.Antwort4
-					</script>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Bilderraten" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Menü</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
-				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
-				<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
-			</div>
-			
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
-				<h1>Wer war's Bilderraten</h1>
-				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true">START</a>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage1B" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Bild 1 von 5</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<img src="Bilder/Carl_Friedrich_Gauß.png" />
-				</p>
-				<legend>Wer bin ich? </legend>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Sir Isaac Newton</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich Gauß</a>
-				<div data-role="popup" id="popupBasic">
-					<p align="justify">Carl Friedrich Gauß, dessen Konterfei auf den<br>Zehn-Mark-Scheinen zu sehen ist, war einer der</br>bedeutendsten Mathematiker der Geschichte und <br>beschäftigte sich außerdem mit Astronomie und</br>Physik.</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alexander von Humboldt</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gottfried Wilhelm Leibniz</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
-					<a href="#Frage2B" data-role="button" data-inline="true">WEITER</a>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage2B" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Bild 2 von 5</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<img src="Bilder/Albert_Einstein.png" />
-				</p>
-				<legend>Wer bin ich? </legend>
-				
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Stephen Hawking</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Max Planck</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Otto Hahn</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Albert Einstein</a>
-				<div data-role="popup" id="popupBasic">
-					<p align="justify">Obwohl er Fotografen nicht ausstehen konnte (er bezeichnete sie als „Lichtaffen“), gibt es doch zahlreiche Aufnahmen von Albert Einstein, einem der bedeutendsten Wissenschaftler der Neuzeit.</p>
-				</div>
-				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
-					<a href="#Frage3B" data-role="button" data-inline="true">WEITER</a>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage3B" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Bild 3 von 5</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<img src="Bilder/SteveJobs.png" />
-				</p>
-				<legend>Wer bin ich? </legend>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Jobs</a>
-				<div data-role="popup" id="popupBasic">
-					<p align="justify">Der Gründer der Firma Apple war eine der wichtigsten Persönlichkeiten der Computerindustrie und maßgeblich für den Erfolg des Heimcomputers verantwortlich.</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">William Hewlett</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Larry Page</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Wozniak</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
-					<a href="#Frage4B" data-role="button" data-inline="true">WEITER</a>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage4B" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Bild 4 von 5</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<img src="Bilder/Leonardo_da_Vinci.png" />
-				</p>
-				<legend>Wer bin ich? </legend>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Galileo Galilei</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nikolaus Kopernikus</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Johannes Kepler</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Leonardo Da Vinci</a>
-				<div data-role="popup" id="popupBasic">
-					<p align="justify">Dieses Selbstporträt zeigt Leonardo da Vinci, der nicht nur Erfinder und Ingenieur, sondern auch ein begabter Zeichner war.</p>
-				</div>
-				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
-					<a href="#Frage5B" data-role="button" data-inline="true">WEITER</a>
-				</p>
-			</div>
-		</div>
-		
-		<div data-role="page" data-theme="a" id="Frage5B" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Side panel -->	
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
-				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
-			</div>
-			
-			<!-- Headerleiste -->
-			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Bild 5 von 5</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
-			</div>
-			
-			<div data-role="content">
-				<p>
-					<img src="Bilder/Benjamin_Franklin.png" />
-				</p>
-				<legend>Wer bin ich? </legend>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Thomas Alva Edison</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Benjamin Franklin</a>
-				<div data-role="popup" id="popupBasic">
-					<p align="justify">Benjamin Franklin war nicht nur als Politiker maßgeblich an der Ausarbeitung der amerikanischen Verfassung beteiligt, sondern auch Naturwissenschaftler und Erfinder. Er beschäftigte sich unter anderem mit Elektrizität und erfand den Blitzableiter.</p>
-				</div>
-				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Lord William Kelvin</a>
-				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
-				</div>
-				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
-				</p>
-			</div>
-		</div>
+
 
 		<!-- Spiele -> Assessment -->
 		<div data-role="page" data-theme="a" id="Assessment" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
@@ -3649,7 +2211,7 @@
 						</script>-->
 					</p>
 					<!--<a href="#Frage1" data-role="button" data-inline="true" value="clear!" onclick="clearRadiosjQ()">START</a>-->
-					<a href="#Frage1" data-role="button" data-inline="true" onclick="clearRadiosjQ();" value="Clear alles mit jQuery"/>START</a>
+					<a href="#Frage1" input type="button" onclick="clearRadiosjQ();" value="Clear alles mit jQuery"/>START</a>
 				</p>
 			</div>
 		</div>
@@ -3675,27 +2237,15 @@
 			<div data-role="content">
 				<form>
 					<fieldset data-role="controlgroup">
-						<legend><span id="jFrage1"></span><br></legend>
-						<input name="fra_1" id="falscha" value="falsch" type="radio">
-						<label for="falscha"><span id="j1Antwort1"></span><br></label>
-						<input name="fra_1" id="richtig1b" value="richtig_1" type="radio">
-						<label for="richtig1b"><span id="j1Antwort2"></span><br></label>
-						<input name="fra_1" id="falschc" value="falsch" type="radio">
-						<label for="falschc"><span id="j1Antwort3"></span><br></label>
-					</fieldset>					
+						<legend>Der zurückgelegt Weg eines Objekts ist das Produkt aus der quadrierten Zeit und <br>s = __ t²</legend>
+						<input name="frage_1" id="falscha" value="falsch" type="radio">
+						<label for="falscha">½ mal der Beschleunigung a</label>
+						<input name="frage_1" id="richtig_1" value="richtig_1" type="radio">
+						<label for="richtig_1">½ mal der Geschwindigkeit v</label>
+						<input name="frage_1" id="falschc" value="falsch" type="radio">
+						<label for="falschc">seiner Masse m</label>
+					</fieldset>	
 				</form>
-				<script>
-					var JSON1={
-						"Frage":"Der zurückgelegt Weg eines Objekts ist das Produkt aus der quadrierten Zeit und <br>s = __ t²",
-						"Antwort1":"½ mal der Beschleunigung a", 
-						"Antwort2":"½ mal der Geschwindigkeit v",
-						"Antwort3":"seiner Masse m"
-					};
-					document.getElementById("jFrage1").innerHTML=JSON1.Frage  
-					document.getElementById("j1Antwort1").innerHTML=JSON1.Antwort1  
-					document.getElementById("j1Antwort2").innerHTML=JSON1.Antwort2  
-					document.getElementById("j1Antwort3").innerHTML=JSON1.Antwort3  
-				</script>
 				<!-- <script type="text/javascript"  src="script_auswerten.js">
 				</script> -->
 				<p>
@@ -3725,27 +2275,15 @@
 			<div data-role="content">
 				<form>
 					<fieldset data-role="controlgroup">
-						<legend><span id="jFrage2"></span><br></legend>
-						<input name="fra_2" id="falscha" value="falsch" type="radio">
-						<label for="falscha"><span id="j2Antwort1"></span><br></label>
-						<input name="fra_2" id="falschb" value="falsch" type="radio">
-						<label for="falschb"><span id="j2Antwort2"></span><br></label>
-						<input name="fra_2" id="richtig1c" value="richtig_1" type="radio">
-						<label for="richtig1c"><span id="j2Antwort3"></span><br></label>
+						<legend>Die Fläche innerhalb eines Kreises ist das Produkt aus dem quadrierten Radius r und <br>A = __ r²</legend>
+						<input name="frage_2" id="falscha" value="falsch" type="radio">
+						<label for="falscha">der Eulersche Zahl e</label>
+						<input name="frage_2" id="falschb" value="falsch" type="radio">
+						<label for="falschb">dem Umfang u des Kreises</label>
+						<input name="frage_2" id="richtig_1" value="richtig_1" type="radio">
+						<label for="richtig_1">der Kreiszahl Pi</label>
 					</fieldset>					
 				</form>
-				<script>
-					var JSON2={
-						"Frage":"Die Fläche innerhalb eines Kreises ist das Produkt aus dem quadrierten Radius r und <br>A = __ r²",
-						"Antwort1":"der Eulersche Zahl e", 
-						"Antwort2":"dem Umfang u des Kreises",
-						"Antwort3":"der Kreiszahl Pi"
-					};
-					document.getElementById("jFrage2").innerHTML=JSON2.Frage  
-					document.getElementById("j2Antwort1").innerHTML=JSON2.Antwort1  
-					document.getElementById("j2Antwort2").innerHTML=JSON2.Antwort2  
-					document.getElementById("j2Antwort3").innerHTML=JSON2.Antwort3  
-				</script>
 				<!-- 2. Frage + Antworten -->
 				<p>
 					<a href="#Frage3" data-role="button" data-inline="true">WEITER</a>
@@ -3774,39 +2312,15 @@
 			<div data-role="content">
 				<form>
 					<fieldset data-role="controlgroup">
-						<legend><span id="jFrage3"></span><br></legend>
-						<input name="fra_3" id="falscha" value="falsch" type="radio">
-						<label for="falscha"><span id="j3Antwort1"></span><br></label>
-						<input name="fra_3" id="richtig1b" value="richtig_1" type="radio">
-						<label for="richtig1b"><span id="j3Antwort2"></span><br></label>
-						<input name="fra_3" id="falschc" value="falsch" type="radio">
-						<label for="falschc"><span id="j3Antwort3"></span><br></label>
+						<legend>Die Lageenergie (potientelle Energie) eines Objekts ist die Produkt aus seiner Masse, der Höhe, in der er sich befindet und <br>E = m * __ * h</legend>
+						<input name="frage_3" id="falscha" value="falsch" type="radio">
+						<label for="falscha">seiner Dichte rho</label>
+						<input name="frage_3" id="richtig_1" value="richtig_1" type="radio">
+						<label for="richtig_1">der Erdbeschleunigung g</label>
+						<input name="frage_3" id="falschc" value="on" type="radio">
+						<label for="falschc">seiner Masse m</label>
 					</fieldset>					
 				</form>
-				<!-- um Arrays an den Server zu senden
-				<script type="text/javascript">
-					$.getJSON('formeln.json',null,function(json){			
-						$.each(json,function(i,fa){
-							alert(json[2].Frage, json[2].Antwort1, json[2].Antwort2, json[2].Antwort.3)
-						});
-					});
-				document.getElementById("jFrage1").innerHTML=JSON1.Frage  
-				document.getElementById("jAntwort1").innerHTML=JSON1.Antwort1  
-				document.getElementById("jAntwort2").innerHTML=JSON1.Antwort2  
-				document.getElementById("jAntwort3").innerHTML=JSON1.Antwort3
-				</script> -->
-				<script>
-					var JSON3={
-						"Frage":"Die Lageenergie (potientelle Energie) eines Objekts ist die Produkt aus seiner Masse, der Höhe, in der er sich befindet und <br>E = m * __ * h",
-						"Antwort1":"seiner Dichte rho", 
-						"Antwort2":"der Erdbeschleunigung g",
-						"Antwort3":"seiner Masse m"
-					};
-					document.getElementById("jFrage3").innerHTML=JSON3.Frage  
-					document.getElementById("j3Antwort1").innerHTML=JSON3.Antwort1  
-					document.getElementById("j3Antwort2").innerHTML=JSON3.Antwort2  
-					document.getElementById("j3Antwort3").innerHTML=JSON3.Antwort3  
-				</script>
 				<!--<script type="text/javascript"  src="script_auswerten1.js">
 				</script>
 				<!-- 3. Frage + Antworten -->
@@ -3837,27 +2351,15 @@
 			<div data-role="content">
 				<form>
 					<fieldset data-role="controlgroup">
-						<legend><span id="jFrage4"></span><br></legend>
-						<input name="fra_4" id="richtig1a" value="richtig_1" type="radio">
-						<label for="richtig1a"><span id="j4Antwort1"></span><br></label>
-						<input name="fra_4" id="falschb" value="falsch" type="radio">
-						<label for="falschb"><span id="j4Antwort2"></span><br></label>
-						<input name="fra_4" id="falschc" value="falsch" type="radio">
-						<label for="falschc"><span id="j4Antwort3"></span><br></label>
+						<legend>Die Spannung an einem Widerstand R ist das Produkt aus R und <br>U = R * __</legend>
+						<input name="frage_4" id="richtig_1" value="richtig_1" type="radio">
+						<label for="richtig_1">dem Widerstand R selbst</label>
+						<input name="frage_4" id="falschb" value="falsch" type="radio">
+						<label for="falschb">dem Strom I</label>
+						<input name="frage_4" id="falschc" value="falsch" type="radio">
+						<label for="falschc">dem Leitwert G</label>
 					</fieldset>					
 				</form>
-				<script>
-					var JSON4={
-						"Frage":"Die Spannung an einem Widerstand R ist das Produkt aus R und <br>U = R * __",
-						"Antwort1":"dem Widerstand R selbst", 
-						"Antwort2":"dem Strom I",
-						"Antwort3":"dem Leitwert G"
-					};
-					document.getElementById("jFrage4").innerHTML=JSON4.Frage  
-					document.getElementById("j4Antwort1").innerHTML=JSON4.Antwort1  
-					document.getElementById("j4Antwort2").innerHTML=JSON4.Antwort2  
-					document.getElementById("j4Antwort3").innerHTML=JSON4.Antwort3  
-				</script>
 				<!-- 4. Frage + Antworten -->
 				<p>
 					<a href="#Frage5" data-role="button" data-inline="true">WEITER</a>
@@ -3886,27 +2388,15 @@
 			<div data-role="content">
 				<form>
 					<fieldset data-role="controlgroup">
-						<legend><span id="jFrage5"></span><br></legend>
-						<input name="fra_5" id="richtig1a" value="richtig_1" type="radio">
-						<label for="richtig1a"><span id="j5Antwort1"></span><br></label>
-						<input name="fra_5" id="falschb" value="falsch" type="radio">
-						<label for="falschb"><span id="j5Antwort2"></span><br></label>
-						<input name="fra_5" id="falschc" value="falsch" type="radio">
-						<label for="falschc"><span id="j5Antwort3"></span><br></label>
+						<legend>Was ergibt das Produkt aus Kondesatorkapazität und Spannung? <br>__ = C * U</legend>
+						<input name="frage_5" id="richtig_1" value="richtig_1" type="radio">
+						<label for="richtig_1">Ladung Q</label>
+						<input name="frage_5" id="falschb" value="falsch" type="radio">
+						<label for="falschb">Strom I</label>
+						<input name="frage_5" id="falschc" value="falsch" type="radio">
+						<label for="falschc">Dielektrizitätskonstante eps</label>
 					</fieldset>					
 				</form>
-				<script>
-					var JSON5={
-						"Frage":"Was ergibt das Produkt aus Kondesatorkapazität und Spannung? <br>__ = C * U",
-						"Antwort1":"Ladung Q", 
-						"Antwort2":"Strom I",
-						"Antwort3":"Dielektrizitätskonstante eps"
-					};
-					document.getElementById("jFrage5").innerHTML=JSON5.Frage  
-					document.getElementById("j5Antwort1").innerHTML=JSON5.Antwort1  
-					document.getElementById("j5Antwort2").innerHTML=JSON5.Antwort2  
-					document.getElementById("j5Antwort3").innerHTML=JSON5.Antwort3  
-				</script>
 				<!-- 5. Frage + Antworten -->
 				<p>
 					<a href="#Frage6" data-role="button" data-inline="true">WEITER</a>
@@ -3935,27 +2425,15 @@
 			<div data-role="content">
 				<form>
 					<fieldset data-role="controlgroup">
-						<legend><span id="jFrage6"></span><br></legend>
-						<input name="fra_6" id="falscha" value="falsch" type="radio">
-						<label for="falscha"><span id="j6Antwort1"></span><br></label>
-						<input name="fra_6" id="falschb" value="falsch" type="radio">
-						<label for="falschb"><span id="j6Antwort2"></span><br></label>
-						<input name="fra_6" id="richtig1c" value="richtig_1" type="radio">
-						<label for="richtig1c"><span id="j6Antwort3"></span><br></label>
+						<legend>Was muss mit einem Leiterstück der Länge l passieren, damit auf es die Lorentzkraft F_L wirkt?	<br>F_L = __ * l * B</legend>
+						<input name="frage_6" id="falscha" value="falsch" type="radio">
+						<label for="falscha">Es muss sich mit der Geschwindigkeit v bewegen</label>
+						<input name="frage_6" id="falschb" value="falsch" type="radio">
+						<label for="falschb">Es muss den Widerstand R bieten</label>
+						<input name="frage_6" id="richtig_1" value="richtig_1" type="radio">
+						<label for="richtig_1">Es muss von einem Strom I durchflossen werden</label>
 					</fieldset>					
 				</form>
-				<script>
-					var JSON6={
-						"Frage":"Was muss mit einem Leiterstück der Länge l passieren, damit auf es die Lorentzkraft F_L wirkt?	<br>F_L = __ * l * B",
-						"Antwort1":"Es muss sich mit der Geschwindigkeit v bewegen", 
-						"Antwort2":"Es muss den Widerstand R bieten",
-						"Antwort3":"Es muss von einem Strom I durchflossen werden"
-					};
-					document.getElementById("jFrage6").innerHTML=JSON6.Frage  
-					document.getElementById("j6Antwort1").innerHTML=JSON6.Antwort1  
-					document.getElementById("j6Antwort2").innerHTML=JSON6.Antwort2  
-					document.getElementById("j6Antwort3").innerHTML=JSON6.Antwort3  
-				</script>
 				<!-- 6. Frage + Antworten -->
 				<p>
 					<a href="#Frage7" data-role="button" data-inline="true" id="f7">WEITER</a>
@@ -3984,27 +2462,15 @@
 			<div data-role="content">
 				<form>
 					<fieldset data-role="controlgroup">
-						<legend><span id="jFrage7"></span><br></legend>
-						<input name="fra_7" id="falscha" value="falsch" type="radio">
-						<label for="falscha"><span id="j7Antwort1"></span><br></label>
-						<input name="fra_7" id="richtig1b" value="richtig_1" type="radio">
-						<label for="richtig1b"><span id="j7Antwort2"></span><br></label>
-						<input name="fra_7" id="falschc" value="falsch" type="radio">
-						<label for="falschc"><span id="j7Antwort3"></span><br></label>
+						<legend>Was muss größer werden, damit das elektrische Feld an einem Kondensator mit der Spannung U kleiner wird?<br>E = U / __<br></legend>
+						<input name="frage_7" id="falscha" value="falsch" type="radio">
+						<label for="falscha">Plattenabstand d<br></label>
+						<input name="frage_7" id="richtig_1" value="richtig_1" type="radio">
+						<label for="richtig_1">Kapazität C<br></label>
+						<input name="frage_7" id="falschc" value="falsch" type="radio">
+						<label for="falschc">Dielektrizitätskonstante eps<br></label>
 					</fieldset>					
 				</form>
-				<script>
-					var JSON7={
-						"Frage":"Was muss größer werden, damit das elektrische Feld an einem Kondensator mit der Spannung U kleiner wird?<br>E = U / __",
-						"Antwort1":"Plattenabstand d", 
-						"Antwort2":"Kapazität C",
-						"Antwort3":"Dielektrizitätskonstante eps"
-					};
-					document.getElementById("jFrage7").innerHTML=JSON7.Frage  
-					document.getElementById("j7Antwort1").innerHTML=JSON7.Antwort1  
-					document.getElementById("j7Antwort2").innerHTML=JSON7.Antwort2  
-					document.getElementById("j7Antwort3").innerHTML=JSON7.Antwort3  
-				</script>
 				<!-- 7. Frage + Antworten -->
 				<p>
 					<a href="#Frage8" data-role="button" data-inline="true">WEITER</a>
@@ -4033,36 +2499,21 @@
 			<div data-role="content">
 				<form>
 					<fieldset data-role="controlgroup">
-						<legend><span id="jFrage8"></span><br></legend>
-						<input name="fra_8" id="falscha" value="falsch" type="radio">
-						<label for="falscha"><span id="j8Antwort1"></span><br></label>
-						<input name="fra_8" id="falschb" value="falsch" type="radio">
-						<label for="falschb"><span id="j8Antwort2"></span><br></label>
-						<input name="fra_8" id="richtig1c" value="richtig_1" type="radio">
-						<label for="richtig1c"><span id="j8Antwort3"></span><br></label>
+						<legend>Die Leistung P ist die Arbeit, die	<br>P = W / __<br></legend>
+						<input name="frage_8" id="falscha" value="falsch" type="radio">
+						<label for="falscha">für eine bestimmte Energie E umgesetzt wird<br></label>
+						<input name="frage_8" id="falschb" value="falsch" type="radio">
+						<label for="falschb">in einer bestimmten Zeit t umgesetzt wird><br></label>
+						<input name="frage_8" id="richtig_1" value="richtig_1" type="radio">
+						<label for="richtig_1">beim Zurücklegen einer bestimmten Strecke s umgesetzt wird<br></label>
 					</fieldset>					
 				</form>
-				<script>
-					var JSON8={
-						"Frage":"Die Leistung P ist die Arbeit, die	<br>P = W / __",
-						"Antwort1":"für eine bestimmte Energie E umgesetzt wird", 
-						"Antwort2":"in einer bestimmten Zeit t umgesetzt wird",
-						"Antwort3":"beim Zurücklegen einer bestimmten Strecke s umgesetzt wird"
-					};
-					document.getElementById("jFrage8").innerHTML=JSON8.Frage  
-					document.getElementById("j8Antwort1").innerHTML=JSON8.Antwort1  
-					document.getElementById("j8Antwort2").innerHTML=JSON8.Antwort2  
-					document.getElementById("j8Antwort3").innerHTML=JSON8.Antwort3  
-				</script>
 				<!-- 8. Frage + Antworten -->
 				<p>
 					<!--<a href="#AUSWERTEN" data-role="button" data-inline="true">Auswerten</a>-->
 					
 					<a href="#" data-role="button" data-inline="true" value="Auswerten!" onclick="auswerten_1()">Auswerten</a>
 					<div id="ausgabe_1">&nbsp;</div>
-					<p>
-						<a href="#Loesung" data-role="button" data-inline="true">LÖSUNG</a>
-					</p>
 					
 					<!--<a href="#ausgabe" data-rel="popup" data-role="button" data-inline="true" data-transition="pop" value="Auswerten!" onclick="auswerten()">Auswerten</a>
 					<div data-role="popup" id="ausgabe"><p>&nbsp;</p>
@@ -4071,37 +2522,32 @@
 			</div>
 		</div>
 		
-		<div data-role="page" data-theme="a" id="Loesung" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
-			<!-- Sidepanel -->
-			<div data-role="panel" data-theme="b" id="SidePanelFormelecke" data-position="right" data-position-fixed="true" data-display="overlay">
-				<h3>Men&uuml;</h3>
+		<!--<div data-role="page" data-theme="a" id="AUSWERTEN" data-title="Hochschule Karlsruhe - Studiengang Mechatronik">
+			<!-- Side panel -->	
+			<!--<div data-role="panel" data-theme="b" id="SidePanelSpiele" data-position="right" data-position-fixed="true" data-display="overlay">
+				<h3>Menü</h3>
 				<a data-role="button" data-theme="b" data-icon="info"   data-transition="flip" href="#Impressum">Impressum</a>
-				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="navigation.html" rel="external">Navigator</a>
-				<a data-role="button" data-theme="b" data-icon="home"   data-transition="flip" href="#Main">Hauptmen&uuml;</a>
-				<a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">App Beenden</a>
-				<a data-role="button" data-theme="b" data-icon="delete"   data-rel="close">Men&uuml; Schlie&szlig;en</a>
+				<a data-role="button" data-theme="b" data-icon="search" data-transition="flip" href="main_topics/navigation.html" rel="external">Navigator</a>
+				<!-- <a data-role="button" data-theme="b" data-icon="delete" onClick="navigator.app.exitApp();">MT-App Beenden</a> -->
+				<!--<a data-role="button" data-theme="b" data-icon="back"   data-rel="close">Menü Schließen</a>
 			</div>
 			
-			<!-- Headerleiste -->
 			<div data-role="header" data-position="fixed">
-				<a data-role="button" data-icon="back" data-transition="slide" data-direction="reverse" data-rel="back" href="#Spiele">Zur&uuml;ck</a>
-				<h1>Lösung</h1>
-				<a data-role="button" data-icon="grid" data-transition="slide" href="#SidePanelFormelecke">Men&uuml;</a>
+				<a data-role="button" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse" href="#Main">Zurück</a>
+				<h1>Ergebnis</h1>
+				<a data-role="button" data-icon="grid" data-iconpos="notext" data-transition="slide" href="#SidePanelSpiele">Menü</a>
 			</div>
-
-			<!-- Inhalt der Seite -->
+			
 			<div data-role="content">
-				<p align="justify">
-					Frage 1:<br>Der zurückgelegt Weg eines Objekts ist das Produkt aus der quadrierten Zeit und<br>s = __ t² --> <b>½ mal der Geschwindigkeit v</b><br>
-					Frage 2:<br>Die Fläche innerhalb eines Kreises ist das Produkt aus dem quadrierten Radius r und<br>A = __ r² --> <b>der Kreiszahl Pi</b><br>
-					Frage 3:<br>Die Lageenergie (potientelle Energie) eines Objekts ist die Produkt aus seiner Masse, der Höhe, in der er sich befindet und<br>E = m * __ * h --> <b>der Erdbeschleunigung g</b><br>
-					Frage 4:<br>Die Spannung an einem Widerstand R ist das Produkt aus R und<br>U = R * __--> <b>dem Widerstand R selbst</b><br>
-					Frage 5:<br>Was ergibt das Produkt aus Kondesatorkapazität und Spannung?<br>__ = C * U--> <b>Ladung Q</b><br>
-					Frage 6:<br>Was muss mit einem Leiterstück der Länge l passieren, damit auf es die Lorentzkraft F_L wirkt?<br>F_L = __ * l * B --> <b>Es muss von einem Strom I durchflossen werden</b><br>
-					Frage 7:<br>Was muss größer werden, damit das elektrische Feld an einem Kondensator mit der Spannung U kleiner wird?<br>E = U / __--> <b>Kapazität C</b><br>
-					Frage 8:<br>Die Leistung P ist die Arbeit, die<br>P = W / __ --> <b>beim Zurücklegen einer bestimmten Strecke s umgesetzt wird</b><br>
-				</p>
+				<p>
+					<!--<a href="#ausgabe" data-role="button" data-inline="true" value="Auswerten!" onclick="auswerten()">Auswerten</a>-->
+					<!--<div id="ausgabe">&nbsp;</div>
+					
+					<!-- <a href="#ausgabe" data-rel="popup" data-role="button" data-inline="true" data-transition="pop" value="Auswerten!" onclick="auswerten()">Auswerten</a>
+					<div data-role="popup" id="ausgabe"><p>&nbsp;</p>
+					</div> -->
+				<!--</p>
 			</div>
-		</div>
+		</div>-->
 	</body>
 </html>
