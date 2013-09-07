@@ -73,27 +73,23 @@
 		
 		
 		<script type="text/javascript">
-			<!--function clearRadios(radioName)
-			<!--{
-				<!--var radios = document.getElementsByName(radioName);
-				<!--if(radios.length > 0)
-				<!--{
-					<!--for (i=0; i<radios.length; i++)
-					<!--{
-					<!--	radios[i].checked = false;
-					<!--}
-				<!--}
-			<!--}
+			function clearRadios(afrage_)
+			{
+				var radios = document.getElementsByName(afrage_);
+				if(radios.length > 0)
+				{
+					for (i=0; i<radios.length; i++)
+					{
+						radios[i].checked = false;
+					}
+				}
+			}
     
 			function clearRadiosjQ()
 			{
 				$("input[type='radio']").removeAttr("checked");
 			}
 			</script>
-		<!--<script language="javascript" type="text/javascript" src="script_formeln.js"></script>
-		<script language="javascript" type="text/javascript" src="script_assessment.js"></script>
-		<script language="javascript" type="text/javascript" src="js/script_auswerten.js"></script>
-		<script language="javascript" type="text/javascript" src="js/script_auswerten1.js"></script>-->
 	</head>
 
 	<!-- BODY -->
@@ -1487,22 +1483,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wer gilt als der Erfinder des Telefons?</b></legend>
-					<p>
-						<a href="#jW1Antwort3" width="100%" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">James Clerk Maxwell</a>
-						<div data-role="popup" id="jW1Antwort3"></div>
-					</p>
-					<p>
-						<a href="#jW1Antwort2" width="100%" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
-						<div data-role="popup" id="jW1Antwort2"><br></div>
-					</p>
-					<p>
-						<a href="#jW1Antwort1" width="100%" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alexander Graham Bell</a>
-						<div data-role="popup" id="jW1Antwort1"><br></div>
-					</p>
-					<p>
-						<a href="#jW1Antwort4" width="100%" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nicola Tesla</a>
-						<div data-role="popup" id="jW1Antwort4"><br></div>
-					</p>
+					<form>
+						<a href="#jW1Antwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">James Clerk Maxwell</a>
+						<div data-role="popup" id="jW1Antwort3"></div><br>
+
+						<a href="#jW1Antwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
+						<div data-role="popup" id="jW1Antwort2"><br></div><br>
+
+						<a href="#jW1Antwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alexander Graham Bell</a>
+						<div data-role="popup" id="jW1Antwort1"><br></div><br>
+
+						<a href="#jW1Antwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nicola Tesla</a>
+						<div data-role="popup" id="jW1Antwort4"><br></div><br>
+					</form>
 					
 					<script>
 						var JSON1W={
@@ -1546,22 +1539,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wer gründete zusammen mit Bill Gates den mittlerweile weltgrößten Softwarekonzern?</b></legend>
-					<p>
+					<form>
 						<a href="#j2WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Paul Allen</a>
-						<div data-role="popup" id="j2WAntwort1"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j2WAntwort1"></div><br>
+
 						<a href="#j2WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Dietmar Hopp</a>
-						<div data-role="popup" id="j2WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j2WAntwort2"><br></div><br>
+
 						<a href="#j2WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Jobs</a>
-						<div data-role="popup" id="j2WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j2WAntwort3"><br></div><br>
+
 						<a href="#j2WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Larry Page</a>
 						<div data-role="popup" id="j2WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON2W={
@@ -1603,22 +1593,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wie heißt der Stuttgarter Ingenieur, der 1887 die größte deutsche GmbH gründete?</b></legend>
-					<p>
+					<form>
 						<a href="#j3WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">August Thyssen</a>
-						<div data-role="popup" id="j3WAntwort4"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j3WAntwort4"></div><br>
+
 						<a href="#j3WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gottlieb Daimler</a>
-						<div data-role="popup" id="j3WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j3WAntwort2"><br></div><br>
+
 						<a href="#j3WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Werner von Siemens</a>
-						<div data-role="popup" id="j3WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j3WAntwort3"><br></div><br>
+
 						<a href="#j3WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Robert Bosch</a>
 						<div data-role="popup" id="j3WAntwort1"><br></div>
-					</p>
+					</form>
 					<script>
 						var JSON3W={
 							"Antwort1":"<b>Das Unternehmen Robert Bosch GmbH mit Firmensitz in Gerlingen bei Stuttgart ist die größte GmbH Deutschlands, das heißt, dass keine Anteile der Firma an Börsen gehandelt werden.</b>", 
@@ -1659,22 +1646,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wer gilt als der Erfinder der Glühbirne?</b></legend>
-					<p>
+					<form>
 						<a href="#j4WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alfred Wendel</a>
-						<div data-role="popup" id="j4WAntwort3"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j4WAntwort3"></div><br>
+						
 						<a href="#j4WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
-						<div data-role="popup" id="j4WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j4WAntwort2"><br></div><br>
+
 						<a href="#j4WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Thomas Alva Edison</a>
-						<div data-role="popup" id="j4WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j4WAntwort1"><br></div><br>
+
 						<a href="#j4WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Joseph von Wolfram</a>
 						<div data-role="popup" id="j4WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON4W={
@@ -1716,22 +1700,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wer erhielt 1905 für die Erklärung des photoelektrischen Effektes den Nobelpreis für Physik?</b></legend>
-					<p>
+					<form>
 						<a href="#j5WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Sir Isaac Newton</a>
-						<div data-role="popup" id="j5WAntwort2"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j5WAntwort2"></div><br>
+
 						<a href="#j5WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Albert Einstein</a>
-						<div data-role="popup" id="j5WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j5WAntwort1"><br></div><br>
+
 						<a href="#j5WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Wilhelm Conrad Röntgen</a>
-						<div data-role="popup" id="j5WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j5WAntwort3"><br></div><br>
+
 						<a href="#j5WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Erwin Schrödinger</a>
 						<div data-role="popup" id="j5WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON5W={
@@ -1773,22 +1754,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wer ließ sich eine freischwebende, gläserne Treppe patentieren?</b></legend>
-					<p>
+					<form>
 						<a href="#j6WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Jobs</a>
-						<div data-role="popup" id="j6WAntwort1"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j6WAntwort1"></div><br>
+
 						<a href="#j6WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alfred Krupp</a>
-						<div data-role="popup" id="j6WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j6WAntwort2"><br></div><br>
+
 						<a href="#j6WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gustave Eiffel</a>
-						<div data-role="popup" id="j6WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j6WAntwort3"><br></div><br>
+
 						<a href="#j6WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Enzo Ferrari</a>
 						<div data-role="popup" id="j6WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON6W={
@@ -1830,22 +1808,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Nach welchem Deutschen Erfinder ist ein noch heute häufig im Automobil eingesetzter Motorentyp benannt?</b></legend>
-					<p>
+					<form>
 						<a href="#j7WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Hugo von Brenner</a>
-						<div data-role="popup" id="j7WAntwort3"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j7WAntwort3"></div><br>
+
 						<a href="#j7WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Benz</a>
-						<div data-role="popup" id="j7WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j7WAntwort2"><br></div><br>
+
 						<a href="#j7WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nicolaus August Otto</a>
-						<div data-role="popup" id="j7WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j7WAntwort1"><br></div><br>
+
 						<a href="#j7WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Robert Stirling</a>
 						<div data-role="popup" id="j7WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON7W={
@@ -1887,22 +1862,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wie hieß die Ehefrau eines berühmten Erfinders, die 1888 mit einem Automobil eine Strecke von 106 Kilometern zurücklegte?</b></legend>
-					<p>
+					<form>
 						<a href="#j8WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Clara Jane Ford</a>
-						<div data-role="popup" id="j8WAntwort4"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j8WAntwort4"></div><br>
+
 						<a href="#j8WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Louise Porsche</a>
-						<div data-role="popup" id="j8WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j8WAntwort2"><br></div><br>
+
 						<a href="#j8WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Anna Bosch</a>
-						<div data-role="popup" id="j8WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j8WAntwort3"><br></div><br>
+
 						<a href="#j8WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Bertha Benz</a>
 						<div data-role="popup" id="j8WAntwort1"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON8W={
@@ -1944,22 +1916,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Was erhielt Michael Rotert als erster 1984 in Karlsruhe?</b></legend>
-					<p>
+					<form>
 						<a href="#j9WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">eine computertomographische<br>Untersuchung (CT)</a>
-						<div data-role="popup" id="j9WAntwort2"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j9WAntwort2"></div><br>
+
 						<a href="#j9WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">eine E-Mail</a>
-						<div data-role="popup" id="j9WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j9WAntwort1"><br></div><br>
+
 						<a href="#j9WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">den Nobelpreis für Mechatronik</a>
-						<div data-role="popup" id="j9WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j9WAntwort3"><br></div><br>
+
 						<a href="#j9WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">einen Anruf von US-Präsident<br>Ronald Reagan</a>
 						<div data-role="popup" id="j9WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON9W={
@@ -2001,22 +1970,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wie heißt der Erfinder des ersten funktionsfähigen Digitalrechners der Welt?</b></legend>
-					<p>
+					<form>
 						<a href="#j10WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Bill Gates</a>
-						<div data-role="popup" id="j10WAntwort2"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j10WAntwort2"></div><br>
+
 						<a href="#j10WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Konrad Zuse</a>
-						<div data-role="popup" id="j10WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j10WAntwort1"><br></div><br>
+
 						<a href="#j10WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Tashado Atari</a>
-						<div data-role="popup" id="j10WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j10WAntwort3"><br></div><br>
+
 						<a href="#j10WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">William Texas-Instruments</a>
 						<div data-role="popup" id="j10WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON10W={
@@ -2058,22 +2024,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wer bewies in Karlsruhe die Existenz der elektromagnetischen Welle?</b></legend>
-					<p>
+					<form>
 						<a href="#j11WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Heinrich Hertz</a>
-						<div data-role="popup" id="j11WAntwort1"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j11WAntwort1"></div><br>
+
 						<a href="#j11WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Albert Einstein</a>
-						<div data-role="popup" id="j11WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j11WAntwort2"><br></div><br>
+
 						<a href="#j11WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Wilhelm Conrad Röntgen</a>
-						<div data-role="popup" id="j11WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j11WAntwort3"><br></div><br>
+
 						<a href="#j11WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Johann Gottfried Tulla</a>
 						<div data-role="popup" id="j11WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON11W={
@@ -2115,22 +2078,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wie heißt der Karlsruher Erfinder, der den Vorläufer des heutigen Fahrrads entwickelte?</b></legend>
-					<p>
+					<form>
 						<a href="#j12WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Benz</a>
-						<div data-role="popup" id="j12WAntwort4"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j12WAntwort4"></div><br>
+
 						<a href="#j12WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
-						<div data-role="popup" id="j12WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j12WAntwort2"><br></div><br>
+
 						<a href="#j12WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich Gauß</a>
-						<div data-role="popup" id="j12WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j12WAntwort3"><br></div><br>
+
 						<a href="#j12WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Karl Drais</a>
 						<div data-role="popup" id="j12WAntwort1"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON12W={
@@ -2172,22 +2132,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Welche zwei Brüder entwickelten das erste motorgetriebene Flugzeug?</b></legend>
-					<p>
+					<form>
 						<a href="#j13WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Joseph Michel und<br>Jacques Etienne Montgolfière</a>
-						<div data-role="popup" id="j13WAntwort3"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j13WAntwort3"></div><br>
+
 						<a href="#j13WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Jacob und Wilhelm Grimm</a>
-						<div data-role="popup" id="j13WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j13WAntwort2"><br></div><br>
+
 						<a href="#j13WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Wilbur und Orville Wright</a>
-						<div data-role="popup" id="j13WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j13WAntwort1"><br></div><br>
+
 						<a href="#j13WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Martin und Simon Fourcade</a>
 						<div data-role="popup" id="j13WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON13W={
@@ -2229,22 +2186,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wer erhielt für ihre Forschungen im Bereich der Radioaktivität als erste Frau den Nobelpreis für Physik?</b></legend>
-					<p>
+					<form>
 						<a href="#j14WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Lise Meitner</a>
-						<div data-role="popup" id="j14WAntwort3"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j14WAntwort3"></div><br>
+
 						<a href="#j14WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Maria Montessori</a>
-						<div data-role="popup" id="j14WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j14WAntwort2"><br></div><br>
+
 						<a href="#j14WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Marie Curie</a>
-						<div data-role="popup" id="j14WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j14WAntwort1"><br></div><br>
+
 						<a href="#j14WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Margaret Thatcher</a>
 						<div data-role="popup" id="j14WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON14W={
@@ -2286,22 +2240,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Welches Universalgenie ist neben seinen Flugmaschinen und vielen anderen Erfindungen vor allem für das Bild einer Frau bekannt?</b></legend>
-					<p>
+					<form>
 						<a href="#j15WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Galileo Galilei</a>
-						<div data-role="popup" id="j15WAntwort2"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j15WAntwort2"></div><br>
+
 						<a href="#j15WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Leonardo da Vinci</a>
-						<div data-role="popup" id="j15WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j15WAntwort1"><br></div><br>
+
 						<a href="#j15WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Vincent van Gogh</a>
-						<div data-role="popup" id="j15WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j15WAntwort3"><br></div><br>
+
 						<a href="#j15WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michelangelo Buonarroti</a>
 						<div data-role="popup" id="j15WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON15W={
@@ -2343,22 +2294,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Wer ermöglichte mit der Entwicklung eines nach ihm benannten Verfahrens die Erfindung des Kühlschranks?</b></legend>
-					<p>
+					<form>
 						<a href="#j16WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich Gauß</a>
-						<div data-role="popup" id="j16WAntwort3"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j16WAntwort3"></div><br>
+
 						<a href="#j16WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Miele</a>
-						<div data-role="popup" id="j16WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j16WAntwort2"><br></div><br>
+
 						<a href="#j16WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl von Linde</a>
-						<div data-role="popup" id="j16WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j16WAntwort1"><br></div><br>
+
 						<a href="#j16WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich von Siemens</a>
 						<div data-role="popup" id="j16WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON16W={
@@ -2400,22 +2348,19 @@
 			<div data-role="content">
 				<p>
 					<legend><b>Welcher bekannte Ingenieur perfektionierte die Fließbandfertigung von Automobilen?</b></legend>
-					<p>
+					<form>
 						<a href="#j17WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Henry Ford</a>
-						<div data-role="popup" id="j17WAntwort1"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j17WAntwort1"></div><br>
+
 						<a href="#j17WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Sakichi Toyota</a>
-						<div data-role="popup" id="j17WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j17WAntwort2"><br></div><br>
+
 						<a href="#j17WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Antonio Fiat</a>
-						<div data-role="popup" id="j17WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j17WAntwort3"><br></div><br>
+
 						<a href="#j17WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Ferdinand Porsche</a>
 						<div data-role="popup" id="j17WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON17W={
@@ -2457,22 +2402,19 @@
 			<div data-role="content">
 				<p>
 					<legend><b>Welcher italienische Erfinder entwickelte die Batterie?</b></legend>
-					<p>
+					<form>
 						<a href="#j18WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Francesco Alkaline</a>
-						<div data-role="popup" id="j18WAntwort4"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j18WAntwort4"></div><br>
+
 						<a href="#j18WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">André-Marie Ampère</a>
-						<div data-role="popup" id="j18WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j18WAntwort2"><br></div><br>
+
 						<a href="#j18WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nikola Tesla</a>
-						<div data-role="popup" id="j18WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j18WAntwort3"><br></div><br>
+
 						<a href="#j18WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alessandro Volta</a>
 						<div data-role="popup" id="j18WAntwort1"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON18W={
@@ -2514,22 +2456,19 @@
 			<div data-role="content">
 				<p>
 					<legend><b>Nach welchem Multitalent sind unter anderem ein neues Satellitennavigationssystem und ein Fernrohr benannt?</b></legend>
-					<p>
+					<form>
 						<a href="#j19WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Johannes Kepler</a>
-						<div data-role="popup" id="j19WAntwort3"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j19WAntwort3"></div><br>
+
 						<a href="#j19WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Tom Tomson</a>
-						<div data-role="popup" id="j19WAntwort2"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j19WAntwort2"><br></div><br>
+
 						<a href="#j19WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Galileo Galilei</a>
-						<div data-role="popup" id="j19WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j19WAntwort1"><br></div><br>
+
 						<a href="#j19WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gustav P. Sloterdijk</a>
 						<div data-role="popup" id="j19WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON19W={
@@ -2571,22 +2510,19 @@
 			<div data-role="content">
 				<p>
 					<legend align="justify"><b>Was erfand Karl Ferdinand Braun 1897 in Karlsruhe?</b></legend>
-					<p>
+					<form>
 						<a href="#j20WAntwort2" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">den ersten elektrisch<br>betriebenen Rasierapparat</a>
-						<div data-role="popup" id="j20WAntwort2"></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j20WAntwort2"></div><br>
+
 						<a href="#j20WAntwort1" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">die Braun'sche Röhre</a>
-						<div data-role="popup" id="j20WAntwort1"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j20WAntwort1"><br></div><br>
+
 						<a href="#j20WAntwort3" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">die Braunüle</a>
-						<div data-role="popup" id="j20WAntwort3"><br></div>
-					</p>
-					<p>
+						<div data-role="popup" id="j20WAntwort3"><br></div><br>
+
 						<a href="#j20WAntwort4" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">die erste funktionstüchtige<br>Langstreckenrakete</a>
 						<div data-role="popup" id="j20WAntwort4"><br></div>
-					</p>
+					</form>
 					
 					<script>
 						var JSON20W={
@@ -2621,8 +2557,11 @@
 			</div>
 			
 			<div data-role="content">
-				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true">START</a>
+				<p align="justify">
+				Beim "Bilderraten" geht es draum, zu dem jeweils angezeigten Bild die richtige Persönlickeit aus den vier Antwortmöglichkeiten auszuwählen.<br><p> Viel Erfolg.</p>
+					<p>
+						<a href="#Frage1B" data-role="button" data-inline="true">START</a>
+					</p>
 				</p>
 			</div>
 		</div>
@@ -2647,27 +2586,26 @@
 			
 			<div data-role="content">
 				<p>
-					<img src="Bilder/Carl_Friedrich_Gauß.png" />
+					<img src="Bilder/Quiz/johann_carl_friedrich_gauss.jpg" width="80%" height="60%"/>
 				</p>
 				<legend>Wer bin ich? </legend>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Sir Isaac Newton</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Carl Friedrich Gauß</a>
 				<div data-role="popup" id="popupBasic">
-					<p align="justify">Carl Friedrich Gauß, dessen Konterfei auf den<br>Zehn-Mark-Scheinen zu sehen ist, war einer der</br>bedeutendsten Mathematiker der Geschichte und <br>beschäftigte sich außerdem mit Astronomie und</br>Physik.</p>
+					<p align="justify"><b>Carl Friedrich Gauß, dessen Konterfei auf den<br>Zehn-Mark-Scheinen zu sehen ist, war einer der</br>bedeutendsten Mathematiker der Geschichte und <br>beschäftigte sich außerdem mit Astronomie und</br>Physik.</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Alexander von Humboldt</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Gottfried Wilhelm Leibniz</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
 					<a href="#Frage2B" data-role="button" data-inline="true">WEITER</a>
 				</p>
 			</div>
@@ -2693,28 +2631,27 @@
 			
 			<div data-role="content">
 				<p>
-					<img src="Bilder/Albert_Einstein.png" />
+					<img src="Bilder/Quiz/albert_einstein.jpg" width="80%" height="60%"/>
 				</p>
 				<legend>Wer bin ich? </legend>
 				
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Stephen Hawking</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Max Planck</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Otto Hahn</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Albert Einstein</a>
 				<div data-role="popup" id="popupBasic">
-					<p align="justify">Obwohl er Fotografen nicht ausstehen konnte (er bezeichnete sie als „Lichtaffen“), gibt es doch zahlreiche Aufnahmen von Albert Einstein, einem der bedeutendsten Wissenschaftler der Neuzeit.</p>
+					<p align="justify"><b>Obwohl er Fotografen nicht ausstehen konnte (er bezeichnete sie als „Lichtaffen“), gibt es doch zahlreiche Aufnahmen von Albert Einstein, einem der bedeutendsten Wissenschaftler der Neuzeit.</b></p>
 				</div>
 				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
 					<a href="#Frage3B" data-role="button" data-inline="true">WEITER</a>
 				</p>
 			</div>
@@ -2740,27 +2677,26 @@
 			
 			<div data-role="content">
 				<p>
-					<img src="Bilder/SteveJobs.png" />
+					<img src="Bilder/Quiz/steve_jobs.jpg" width="80%" height="60%"/>
 				</p>
 				<legend>Wer bin ich? </legend>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Jobs</a>
 				<div data-role="popup" id="popupBasic">
-					<p align="justify">Der Gründer der Firma Apple war eine der wichtigsten Persönlichkeiten der Computerindustrie und maßgeblich für den Erfolg des Heimcomputers verantwortlich.</p>
+					<p align="justify"><b>Der Gründer der Firma Apple war eine der wichtigsten Persönlichkeiten der Computerindustrie und maßgeblich für den Erfolg des Heimcomputers verantwortlich.</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">William Hewlett</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Larry Page</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Steve Wozniak</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
 					<a href="#Frage4B" data-role="button" data-inline="true">WEITER</a>
 				</p>
 			</div>
@@ -2786,27 +2722,26 @@
 			
 			<div data-role="content">
 				<p>
-					<img src="Bilder/Leonardo_da_Vinci.png" />
+					<img src="Bilder/Quiz/Leonardo_Da-Vinci.jpg" width="80%" height="60%"/>
 				</p>
 				<legend>Wer bin ich? </legend>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Galileo Galilei</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!<b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Nikolaus Kopernikus</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!<b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Johannes Kepler</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!<b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Leonardo Da Vinci</a>
 				<div data-role="popup" id="popupBasic">
-					<p align="justify">Dieses Selbstporträt zeigt Leonardo da Vinci, der nicht nur Erfinder und Ingenieur, sondern auch ein begabter Zeichner war.</p>
+					<p align="justify"><b>Dieses Selbstporträt zeigt Leonardo da Vinci, der nicht nur Erfinder und Ingenieur, sondern auch ein begabter Zeichner war.</b></p>
 				</div>
 				<p>
-					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
 					<a href="#Frage5B" data-role="button" data-inline="true">WEITER</a>
 				</p>
 			</div>
@@ -2832,24 +2767,24 @@
 			
 			<div data-role="content">
 				<p>
-					<img src="Bilder/Benjamin_Franklin.png" />
+					<img src="Bilder/Quiz/Benjamin_Franklin.jpg" width="80%" height="60%"/>
 				</p>
 				<legend>Wer bin ich? </legend>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Thomas Alva Edison</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Michael Faraday</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Benjamin Franklin</a>
 				<div data-role="popup" id="popupBasic">
-					<p align="justify">Benjamin Franklin war nicht nur als Politiker maßgeblich an der Ausarbeitung der amerikanischen Verfassung beteiligt, sondern auch Naturwissenschaftler und Erfinder. Er beschäftigte sich unter anderem mit Elektrizität und erfand den Blitzableiter.</p>
+					<p align="justify"><b>Benjamin Franklin war nicht nur als Politiker maßgeblich an der Ausarbeitung der amerikanischen Verfassung beteiligt, sondern auch Naturwissenschaftler und Erfinder. Er beschäftigte sich unter anderem mit Elektrizität und erfand den Blitzableiter.</b></p>
 				</div>
 				<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop">Lord William Kelvin</a>
 				<div data-role="popup" id="popupBasic">
-					<p>Leider falsch – probier‘s nochmal!</p>
+					<p><b>Leider falsch – probier‘s nochmal!</b></p>
 				</div>
 				<p>
 					<a href="#Frage1B" data-role="button" data-inline="true" data-icon="home">Start</a>
@@ -2883,7 +2818,8 @@
 				aber nur eine davon ist richtig. <br>Wenn du die Frage beantwortet hast, einfach auf den Button 'WEITER' klicken und die kommst zur nächsten Frage. Am Ende 
 				des Quiz kannst du dir das Ergebnis auswerten lassen, indem du einfach auf den'Auswerten'-Butoon klickst.<br><p> Viel Erfolg.</p>
 					<p>
-						<a href="#Frage1A" data-role="button" data-inline="true">START</a>
+						<!--<a href="#Frage1A" data-role="button" data-inline="true">START</a>-->
+						<a href="#Frage1A" data-role="button" data-inline="true" value="Auswerten!" onclick="function clearRadios()">START</a>
 					</p>
 				</p>
 			</div>
